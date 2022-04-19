@@ -1,0 +1,3188 @@
+	.text
+	.syntax unified
+	.eabi_attribute	67, "2.09"	@ Tag_conformance
+	.cpu	cortex-m23
+	.eabi_attribute	6, 16	@ Tag_CPU_arch
+	.eabi_attribute	7, 77	@ Tag_CPU_arch_profile
+	.eabi_attribute	8, 0	@ Tag_ARM_ISA_use
+	.eabi_attribute	9, 3	@ Tag_THUMB_ISA_use
+	.eabi_attribute	34, 0	@ Tag_CPU_unaligned_access
+	.eabi_attribute	17, 1	@ Tag_ABI_PCS_GOT_use
+	.eabi_attribute	20, 2	@ Tag_ABI_FP_denormal
+	.eabi_attribute	21, 0	@ Tag_ABI_FP_exceptions
+	.eabi_attribute	23, 1	@ Tag_ABI_FP_number_model
+	.eabi_attribute	24, 1	@ Tag_ABI_align_needed
+	.eabi_attribute	25, 1	@ Tag_ABI_align_preserved
+	.eabi_attribute	38, 1	@ Tag_ABI_FP_16bit_format
+	.eabi_attribute	18, 2	@ Tag_ABI_PCS_wchar_t
+	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
+	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
+	.file	"gd32e230_dma.c"
+	.file	1 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Include\\gd32e230_dma.h"
+	.file	2 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../GD32E230_Firmware_Library/CMSIS/GD/GD32E230/Include\\gd32e230.h"
+	.file	3 "D:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include" "stdint.h"
+	.section	.text.dma_deinit,"ax",%progbits
+	.hidden	dma_deinit              @ -- Begin function dma_deinit
+	.globl	dma_deinit
+	.p2align	2
+	.type	dma_deinit,%function
+	.code	16                      @ @dma_deinit
+	.thumb_func
+dma_deinit:
+.Lfunc_begin0:
+	.file	4 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c"
+	.loc	4 48 0                  @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:48:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r6, lr}
+	push	{r4, r5, r6, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r6, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 20
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp0:
+	.loc	4 50 5 prologue_end     @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:50:5
+	ldrb	r0, [r2]
+	movs	r3, #20
+	mov	r4, r3
+	muls	r4, r0, r4
+	ldr	r0, __arm_cp.0_0
+	.loc	4 50 25 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:50:25
+	ldr	r5, [r4, r0]
+	movs	r6, #1
+	bics	r5, r6
+	str	r5, [r4, r0]
+	.loc	4 52 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:52:5
+	ldrb	r4, [r2]
+	mov	r5, r3
+	muls	r5, r4, r5
+	movs	r4, #0
+	.loc	4 52 25 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:52:25
+	str	r4, [r5, r0]
+	.loc	4 53 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:53:5
+	ldrb	r0, [r2]
+	mov	r5, r3
+	muls	r5, r0, r5
+	ldr	r0, __arm_cp.0_1
+	.loc	4 53 25 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:53:25
+	str	r4, [r5, r0]
+	.loc	4 54 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:54:5
+	ldrb	r0, [r2]
+	mov	r5, r3
+	muls	r5, r0, r5
+	ldr	r0, __arm_cp.0_2
+	.loc	4 54 27 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:54:27
+	str	r4, [r5, r0]
+	.loc	4 55 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:55:5
+	ldrb	r0, [r2]
+	muls	r3, r0, r3
+	ldr	r0, __arm_cp.0_3
+	.loc	4 55 27 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:55:27
+	str	r4, [r3, r0]
+	.loc	4 56 17 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:56:17
+	ldrb	r0, [r2]
+	lsls	r0, r0, #2
+	movs	r2, #15
+	lsls	r2, r0
+	ldr	r0, __arm_cp.0_4
+	.loc	4 56 14 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:56:14
+	ldr	r3, [r0]
+	orrs	r3, r2
+	str	r3, [r0]
+	.loc	4 57 1 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:57:1
+	add	sp, #4
+	pop	{r4, r5, r6, pc}
+.Ltmp1:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.0_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end0:
+	.size	__arm_cp.0_0, .Lcpi_end0-__arm_cp.0_0
+__arm_cp.0_1:
+	.long	1073872908              @ 0x4002000c
+.Lcpi_end1:
+	.size	__arm_cp.0_1, .Lcpi_end1-__arm_cp.0_1
+__arm_cp.0_2:
+	.long	1073872912              @ 0x40020010
+.Lcpi_end2:
+	.size	__arm_cp.0_2, .Lcpi_end2-__arm_cp.0_2
+__arm_cp.0_3:
+	.long	1073872916              @ 0x40020014
+.Lcpi_end3:
+	.size	__arm_cp.0_3, .Lcpi_end3-__arm_cp.0_3
+__arm_cp.0_4:
+	.long	1073872900              @ 0x40020004
+.Lcpi_end4:
+	.size	__arm_cp.0_4, .Lcpi_end4-__arm_cp.0_4
+.Lfunc_end0:
+	.size	dma_deinit, .Lfunc_end0-dma_deinit
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_struct_para_init,"ax",%progbits
+	.hidden	dma_struct_para_init    @ -- Begin function dma_struct_para_init
+	.globl	dma_struct_para_init
+	.p2align	1
+	.type	dma_struct_para_init,%function
+	.code	16                      @ @dma_struct_para_init
+	.thumb_func
+dma_struct_para_init:
+.Lfunc_begin1:
+	.loc	4 66 0 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:66:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 4
+	str	r0, [sp]
+.Ltmp2:
+	.loc	4 68 5 prologue_end     @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:68:5
+	ldr	r0, [sp]
+	movs	r1, #0
+	.loc	4 68 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:68:31
+	str	r1, [r0]
+	.loc	4 69 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:69:5
+	ldr	r0, [sp]
+	.loc	4 69 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:69:31
+	str	r1, [r0, #4]
+	.loc	4 70 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:70:5
+	ldr	r0, [sp]
+	.loc	4 70 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:70:31
+	strb	r1, [r0, #24]
+	.loc	4 71 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:71:5
+	ldr	r0, [sp]
+	.loc	4 71 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:71:31
+	str	r1, [r0, #8]
+	.loc	4 72 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:72:5
+	ldr	r0, [sp]
+	.loc	4 72 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:72:31
+	str	r1, [r0, #12]
+	.loc	4 73 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:73:5
+	ldr	r0, [sp]
+	.loc	4 73 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:73:31
+	strb	r1, [r0, #25]
+	.loc	4 74 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:74:5
+	ldr	r0, [sp]
+	.loc	4 74 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:74:31
+	str	r1, [r0, #16]
+	.loc	4 75 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:75:5
+	ldr	r0, [sp]
+	.loc	4 75 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:75:31
+	strb	r1, [r0, #26]
+	.loc	4 76 5 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:76:5
+	ldr	r0, [sp]
+	.loc	4 76 31 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:76:31
+	str	r1, [r0, #20]
+	.loc	4 77 1 is_stmt 1        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:77:1
+	add	sp, #4
+	bx	lr
+.Ltmp3:
+.Lfunc_end1:
+	.size	dma_struct_para_init, .Lfunc_end1-dma_struct_para_init
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_init,"ax",%progbits
+	.hidden	dma_init                @ -- Begin function dma_init
+	.globl	dma_init
+	.p2align	2
+	.type	dma_init,%function
+	.code	16                      @ @dma_init
+	.thumb_func
+dma_init:
+.Lfunc_begin2:
+	.loc	4 98 0                  @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:98:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#24
+	sub	sp, #24
+	.cfi_def_cfa_offset 40
+	mov	r2, r0
+	add	r3, sp, #20
+	strb	r0, [r3]
+	str	r1, [sp, #16]
+.Ltmp4:
+	.loc	4 101 25 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:101:25
+	ldrb	r0, [r3]
+	.loc	4 101 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:101:5
+	str	r2, [sp, #8]            @ 4-byte Spill
+	str	r3, [sp, #4]            @ 4-byte Spill
+	bl	dma_channel_disable
+	.loc	4 104 29 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:104:29
+	ldr	r0, [sp, #16]
+	.loc	4 104 42 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:104:42
+	ldr	r0, [r0]
+	.loc	4 104 5                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:104:5
+	ldr	r1, [sp, #4]            @ 4-byte Reload
+	ldrb	r2, [r1]
+	movs	r3, #20
+	mov	r4, r3
+	muls	r4, r2, r4
+	ldr	r2, __arm_cp.2_0
+	.loc	4 104 27                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:104:27
+	str	r0, [r4, r2]
+	.loc	4 107 29 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:107:29
+	ldr	r0, [sp, #16]
+	.loc	4 107 42 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:107:42
+	ldr	r0, [r0, #8]
+	.loc	4 107 5                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:107:5
+	ldrb	r2, [r1]
+	mov	r4, r3
+	muls	r4, r2, r4
+	ldr	r2, __arm_cp.2_1
+	.loc	4 107 27                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:107:27
+	str	r0, [r4, r2]
+	.loc	4 110 28 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:110:28
+	ldr	r0, [sp, #16]
+	.loc	4 110 41 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:110:41
+	ldrh	r0, [r0, #16]
+	.loc	4 110 5                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:110:5
+	ldrb	r2, [r1]
+	mov	r4, r3
+	muls	r4, r2, r4
+	ldr	r2, __arm_cp.2_2
+	.loc	4 110 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:110:25
+	str	r0, [r4, r2]
+	.loc	4 113 11 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:113:11
+	ldrb	r0, [r1]
+	mov	r2, r3
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.2_3
+	ldr	r2, [r2, r0]
+	.loc	4 113 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:113:9
+	str	r2, [sp, #12]
+	.loc	4 114 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:114:9
+	ldr	r2, [sp, #12]
+	movw	r4, #16128
+	bics	r2, r4
+	str	r2, [sp, #12]
+	.loc	4 115 13                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:13
+	ldr	r2, [sp, #16]
+	.loc	4 115 26 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:26
+	ldr	r4, [r2, #4]
+	.loc	4 115 54                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:54
+	ldr	r5, [r2, #12]
+	.loc	4 115 39                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:39
+	orrs	r4, r5
+	.loc	4 115 82                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:82
+	ldr	r2, [r2, #20]
+	.loc	4 115 67                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:67
+	orrs	r4, r2
+	.loc	4 115 9                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:115:9
+	ldr	r2, [sp, #12]
+	orrs	r2, r4
+	str	r2, [sp, #12]
+	.loc	4 116 27 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:116:27
+	ldr	r2, [sp, #12]
+	.loc	4 116 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:116:5
+	ldrb	r4, [r1]
+	muls	r3, r4, r3
+	.loc	4 116 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:116:25
+	str	r2, [r3, r0]
+.Ltmp5:
+	.loc	4 119 38 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:119:38
+	ldr	r0, [sp, #16]
+	.loc	4 119 51 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:119:51
+	ldrb	r0, [r0, #24]
+.Ltmp6:
+	.loc	4 119 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:119:8
+	cmp	r0, #1
+	bne	.LBB2_2
+	b	.LBB2_1
+.LBB2_1:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	add	r0, sp, #20
+.Ltmp7:
+	.loc	4 120 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:120:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 120 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:120:29
+	ldr	r2, [r1, r0]
+	movs	r3, #64
+	orrs	r2, r3
+	str	r2, [r1, r0]
+	.loc	4 121 5 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:121:5
+	b	.LBB2_3
+.Ltmp8:
+.LBB2_2:
+	.loc	4 0 5 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	add	r0, sp, #20
+.Ltmp9:
+	.loc	4 122 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:122:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 122 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:122:29
+	ldr	r2, [r1, r0]
+	movs	r3, #64
+	bics	r2, r3
+	str	r2, [r1, r0]
+	b	.LBB2_3
+.Ltmp10:
+.LBB2_3:
+	.loc	4 126 38 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:126:38
+	ldr	r0, [sp, #16]
+	.loc	4 126 51 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:126:51
+	ldrb	r0, [r0, #25]
+.Ltmp11:
+	.loc	4 126 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:126:8
+	cmp	r0, #1
+	bne	.LBB2_5
+	b	.LBB2_4
+.LBB2_4:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	add	r0, sp, #20
+.Ltmp12:
+	.loc	4 127 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:127:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 127 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:127:29
+	ldr	r2, [r1, r0]
+	movs	r3, #128
+	orrs	r2, r3
+	str	r2, [r1, r0]
+	.loc	4 128 5 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:128:5
+	b	.LBB2_6
+.Ltmp13:
+.LBB2_5:
+	.loc	4 0 5 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	add	r0, sp, #20
+.Ltmp14:
+	.loc	4 129 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:129:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 129 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:129:29
+	ldr	r2, [r1, r0]
+	movs	r3, #128
+	bics	r2, r3
+	str	r2, [r1, r0]
+	b	.LBB2_6
+.Ltmp15:
+.LBB2_6:
+	.loc	4 133 36 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:133:36
+	ldr	r0, [sp, #16]
+	.loc	4 133 49 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:133:49
+	ldrb	r0, [r0, #26]
+.Ltmp16:
+	.loc	4 133 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:133:8
+	cmp	r0, #0
+	bne	.LBB2_8
+	b	.LBB2_7
+.LBB2_7:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	add	r0, sp, #20
+.Ltmp17:
+	.loc	4 134 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:134:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 134 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:134:29
+	ldr	r2, [r1, r0]
+	movs	r3, #16
+	bics	r2, r3
+	str	r2, [r1, r0]
+	.loc	4 135 5 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:135:5
+	b	.LBB2_9
+.Ltmp18:
+.LBB2_8:
+	.loc	4 0 5 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	add	r0, sp, #20
+.Ltmp19:
+	.loc	4 136 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:136:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.2_3
+	.loc	4 136 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:136:29
+	ldr	r2, [r1, r0]
+	movs	r3, #16
+	orrs	r2, r3
+	str	r2, [r1, r0]
+	b	.LBB2_9
+.Ltmp20:
+.LBB2_9:
+	.loc	4 138 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:138:1
+	add	sp, #24
+	pop	{r4, r5, r7, pc}
+.Ltmp21:
+	.p2align	2
+@ %bb.10:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.2_0:
+	.long	1073872912              @ 0x40020010
+.Lcpi_end5:
+	.size	__arm_cp.2_0, .Lcpi_end5-__arm_cp.2_0
+__arm_cp.2_1:
+	.long	1073872916              @ 0x40020014
+.Lcpi_end6:
+	.size	__arm_cp.2_1, .Lcpi_end6-__arm_cp.2_1
+__arm_cp.2_2:
+	.long	1073872908              @ 0x4002000c
+.Lcpi_end7:
+	.size	__arm_cp.2_2, .Lcpi_end7-__arm_cp.2_2
+__arm_cp.2_3:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end8:
+	.size	__arm_cp.2_3, .Lcpi_end8-__arm_cp.2_3
+.Lfunc_end2:
+	.size	dma_init, .Lfunc_end2-dma_init
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_channel_disable,"ax",%progbits
+	.hidden	dma_channel_disable     @ -- Begin function dma_channel_disable
+	.globl	dma_channel_disable
+	.p2align	2
+	.type	dma_channel_disable,%function
+	.code	16                      @ @dma_channel_disable
+	.thumb_func
+dma_channel_disable:
+.Lfunc_begin3:
+	.loc	4 214 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:214:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp22:
+	.loc	4 215 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:215:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.3_0
+	.loc	4 215 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:215:25
+	ldr	r3, [r2, r0]
+	movs	r4, #1
+	bics	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 216 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:216:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp23:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.3_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end9:
+	.size	__arm_cp.3_0, .Lcpi_end9-__arm_cp.3_0
+.Lfunc_end3:
+	.size	dma_channel_disable, .Lfunc_end3-dma_channel_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_circulation_enable,"ax",%progbits
+	.hidden	dma_circulation_enable  @ -- Begin function dma_circulation_enable
+	.globl	dma_circulation_enable
+	.p2align	2
+	.type	dma_circulation_enable,%function
+	.code	16                      @ @dma_circulation_enable
+	.thumb_func
+dma_circulation_enable:
+.Lfunc_begin4:
+	.loc	4 149 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:149:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp24:
+	.loc	4 150 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:150:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.4_0
+	.loc	4 150 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:150:25
+	ldr	r3, [r2, r0]
+	movs	r4, #32
+	orrs	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 151 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:151:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp25:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.4_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end10:
+	.size	__arm_cp.4_0, .Lcpi_end10-__arm_cp.4_0
+.Lfunc_end4:
+	.size	dma_circulation_enable, .Lfunc_end4-dma_circulation_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_circulation_disable,"ax",%progbits
+	.hidden	dma_circulation_disable @ -- Begin function dma_circulation_disable
+	.globl	dma_circulation_disable
+	.p2align	2
+	.type	dma_circulation_disable,%function
+	.code	16                      @ @dma_circulation_disable
+	.thumb_func
+dma_circulation_disable:
+.Lfunc_begin5:
+	.loc	4 162 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:162:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp26:
+	.loc	4 163 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:163:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.5_0
+	.loc	4 163 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:163:25
+	ldr	r3, [r2, r0]
+	movs	r4, #32
+	bics	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 164 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:164:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp27:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.5_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end11:
+	.size	__arm_cp.5_0, .Lcpi_end11-__arm_cp.5_0
+.Lfunc_end5:
+	.size	dma_circulation_disable, .Lfunc_end5-dma_circulation_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_to_memory_enable,"ax",%progbits
+	.hidden	dma_memory_to_memory_enable @ -- Begin function dma_memory_to_memory_enable
+	.globl	dma_memory_to_memory_enable
+	.p2align	2
+	.type	dma_memory_to_memory_enable,%function
+	.code	16                      @ @dma_memory_to_memory_enable
+	.thumb_func
+dma_memory_to_memory_enable:
+.Lfunc_begin6:
+	.loc	4 175 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:175:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp28:
+	.loc	4 176 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:176:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.6_0
+	.loc	4 176 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:176:25
+	ldr	r3, [r2, r0]
+	movw	r4, #16384
+	orrs	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 177 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:177:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp29:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.6_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end12:
+	.size	__arm_cp.6_0, .Lcpi_end12-__arm_cp.6_0
+.Lfunc_end6:
+	.size	dma_memory_to_memory_enable, .Lfunc_end6-dma_memory_to_memory_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_to_memory_disable,"ax",%progbits
+	.hidden	dma_memory_to_memory_disable @ -- Begin function dma_memory_to_memory_disable
+	.globl	dma_memory_to_memory_disable
+	.p2align	2
+	.type	dma_memory_to_memory_disable,%function
+	.code	16                      @ @dma_memory_to_memory_disable
+	.thumb_func
+dma_memory_to_memory_disable:
+.Lfunc_begin7:
+	.loc	4 188 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:188:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp30:
+	.loc	4 189 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:189:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.7_0
+	.loc	4 189 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:189:25
+	ldr	r3, [r2, r0]
+	movw	r4, #16384
+	bics	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 190 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:190:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp31:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.7_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end13:
+	.size	__arm_cp.7_0, .Lcpi_end13-__arm_cp.7_0
+.Lfunc_end7:
+	.size	dma_memory_to_memory_disable, .Lfunc_end7-dma_memory_to_memory_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_channel_enable,"ax",%progbits
+	.hidden	dma_channel_enable      @ -- Begin function dma_channel_enable
+	.globl	dma_channel_enable
+	.p2align	2
+	.type	dma_channel_enable,%function
+	.code	16                      @ @dma_channel_enable
+	.thumb_func
+dma_channel_enable:
+.Lfunc_begin8:
+	.loc	4 201 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:201:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp32:
+	.loc	4 202 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:202:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.8_0
+	.loc	4 202 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:202:25
+	ldr	r3, [r2, r0]
+	movs	r4, #1
+	orrs	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 203 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:203:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp33:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.8_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end14:
+	.size	__arm_cp.8_0, .Lcpi_end14-__arm_cp.8_0
+.Lfunc_end8:
+	.size	dma_channel_enable, .Lfunc_end8-dma_channel_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_periph_address_config,"ax",%progbits
+	.hidden	dma_periph_address_config @ -- Begin function dma_periph_address_config
+	.globl	dma_periph_address_config
+	.p2align	2
+	.type	dma_periph_address_config,%function
+	.code	16                      @ @dma_periph_address_config
+	.thumb_func
+dma_periph_address_config:
+.Lfunc_begin9:
+	.loc	4 228 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:228:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp34:
+	.loc	4 229 29 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:229:29
+	ldr	r0, [sp]
+	.loc	4 229 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:229:5
+	ldrb	r1, [r3]
+	movs	r3, #20
+	muls	r3, r1, r3
+	ldr	r1, __arm_cp.9_0
+	.loc	4 229 27                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:229:27
+	str	r0, [r3, r1]
+	.loc	4 230 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:230:1
+	add	sp, #8
+	bx	lr
+.Ltmp35:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.9_0:
+	.long	1073872912              @ 0x40020010
+.Lcpi_end15:
+	.size	__arm_cp.9_0, .Lcpi_end15-__arm_cp.9_0
+.Lfunc_end9:
+	.size	dma_periph_address_config, .Lfunc_end9-dma_periph_address_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_address_config,"ax",%progbits
+	.hidden	dma_memory_address_config @ -- Begin function dma_memory_address_config
+	.globl	dma_memory_address_config
+	.p2align	2
+	.type	dma_memory_address_config,%function
+	.code	16                      @ @dma_memory_address_config
+	.thumb_func
+dma_memory_address_config:
+.Lfunc_begin10:
+	.loc	4 242 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:242:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp36:
+	.loc	4 243 29 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:243:29
+	ldr	r0, [sp]
+	.loc	4 243 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:243:5
+	ldrb	r1, [r3]
+	movs	r3, #20
+	muls	r3, r1, r3
+	ldr	r1, __arm_cp.10_0
+	.loc	4 243 27                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:243:27
+	str	r0, [r3, r1]
+	.loc	4 244 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:244:1
+	add	sp, #8
+	bx	lr
+.Ltmp37:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.10_0:
+	.long	1073872916              @ 0x40020014
+.Lcpi_end16:
+	.size	__arm_cp.10_0, .Lcpi_end16-__arm_cp.10_0
+.Lfunc_end10:
+	.size	dma_memory_address_config, .Lfunc_end10-dma_memory_address_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_transfer_number_config,"ax",%progbits
+	.hidden	dma_transfer_number_config @ -- Begin function dma_transfer_number_config
+	.globl	dma_transfer_number_config
+	.p2align	2
+	.type	dma_transfer_number_config,%function
+	.code	16                      @ @dma_transfer_number_config
+	.thumb_func
+dma_transfer_number_config:
+.Lfunc_begin11:
+	.loc	4 256 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:256:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+	mov	r0, sp
+.Ltmp38:
+	.loc	4 257 28 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:257:28
+	ldrh	r0, [r0]
+	.loc	4 257 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:257:5
+	ldrb	r1, [r3]
+	movs	r3, #20
+	muls	r3, r1, r3
+	ldr	r1, __arm_cp.11_0
+	.loc	4 257 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:257:25
+	str	r0, [r3, r1]
+	.loc	4 258 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:258:1
+	add	sp, #8
+	bx	lr
+.Ltmp39:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.11_0:
+	.long	1073872908              @ 0x4002000c
+.Lcpi_end17:
+	.size	__arm_cp.11_0, .Lcpi_end17-__arm_cp.11_0
+.Lfunc_end11:
+	.size	dma_transfer_number_config, .Lfunc_end11-dma_transfer_number_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_transfer_number_get,"ax",%progbits
+	.hidden	dma_transfer_number_get @ -- Begin function dma_transfer_number_get
+	.globl	dma_transfer_number_get
+	.p2align	2
+	.type	dma_transfer_number_get,%function
+	.code	16                      @ @dma_transfer_number_get
+	.thumb_func
+dma_transfer_number_get:
+.Lfunc_begin12:
+	.loc	4 269 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:269:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 4
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp40:
+	.loc	4 270 22 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:270:22
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.12_0
+	ldr	r0, [r2, r0]
+	.loc	4 270 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:270:5
+	add	sp, #4
+	bx	lr
+.Ltmp41:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 5                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+__arm_cp.12_0:
+	.long	1073872908              @ 0x4002000c
+.Lcpi_end18:
+	.size	__arm_cp.12_0, .Lcpi_end18-__arm_cp.12_0
+.Lfunc_end12:
+	.size	dma_transfer_number_get, .Lfunc_end12-dma_transfer_number_get
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_priority_config,"ax",%progbits
+	.hidden	dma_priority_config     @ -- Begin function dma_priority_config
+	.globl	dma_priority_config
+	.p2align	2
+	.type	dma_priority_config,%function
+	.code	16                      @ @dma_priority_config
+	.thumb_func
+dma_priority_config:
+.Lfunc_begin13:
+	.loc	4 288 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:288:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 28
+	mov	r2, r0
+	add	r3, sp, #8
+	strb	r0, [r3]
+	str	r1, [sp, #4]
+.Ltmp42:
+	.loc	4 292 11 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:292:11
+	ldrb	r0, [r3]
+	movs	r1, #20
+	mov	r4, r1
+	muls	r4, r0, r4
+	ldr	r0, __arm_cp.13_0
+	ldr	r4, [r4, r0]
+	.loc	4 292 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:292:9
+	str	r4, [sp]
+	.loc	4 294 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:294:9
+	ldr	r4, [sp]
+	movw	r5, #12288
+	bics	r4, r5
+	str	r4, [sp]
+	.loc	4 295 12                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:295:12
+	ldr	r4, [sp, #4]
+	.loc	4 295 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:295:9
+	ldr	r5, [sp]
+	orrs	r5, r4
+	str	r5, [sp]
+	.loc	4 296 27 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:296:27
+	ldr	r4, [sp]
+	.loc	4 296 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:296:5
+	ldrb	r3, [r3]
+	muls	r1, r3, r1
+	.loc	4 296 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:296:25
+	str	r4, [r1, r0]
+	.loc	4 297 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:297:1
+	add	sp, #12
+	pop	{r4, r5, r7, pc}
+.Ltmp43:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.13_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end19:
+	.size	__arm_cp.13_0, .Lcpi_end19-__arm_cp.13_0
+.Lfunc_end13:
+	.size	dma_priority_config, .Lfunc_end13-dma_priority_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_width_config,"ax",%progbits
+	.hidden	dma_memory_width_config @ -- Begin function dma_memory_width_config
+	.globl	dma_memory_width_config
+	.p2align	2
+	.type	dma_memory_width_config,%function
+	.code	16                      @ @dma_memory_width_config
+	.thumb_func
+dma_memory_width_config:
+.Lfunc_begin14:
+	.loc	4 313 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:313:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 28
+	mov	r2, r0
+	add	r3, sp, #8
+	strb	r0, [r3]
+	str	r1, [sp, #4]
+.Ltmp44:
+	.loc	4 317 11 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:317:11
+	ldrb	r0, [r3]
+	movs	r1, #20
+	mov	r4, r1
+	muls	r4, r0, r4
+	ldr	r0, __arm_cp.14_0
+	ldr	r4, [r4, r0]
+	.loc	4 317 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:317:9
+	str	r4, [sp]
+	.loc	4 319 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:319:9
+	ldr	r4, [sp]
+	movw	r5, #3072
+	bics	r4, r5
+	str	r4, [sp]
+	.loc	4 320 12                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:320:12
+	ldr	r4, [sp, #4]
+	.loc	4 320 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:320:9
+	ldr	r5, [sp]
+	orrs	r5, r4
+	str	r5, [sp]
+	.loc	4 321 27 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:321:27
+	ldr	r4, [sp]
+	.loc	4 321 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:321:5
+	ldrb	r3, [r3]
+	muls	r1, r3, r1
+	.loc	4 321 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:321:25
+	str	r4, [r1, r0]
+	.loc	4 322 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:322:1
+	add	sp, #12
+	pop	{r4, r5, r7, pc}
+.Ltmp45:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.14_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end20:
+	.size	__arm_cp.14_0, .Lcpi_end20-__arm_cp.14_0
+.Lfunc_end14:
+	.size	dma_memory_width_config, .Lfunc_end14-dma_memory_width_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_periph_width_config,"ax",%progbits
+	.hidden	dma_periph_width_config @ -- Begin function dma_periph_width_config
+	.globl	dma_periph_width_config
+	.p2align	2
+	.type	dma_periph_width_config,%function
+	.code	16                      @ @dma_periph_width_config
+	.thumb_func
+dma_periph_width_config:
+.Lfunc_begin15:
+	.loc	4 338 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:338:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 28
+	mov	r2, r0
+	add	r3, sp, #8
+	strb	r0, [r3]
+	str	r1, [sp, #4]
+.Ltmp46:
+	.loc	4 342 11 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:342:11
+	ldrb	r0, [r3]
+	movs	r1, #20
+	mov	r4, r1
+	muls	r4, r0, r4
+	ldr	r0, __arm_cp.15_0
+	ldr	r4, [r4, r0]
+	.loc	4 342 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:342:9
+	str	r4, [sp]
+	.loc	4 344 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:344:9
+	ldr	r4, [sp]
+	movw	r5, #768
+	bics	r4, r5
+	str	r4, [sp]
+	.loc	4 345 12                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:345:12
+	ldr	r4, [sp, #4]
+	.loc	4 345 9 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:345:9
+	ldr	r5, [sp]
+	orrs	r5, r4
+	str	r5, [sp]
+	.loc	4 346 27 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:346:27
+	ldr	r4, [sp]
+	.loc	4 346 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:346:5
+	ldrb	r3, [r3]
+	muls	r1, r3, r1
+	.loc	4 346 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:346:25
+	str	r4, [r1, r0]
+	.loc	4 347 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:347:1
+	add	sp, #12
+	pop	{r4, r5, r7, pc}
+.Ltmp47:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.15_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end21:
+	.size	__arm_cp.15_0, .Lcpi_end21-__arm_cp.15_0
+.Lfunc_end15:
+	.size	dma_periph_width_config, .Lfunc_end15-dma_periph_width_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_increase_enable,"ax",%progbits
+	.hidden	dma_memory_increase_enable @ -- Begin function dma_memory_increase_enable
+	.globl	dma_memory_increase_enable
+	.p2align	2
+	.type	dma_memory_increase_enable,%function
+	.code	16                      @ @dma_memory_increase_enable
+	.thumb_func
+dma_memory_increase_enable:
+.Lfunc_begin16:
+	.loc	4 358 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:358:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp48:
+	.loc	4 359 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:359:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.16_0
+	.loc	4 359 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:359:25
+	ldr	r3, [r2, r0]
+	movs	r4, #128
+	orrs	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 360 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:360:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp49:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.16_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end22:
+	.size	__arm_cp.16_0, .Lcpi_end22-__arm_cp.16_0
+.Lfunc_end16:
+	.size	dma_memory_increase_enable, .Lfunc_end16-dma_memory_increase_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_memory_increase_disable,"ax",%progbits
+	.hidden	dma_memory_increase_disable @ -- Begin function dma_memory_increase_disable
+	.globl	dma_memory_increase_disable
+	.p2align	2
+	.type	dma_memory_increase_disable,%function
+	.code	16                      @ @dma_memory_increase_disable
+	.thumb_func
+dma_memory_increase_disable:
+.Lfunc_begin17:
+	.loc	4 371 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:371:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp50:
+	.loc	4 372 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:372:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.17_0
+	.loc	4 372 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:372:25
+	ldr	r3, [r2, r0]
+	movs	r4, #128
+	bics	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 373 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:373:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp51:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.17_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end23:
+	.size	__arm_cp.17_0, .Lcpi_end23-__arm_cp.17_0
+.Lfunc_end17:
+	.size	dma_memory_increase_disable, .Lfunc_end17-dma_memory_increase_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_periph_increase_enable,"ax",%progbits
+	.hidden	dma_periph_increase_enable @ -- Begin function dma_periph_increase_enable
+	.globl	dma_periph_increase_enable
+	.p2align	2
+	.type	dma_periph_increase_enable,%function
+	.code	16                      @ @dma_periph_increase_enable
+	.thumb_func
+dma_periph_increase_enable:
+.Lfunc_begin18:
+	.loc	4 384 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:384:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp52:
+	.loc	4 385 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:385:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.18_0
+	.loc	4 385 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:385:25
+	ldr	r3, [r2, r0]
+	movs	r4, #64
+	orrs	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 386 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:386:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp53:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.18_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end24:
+	.size	__arm_cp.18_0, .Lcpi_end24-__arm_cp.18_0
+.Lfunc_end18:
+	.size	dma_periph_increase_enable, .Lfunc_end18-dma_periph_increase_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_periph_increase_disable,"ax",%progbits
+	.hidden	dma_periph_increase_disable @ -- Begin function dma_periph_increase_disable
+	.globl	dma_periph_increase_disable
+	.p2align	2
+	.type	dma_periph_increase_disable,%function
+	.code	16                      @ @dma_periph_increase_disable
+	.thumb_func
+dma_periph_increase_disable:
+.Lfunc_begin19:
+	.loc	4 397 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:397:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 12
+	mov	r1, r0
+	mov	r2, sp
+	strb	r0, [r2]
+.Ltmp54:
+	.loc	4 398 5 prologue_end    @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:398:5
+	ldrb	r0, [r2]
+	movs	r2, #20
+	muls	r2, r0, r2
+	ldr	r0, __arm_cp.19_0
+	.loc	4 398 25 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:398:25
+	ldr	r3, [r2, r0]
+	movs	r4, #64
+	bics	r3, r4
+	str	r3, [r2, r0]
+	.loc	4 399 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:399:1
+	add	sp, #4
+	pop	{r4, pc}
+.Ltmp55:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.19_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end25:
+	.size	__arm_cp.19_0, .Lcpi_end25-__arm_cp.19_0
+.Lfunc_end19:
+	.size	dma_periph_increase_disable, .Lfunc_end19-dma_periph_increase_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_transfer_direction_config,"ax",%progbits
+	.hidden	dma_transfer_direction_config @ -- Begin function dma_transfer_direction_config
+	.globl	dma_transfer_direction_config
+	.p2align	2
+	.type	dma_transfer_direction_config,%function
+	.code	16                      @ @dma_transfer_direction_config
+	.thumb_func
+dma_transfer_direction_config:
+.Lfunc_begin20:
+	.loc	4 414 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:414:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp56:
+	.loc	4 415 36 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:415:36
+	ldr	r0, [sp]
+.Ltmp57:
+	.loc	4 415 8 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:415:8
+	cmp	r0, #0
+	bne	.LBB20_2
+	b	.LBB20_1
+.LBB20_1:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	add	r0, sp, #4
+.Ltmp58:
+	.loc	4 416 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:416:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.20_0
+	.loc	4 416 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:416:29
+	ldr	r2, [r1, r0]
+	movs	r3, #16
+	bics	r2, r3
+	str	r2, [r1, r0]
+	.loc	4 417 5 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:417:5
+	b	.LBB20_3
+.Ltmp59:
+.LBB20_2:
+	.loc	4 0 5 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	add	r0, sp, #4
+.Ltmp60:
+	.loc	4 418 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:418:9
+	ldrb	r0, [r0]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.20_0
+	.loc	4 418 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:418:29
+	ldr	r2, [r1, r0]
+	movs	r3, #16
+	orrs	r2, r3
+	str	r2, [r1, r0]
+	b	.LBB20_3
+.Ltmp61:
+.LBB20_3:
+	.loc	4 420 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:420:1
+	add	sp, #8
+	bx	lr
+.Ltmp62:
+	.p2align	2
+@ %bb.4:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.20_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end26:
+	.size	__arm_cp.20_0, .Lcpi_end26-__arm_cp.20_0
+.Lfunc_end20:
+	.size	dma_transfer_direction_config, .Lfunc_end20-dma_transfer_direction_config
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_flag_get,"ax",%progbits
+	.hidden	dma_flag_get            @ -- Begin function dma_flag_get
+	.globl	dma_flag_get
+	.p2align	2
+	.type	dma_flag_get,%function
+	.code	16                      @ @dma_flag_get
+	.thumb_func
+dma_flag_get:
+.Lfunc_begin21:
+	.loc	4 437 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:437:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 12
+	mov	r2, r0
+	add	r3, sp, #8
+	strb	r0, [r3]
+	str	r1, [sp, #4]
+	ldr	r0, __arm_cp.21_0
+.Ltmp63:
+	.loc	4 440 18 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:440:18
+	ldr	r0, [r0]
+	.loc	4 440 29 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:440:29
+	ldr	r1, [sp, #4]
+	ldrb	r3, [r3]
+	lsls	r3, r3, #2
+	lsls	r1, r3
+.Ltmp64:
+	.loc	4 440 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:440:8
+	tst	r0, r1
+	beq	.LBB21_2
+	b	.LBB21_1
+.LBB21_1:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	mov	r0, sp
+	movs	r1, #1
+.Ltmp65:
+	.loc	4 441 15 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:441:15
+	strb	r1, [r0]
+	.loc	4 442 5                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:442:5
+	b	.LBB21_3
+.Ltmp66:
+.LBB21_2:
+	.loc	4 0 5 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	mov	r0, sp
+	movs	r1, #0
+.Ltmp67:
+	.loc	4 443 15 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:443:15
+	strb	r1, [r0]
+	b	.LBB21_3
+.Ltmp68:
+.LBB21_3:
+	.loc	4 0 15 is_stmt 0        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:15
+	mov	r0, sp
+	.loc	4 446 12 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:446:12
+	ldrb	r0, [r0]
+	.loc	4 446 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:446:5
+	add	sp, #12
+	bx	lr
+.Ltmp69:
+	.p2align	2
+@ %bb.4:
+	.loc	4 0 5                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+__arm_cp.21_0:
+	.long	1073872896              @ 0x40020000
+.Lcpi_end27:
+	.size	__arm_cp.21_0, .Lcpi_end27-__arm_cp.21_0
+.Lfunc_end21:
+	.size	dma_flag_get, .Lfunc_end21-dma_flag_get
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_flag_clear,"ax",%progbits
+	.hidden	dma_flag_clear          @ -- Begin function dma_flag_clear
+	.globl	dma_flag_clear
+	.p2align	2
+	.type	dma_flag_clear,%function
+	.code	16                      @ @dma_flag_clear
+	.thumb_func
+dma_flag_clear:
+.Lfunc_begin22:
+	.loc	4 464 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:464:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp70:
+	.loc	4 465 17 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:465:17
+	ldr	r0, [sp]
+	ldrb	r1, [r3]
+	lsls	r1, r1, #2
+	lsls	r0, r1
+	ldr	r1, __arm_cp.22_0
+	.loc	4 465 14 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:465:14
+	ldr	r3, [r1]
+	orrs	r3, r0
+	str	r3, [r1]
+	.loc	4 466 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:466:1
+	add	sp, #8
+	bx	lr
+.Ltmp71:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.22_0:
+	.long	1073872900              @ 0x40020004
+.Lcpi_end28:
+	.size	__arm_cp.22_0, .Lcpi_end28-__arm_cp.22_0
+.Lfunc_end22:
+	.size	dma_flag_clear, .Lfunc_end22-dma_flag_clear
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_interrupt_flag_get,"ax",%progbits
+	.hidden	dma_interrupt_flag_get  @ -- Begin function dma_interrupt_flag_get
+	.globl	dma_interrupt_flag_get
+	.p2align	2
+	.type	dma_interrupt_flag_get,%function
+	.code	16                      @ @dma_interrupt_flag_get
+	.thumb_func
+dma_interrupt_flag_get:
+.Lfunc_begin23:
+	.loc	4 482 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:482:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#24
+	sub	sp, #24
+	.cfi_def_cfa_offset 24
+	mov	r2, r0
+	add	r3, sp, #16
+	strb	r0, [r3]
+	str	r1, [sp, #12]
+	movs	r0, #0
+.Ltmp72:
+	.loc	4 483 14 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:483:14
+	str	r0, [sp, #8]
+	.loc	4 483 37 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:483:37
+	str	r0, [sp, #4]
+	.loc	4 485 12 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:485:12
+	ldr	r0, [sp, #12]
+	.loc	4 485 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:485:5
+	cmp	r0, #2
+	str	r0, [sp]                @ 4-byte Spill
+	beq	.LBB23_3
+	b	.LBB23_1
+.LBB23_1:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #4
+	beq	.LBB23_4
+	b	.LBB23_2
+.LBB23_2:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #8
+	beq	.LBB23_5
+	b	.LBB23_6
+.LBB23_3:
+	.loc	4 0 5                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:5
+	ldr	r0, __arm_cp.23_0
+.Ltmp73:
+	.loc	4 487 30 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:487:30
+	ldr	r0, [r0]
+	.loc	4 487 41 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:487:41
+	ldr	r1, [sp, #12]
+	add	r2, sp, #16
+	ldrb	r3, [r2]
+	lsls	r3, r3, #2
+	lsls	r1, r3
+	.loc	4 487 39                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:487:39
+	ands	r0, r1
+	.loc	4 487 28                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:487:28
+	str	r0, [sp, #4]
+	.loc	4 488 32 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:488:32
+	ldrb	r0, [r2]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.23_1
+	ldr	r0, [r1, r0]
+	movs	r1, #2
+	.loc	4 488 52 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:488:52
+	ands	r0, r1
+	.loc	4 488 30                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:488:30
+	str	r0, [sp, #8]
+	.loc	4 489 13 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:489:13
+	b	.LBB23_7
+.LBB23_4:
+	.loc	4 0 13 is_stmt 0        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:13
+	ldr	r0, __arm_cp.23_0
+	.loc	4 491 30 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:491:30
+	ldr	r0, [r0]
+	.loc	4 491 41 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:491:41
+	ldr	r1, [sp, #12]
+	add	r2, sp, #16
+	ldrb	r3, [r2]
+	lsls	r3, r3, #2
+	lsls	r1, r3
+	.loc	4 491 39                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:491:39
+	ands	r0, r1
+	.loc	4 491 28                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:491:28
+	str	r0, [sp, #4]
+	.loc	4 492 32 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:492:32
+	ldrb	r0, [r2]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.23_1
+	ldr	r0, [r1, r0]
+	movs	r1, #4
+	.loc	4 492 52 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:492:52
+	ands	r0, r1
+	.loc	4 492 30                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:492:30
+	str	r0, [sp, #8]
+	.loc	4 493 13 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:493:13
+	b	.LBB23_7
+.LBB23_5:
+	.loc	4 0 13 is_stmt 0        @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:13
+	ldr	r0, __arm_cp.23_0
+	.loc	4 495 30 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:495:30
+	ldr	r0, [r0]
+	.loc	4 495 41 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:495:41
+	ldr	r1, [sp, #12]
+	add	r2, sp, #16
+	ldrb	r3, [r2]
+	lsls	r3, r3, #2
+	lsls	r1, r3
+	.loc	4 495 39                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:495:39
+	ands	r0, r1
+	.loc	4 495 28                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:495:28
+	str	r0, [sp, #4]
+	.loc	4 496 32 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:496:32
+	ldrb	r0, [r2]
+	movs	r1, #20
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.23_1
+	ldr	r0, [r1, r0]
+	movs	r1, #8
+	.loc	4 496 52 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:496:52
+	ands	r0, r1
+	.loc	4 496 30                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:496:30
+	str	r0, [sp, #8]
+	.loc	4 497 13 is_stmt 1      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:497:13
+	b	.LBB23_7
+.LBB23_6:
+	.loc	4 499 13                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:499:13
+	b	.LBB23_7
+.Ltmp74:
+.LBB23_7:
+	.loc	4 502 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:502:8
+	ldr	r0, [sp, #4]
+	.loc	4 502 23 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:502:23
+	cmp	r0, #0
+	beq	.LBB23_10
+	b	.LBB23_8
+.LBB23_8:
+	.loc	4 502 26                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:502:26
+	ldr	r0, [sp, #8]
+.Ltmp75:
+	.loc	4 502 8                 @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:502:8
+	cmp	r0, #0
+	beq	.LBB23_10
+	b	.LBB23_9
+.LBB23_9:
+	.loc	4 0 8                   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:8
+	add	r0, sp, #20
+	movs	r1, #1
+.Ltmp76:
+	.loc	4 503 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:503:9
+	strb	r1, [r0]
+	b	.LBB23_11
+.Ltmp77:
+.LBB23_10:
+	.loc	4 0 9 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:9
+	add	r0, sp, #20
+	movs	r1, #0
+.Ltmp78:
+	.loc	4 505 9 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:505:9
+	strb	r1, [r0]
+	b	.LBB23_11
+.Ltmp79:
+.LBB23_11:
+	.loc	4 0 9 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:9
+	add	r0, sp, #20
+	.loc	4 507 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:507:1
+	ldrb	r0, [r0]
+	add	sp, #24
+	bx	lr
+.Ltmp80:
+	.p2align	2
+@ %bb.12:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.23_0:
+	.long	1073872896              @ 0x40020000
+.Lcpi_end29:
+	.size	__arm_cp.23_0, .Lcpi_end29-__arm_cp.23_0
+__arm_cp.23_1:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end30:
+	.size	__arm_cp.23_1, .Lcpi_end30-__arm_cp.23_1
+.Lfunc_end23:
+	.size	dma_interrupt_flag_get, .Lfunc_end23-dma_interrupt_flag_get
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_interrupt_flag_clear,"ax",%progbits
+	.hidden	dma_interrupt_flag_clear @ -- Begin function dma_interrupt_flag_clear
+	.globl	dma_interrupt_flag_clear
+	.p2align	2
+	.type	dma_interrupt_flag_clear,%function
+	.code	16                      @ @dma_interrupt_flag_clear
+	.thumb_func
+dma_interrupt_flag_clear:
+.Lfunc_begin24:
+	.loc	4 524 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:524:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp81:
+	.loc	4 525 17 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:525:17
+	ldr	r0, [sp]
+	ldrb	r1, [r3]
+	lsls	r1, r1, #2
+	lsls	r0, r1
+	ldr	r1, __arm_cp.24_0
+	.loc	4 525 14 is_stmt 0      @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:525:14
+	ldr	r3, [r1]
+	orrs	r3, r0
+	str	r3, [r1]
+	.loc	4 526 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:526:1
+	add	sp, #8
+	bx	lr
+.Ltmp82:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.24_0:
+	.long	1073872900              @ 0x40020004
+.Lcpi_end31:
+	.size	__arm_cp.24_0, .Lcpi_end31-__arm_cp.24_0
+.Lfunc_end24:
+	.size	dma_interrupt_flag_clear, .Lfunc_end24-dma_interrupt_flag_clear
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_interrupt_enable,"ax",%progbits
+	.hidden	dma_interrupt_enable    @ -- Begin function dma_interrupt_enable
+	.globl	dma_interrupt_enable
+	.p2align	2
+	.type	dma_interrupt_enable,%function
+	.code	16                      @ @dma_interrupt_enable
+	.thumb_func
+dma_interrupt_enable:
+.Lfunc_begin25:
+	.loc	4 542 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:542:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp83:
+	.loc	4 543 28 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:543:28
+	ldr	r0, [sp]
+	.loc	4 543 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:543:5
+	ldrb	r1, [r3]
+	movs	r3, #20
+	muls	r3, r1, r3
+	ldr	r1, __arm_cp.25_0
+	.loc	4 543 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:543:25
+	ldr	r4, [r3, r1]
+	orrs	r4, r0
+	str	r4, [r3, r1]
+	.loc	4 544 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:544:1
+	add	sp, #8
+	pop	{r4, pc}
+.Ltmp84:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.25_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end32:
+	.size	__arm_cp.25_0, .Lcpi_end32-__arm_cp.25_0
+.Lfunc_end25:
+	.size	dma_interrupt_enable, .Lfunc_end25-dma_interrupt_enable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.dma_interrupt_disable,"ax",%progbits
+	.hidden	dma_interrupt_disable   @ -- Begin function dma_interrupt_disable
+	.globl	dma_interrupt_disable
+	.p2align	2
+	.type	dma_interrupt_disable,%function
+	.code	16                      @ @dma_interrupt_disable
+	.thumb_func
+dma_interrupt_disable:
+.Lfunc_begin26:
+	.loc	4 560 0 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:560:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	mov	r2, r0
+	add	r3, sp, #4
+	strb	r0, [r3]
+	str	r1, [sp]
+.Ltmp85:
+	.loc	4 561 29 prologue_end   @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:561:29
+	ldr	r0, [sp]
+	.loc	4 561 5 is_stmt 0       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:561:5
+	ldrb	r1, [r3]
+	movs	r3, #20
+	muls	r3, r1, r3
+	ldr	r1, __arm_cp.26_0
+	.loc	4 561 25                @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:561:25
+	ldr	r4, [r3, r1]
+	bics	r4, r0
+	str	r4, [r3, r1]
+	.loc	4 562 1 is_stmt 1       @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:562:1
+	add	sp, #8
+	pop	{r4, pc}
+.Ltmp86:
+	.p2align	2
+@ %bb.1:
+	.loc	4 0 1 is_stmt 0         @ ../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source/gd32e230_dma.c:0:1
+__arm_cp.26_0:
+	.long	1073872904              @ 0x40020008
+.Lcpi_end33:
+	.size	__arm_cp.26_0, .Lcpi_end33-__arm_cp.26_0
+.Lfunc_end26:
+	.size	dma_interrupt_disable, .Lfunc_end26-dma_interrupt_disable
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.debug_str,"MS",%progbits,1
+.Linfo_string0:
+	.asciz	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]" @ string offset=0
+.Linfo_string1:
+	.asciz	"../GD32E230_Firmware_Library/GD32E230_standard_peripheral/Source\\gd32e230_dma.c" @ string offset=55
+.Linfo_string2:
+	.asciz	"E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" @ string offset=135
+.Linfo_string3:
+	.asciz	"unsigned char"         @ string offset=182
+.Linfo_string4:
+	.asciz	"DMA_CH0"               @ string offset=196
+.Linfo_string5:
+	.asciz	"DMA_CH1"               @ string offset=204
+.Linfo_string6:
+	.asciz	"DMA_CH2"               @ string offset=212
+.Linfo_string7:
+	.asciz	"DMA_CH3"               @ string offset=220
+.Linfo_string8:
+	.asciz	"DMA_CH4"               @ string offset=228
+.Linfo_string9:
+	.asciz	"RESET"                 @ string offset=236
+.Linfo_string10:
+	.asciz	"SET"                   @ string offset=242
+.Linfo_string11:
+	.asciz	"unsigned int"          @ string offset=246
+.Linfo_string12:
+	.asciz	"uint32_t"              @ string offset=259
+.Linfo_string13:
+	.asciz	"uint8_t"               @ string offset=268
+.Linfo_string14:
+	.asciz	"dma_deinit"            @ string offset=276
+.Linfo_string15:
+	.asciz	"dma_struct_para_init"  @ string offset=287
+.Linfo_string16:
+	.asciz	"dma_init"              @ string offset=308
+.Linfo_string17:
+	.asciz	"dma_channel_disable"   @ string offset=317
+.Linfo_string18:
+	.asciz	"dma_circulation_enable" @ string offset=337
+.Linfo_string19:
+	.asciz	"dma_circulation_disable" @ string offset=360
+.Linfo_string20:
+	.asciz	"dma_memory_to_memory_enable" @ string offset=384
+.Linfo_string21:
+	.asciz	"dma_memory_to_memory_disable" @ string offset=412
+.Linfo_string22:
+	.asciz	"dma_channel_enable"    @ string offset=441
+.Linfo_string23:
+	.asciz	"dma_periph_address_config" @ string offset=460
+.Linfo_string24:
+	.asciz	"dma_memory_address_config" @ string offset=486
+.Linfo_string25:
+	.asciz	"dma_transfer_number_config" @ string offset=512
+.Linfo_string26:
+	.asciz	"dma_transfer_number_get" @ string offset=539
+.Linfo_string27:
+	.asciz	"dma_priority_config"   @ string offset=563
+.Linfo_string28:
+	.asciz	"dma_memory_width_config" @ string offset=583
+.Linfo_string29:
+	.asciz	"dma_periph_width_config" @ string offset=607
+.Linfo_string30:
+	.asciz	"dma_memory_increase_enable" @ string offset=631
+.Linfo_string31:
+	.asciz	"dma_memory_increase_disable" @ string offset=658
+.Linfo_string32:
+	.asciz	"dma_periph_increase_enable" @ string offset=686
+.Linfo_string33:
+	.asciz	"dma_periph_increase_disable" @ string offset=713
+.Linfo_string34:
+	.asciz	"dma_transfer_direction_config" @ string offset=741
+.Linfo_string35:
+	.asciz	"dma_flag_get"          @ string offset=771
+.Linfo_string36:
+	.asciz	"FlagStatus"            @ string offset=784
+.Linfo_string37:
+	.asciz	"dma_flag_clear"        @ string offset=795
+.Linfo_string38:
+	.asciz	"dma_interrupt_flag_get" @ string offset=810
+.Linfo_string39:
+	.asciz	"dma_interrupt_flag_clear" @ string offset=833
+.Linfo_string40:
+	.asciz	"dma_interrupt_enable"  @ string offset=858
+.Linfo_string41:
+	.asciz	"dma_interrupt_disable" @ string offset=879
+.Linfo_string42:
+	.asciz	"channelx"              @ string offset=901
+.Linfo_string43:
+	.asciz	"dma_channel_enum"      @ string offset=910
+.Linfo_string44:
+	.asciz	"init_struct"           @ string offset=927
+.Linfo_string45:
+	.asciz	"periph_addr"           @ string offset=939
+.Linfo_string46:
+	.asciz	"periph_width"          @ string offset=951
+.Linfo_string47:
+	.asciz	"memory_addr"           @ string offset=964
+.Linfo_string48:
+	.asciz	"memory_width"          @ string offset=976
+.Linfo_string49:
+	.asciz	"number"                @ string offset=989
+.Linfo_string50:
+	.asciz	"priority"              @ string offset=996
+.Linfo_string51:
+	.asciz	"periph_inc"            @ string offset=1005
+.Linfo_string52:
+	.asciz	"memory_inc"            @ string offset=1016
+.Linfo_string53:
+	.asciz	"direction"             @ string offset=1027
+.Linfo_string54:
+	.asciz	"dma_parameter_struct"  @ string offset=1037
+.Linfo_string55:
+	.asciz	"ctl"                   @ string offset=1058
+.Linfo_string56:
+	.asciz	"address"               @ string offset=1062
+.Linfo_string57:
+	.asciz	"mwidth"                @ string offset=1070
+.Linfo_string58:
+	.asciz	"pwidth"                @ string offset=1077
+.Linfo_string59:
+	.asciz	"flag"                  @ string offset=1084
+.Linfo_string60:
+	.asciz	"reval"                 @ string offset=1089
+.Linfo_string61:
+	.asciz	"interrupt_enable"      @ string offset=1095
+.Linfo_string62:
+	.asciz	"interrupt_flag"        @ string offset=1112
+.Linfo_string63:
+	.asciz	"source"                @ string offset=1127
+	.section	.debug_abbrev,"",%progbits
+	.byte	1                       @ Abbreviation Code
+	.byte	17                      @ DW_TAG_compile_unit
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	37                      @ DW_AT_producer
+	.byte	14                      @ DW_FORM_strp
+	.byte	19                      @ DW_AT_language
+	.byte	5                       @ DW_FORM_data2
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	16                      @ DW_AT_stmt_list
+	.byte	6                       @ DW_FORM_data4
+	.byte	27                      @ DW_AT_comp_dir
+	.byte	14                      @ DW_FORM_strp
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	85                      @ DW_AT_ranges
+	.byte	6                       @ DW_FORM_data4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	2                       @ Abbreviation Code
+	.byte	4                       @ DW_TAG_enumeration_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	3                       @ Abbreviation Code
+	.byte	40                      @ DW_TAG_enumerator
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	28                      @ DW_AT_const_value
+	.byte	15                      @ DW_FORM_udata
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	4                       @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	5                       @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	15                      @ DW_TAG_pointer_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
+	.byte	53                      @ DW_TAG_volatile_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	8                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	9                       @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	10                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	11                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	12                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	13                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	14                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	15                      @ Abbreviation Code
+	.byte	19                      @ DW_TAG_structure_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	16                      @ Abbreviation Code
+	.byte	13                      @ DW_TAG_member
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	56                      @ DW_AT_data_member_location
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	0                       @ EOM(3)
+	.section	.debug_info,"",%progbits
+.Lcu_begin0:
+	.long	.Ldebug_info_end0-.Ldebug_info_start0 @ Length of Unit
+.Ldebug_info_start0:
+	.short	3                       @ DWARF version number
+	.long	.debug_abbrev           @ Offset Into Abbrev. Section
+	.byte	4                       @ Address Size (in bytes)
+	.byte	1                       @ Abbrev [1] 0xb:0x613 DW_TAG_compile_unit
+	.long	.Linfo_string0          @ DW_AT_producer
+	.short	12                      @ DW_AT_language
+	.long	.Linfo_string1          @ DW_AT_name
+	.long	.Lline_table_start0     @ DW_AT_stmt_list
+	.long	.Linfo_string2          @ DW_AT_comp_dir
+	.long	0                       @ DW_AT_low_pc
+	.long	.Ldebug_ranges0         @ DW_AT_ranges
+	.byte	2                       @ Abbrev [2] 0x26:0x27 DW_TAG_enumeration_type
+	.long	77                      @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	107                     @ DW_AT_decl_line
+	.byte	3                       @ Abbrev [3] 0x2e:0x6 DW_TAG_enumerator
+	.long	.Linfo_string4          @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x34:0x6 DW_TAG_enumerator
+	.long	.Linfo_string5          @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x3a:0x6 DW_TAG_enumerator
+	.long	.Linfo_string6          @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x40:0x6 DW_TAG_enumerator
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x46:0x6 DW_TAG_enumerator
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	4                       @ Abbrev [4] 0x4d:0x7 DW_TAG_base_type
+	.long	.Linfo_string3          @ DW_AT_name
+	.byte	8                       @ DW_AT_encoding
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ Abbrev [2] 0x54:0x15 DW_TAG_enumeration_type
+	.long	77                      @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	158                     @ DW_AT_decl_line
+	.byte	3                       @ Abbrev [3] 0x5c:0x6 DW_TAG_enumerator
+	.long	.Linfo_string9          @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x62:0x6 DW_TAG_enumerator
+	.long	.Linfo_string10         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x69:0xb DW_TAG_typedef
+	.long	116                     @ DW_AT_type
+	.long	.Linfo_string12         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	64                      @ DW_AT_decl_line
+	.byte	4                       @ Abbrev [4] 0x74:0x7 DW_TAG_base_type
+	.long	.Linfo_string11         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	6                       @ Abbrev [6] 0x7b:0x5 DW_TAG_pointer_type
+	.long	128                     @ DW_AT_type
+	.byte	7                       @ Abbrev [7] 0x80:0x5 DW_TAG_volatile_type
+	.long	105                     @ DW_AT_type
+	.byte	5                       @ Abbrev [5] 0x85:0xb DW_TAG_typedef
+	.long	77                      @ DW_AT_type
+	.long	.Linfo_string13         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	62                      @ DW_AT_decl_line
+	.byte	8                       @ Abbrev [8] 0x90:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end0             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string14         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	47                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0xa3:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	47                      @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0xb2:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string15         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	65                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0xc5:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	65                      @ DW_AT_decl_line
+	.long	1436                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0xd4:0x3e DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string16         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	97                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0xe7:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	97                      @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0xf5:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	97                      @ DW_AT_decl_line
+	.long	1436                    @ DW_AT_type
+	.byte	10                      @ Abbrev [10] 0x103:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	99                      @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x112:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin3           @ DW_AT_low_pc
+	.long	.Lfunc_end3             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string17         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	213                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x125:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	213                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x134:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin4           @ DW_AT_low_pc
+	.long	.Lfunc_end4             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string18         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	148                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x147:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	148                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x156:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin5           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string19         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	161                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x169:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	161                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x178:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin6           @ DW_AT_low_pc
+	.long	.Lfunc_end6             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string20         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	174                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x18b:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	174                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x19a:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin7           @ DW_AT_low_pc
+	.long	.Lfunc_end7             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string21         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	187                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x1ad:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	187                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x1bc:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin8           @ DW_AT_low_pc
+	.long	.Lfunc_end8             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string22         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	200                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x1cf:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	200                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x1de:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin9           @ DW_AT_low_pc
+	.long	.Lfunc_end9             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string23         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	227                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x1f1:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	227                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x1ff:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string56         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	227                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x20e:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin10          @ DW_AT_low_pc
+	.long	.Lfunc_end10            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string24         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	241                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x221:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	241                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x22f:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string56         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	241                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x23e:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin11          @ DW_AT_low_pc
+	.long	.Lfunc_end11            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string25         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	255                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x251:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	255                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x25f:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	255                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	11                      @ Abbrev [11] 0x26e:0x28 DW_TAG_subprogram
+	.long	.Lfunc_begin12          @ DW_AT_low_pc
+	.long	.Lfunc_end12            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string26         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	268                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x286:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	268                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x296:0x42 DW_TAG_subprogram
+	.long	.Lfunc_begin13          @ DW_AT_low_pc
+	.long	.Lfunc_end13            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string27         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	287                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x2aa:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	287                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x2b9:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	287                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x2c8:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	289                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x2d8:0x42 DW_TAG_subprogram
+	.long	.Lfunc_begin14          @ DW_AT_low_pc
+	.long	.Lfunc_end14            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string28         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	312                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x2ec:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	312                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x2fb:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string57         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	312                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x30a:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	314                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x31a:0x42 DW_TAG_subprogram
+	.long	.Lfunc_begin15          @ DW_AT_low_pc
+	.long	.Lfunc_end15            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string29         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	337                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x32e:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	337                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x33d:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string58         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	337                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x34c:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	339                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x35c:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin16          @ DW_AT_low_pc
+	.long	.Lfunc_end16            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string30         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	357                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x370:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	357                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x380:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin17          @ DW_AT_low_pc
+	.long	.Lfunc_end17            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string31         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	370                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x394:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	370                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x3a4:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin18          @ DW_AT_low_pc
+	.long	.Lfunc_end18            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string32         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	383                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x3b8:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	383                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x3c8:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin19          @ DW_AT_low_pc
+	.long	.Lfunc_end19            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string33         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	396                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x3dc:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	396                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x3ec:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin20          @ DW_AT_low_pc
+	.long	.Lfunc_end20            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string34         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	413                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x400:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	413                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x40f:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string53         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	413                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	11                      @ Abbrev [11] 0x41f:0x46 DW_TAG_subprogram
+	.long	.Lfunc_begin21          @ DW_AT_low_pc
+	.long	.Lfunc_end21            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string35         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	436                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.long	1414                    @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x437:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	436                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x446:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	436                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x455:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string60         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	438                     @ DW_AT_decl_line
+	.long	1414                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x465:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin22          @ DW_AT_low_pc
+	.long	.Lfunc_end22            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string37         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	463                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x479:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	463                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x488:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	463                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	11                      @ Abbrev [11] 0x498:0x55 DW_TAG_subprogram
+	.long	.Lfunc_begin23          @ DW_AT_low_pc
+	.long	.Lfunc_end23            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string38         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	481                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.long	1414                    @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x4b0:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	481                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x4bf:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	481                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x4ce:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string61         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	483                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	14                      @ Abbrev [14] 0x4dd:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string62         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	483                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x4ed:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin24          @ DW_AT_low_pc
+	.long	.Lfunc_end24            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string39         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	523                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x501:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	523                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x510:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	523                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x520:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin25          @ DW_AT_low_pc
+	.long	.Lfunc_end25            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string40         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	541                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x534:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	541                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x543:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string63         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	541                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	13                      @ Abbrev [13] 0x553:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin26          @ DW_AT_low_pc
+	.long	.Lfunc_end26            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string41         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	559                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x567:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	559                     @ DW_AT_decl_line
+	.long	1425                    @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0x576:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string63         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.short	559                     @ DW_AT_decl_line
+	.long	105                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x586:0xb DW_TAG_typedef
+	.long	84                      @ DW_AT_type
+	.long	.Linfo_string36         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	158                     @ DW_AT_decl_line
+	.byte	5                       @ Abbrev [5] 0x591:0xb DW_TAG_typedef
+	.long	38                      @ DW_AT_type
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	114                     @ DW_AT_decl_line
+	.byte	6                       @ Abbrev [6] 0x59c:0x5 DW_TAG_pointer_type
+	.long	1441                    @ DW_AT_type
+	.byte	5                       @ Abbrev [5] 0x5a1:0xb DW_TAG_typedef
+	.long	1452                    @ DW_AT_type
+	.long	.Linfo_string54         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	128                     @ DW_AT_decl_line
+	.byte	15                      @ Abbrev [15] 0x5ac:0x71 DW_TAG_structure_type
+	.byte	28                      @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	117                     @ DW_AT_decl_line
+	.byte	16                      @ Abbrev [16] 0x5b0:0xc DW_TAG_member
+	.long	.Linfo_string45         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	119                     @ DW_AT_decl_line
+	.byte	0                       @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5bc:0xc DW_TAG_member
+	.long	.Linfo_string46         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	120                     @ DW_AT_decl_line
+	.byte	4                       @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5c8:0xc DW_TAG_member
+	.long	.Linfo_string47         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	121                     @ DW_AT_decl_line
+	.byte	8                       @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5d4:0xc DW_TAG_member
+	.long	.Linfo_string48         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	122                     @ DW_AT_decl_line
+	.byte	12                      @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5e0:0xc DW_TAG_member
+	.long	.Linfo_string49         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	123                     @ DW_AT_decl_line
+	.byte	16                      @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5ec:0xc DW_TAG_member
+	.long	.Linfo_string50         @ DW_AT_name
+	.long	105                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	124                     @ DW_AT_decl_line
+	.byte	20                      @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x5f8:0xc DW_TAG_member
+	.long	.Linfo_string51         @ DW_AT_name
+	.long	133                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	125                     @ DW_AT_decl_line
+	.byte	24                      @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x604:0xc DW_TAG_member
+	.long	.Linfo_string52         @ DW_AT_name
+	.long	133                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	126                     @ DW_AT_decl_line
+	.byte	25                      @ DW_AT_data_member_location
+	.byte	16                      @ Abbrev [16] 0x610:0xc DW_TAG_member
+	.long	.Linfo_string53         @ DW_AT_name
+	.long	133                     @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	127                     @ DW_AT_decl_line
+	.byte	26                      @ DW_AT_data_member_location
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+.Ldebug_info_end0:
+	.section	.debug_ranges,"",%progbits
+.Ldebug_ranges0:
+	.long	.Lfunc_begin0
+	.long	.Lfunc_end0
+	.long	.Lfunc_begin1
+	.long	.Lfunc_end1
+	.long	.Lfunc_begin2
+	.long	.Lfunc_end2
+	.long	.Lfunc_begin3
+	.long	.Lfunc_end3
+	.long	.Lfunc_begin4
+	.long	.Lfunc_end4
+	.long	.Lfunc_begin5
+	.long	.Lfunc_end5
+	.long	.Lfunc_begin6
+	.long	.Lfunc_end6
+	.long	.Lfunc_begin7
+	.long	.Lfunc_end7
+	.long	.Lfunc_begin8
+	.long	.Lfunc_end8
+	.long	.Lfunc_begin9
+	.long	.Lfunc_end9
+	.long	.Lfunc_begin10
+	.long	.Lfunc_end10
+	.long	.Lfunc_begin11
+	.long	.Lfunc_end11
+	.long	.Lfunc_begin12
+	.long	.Lfunc_end12
+	.long	.Lfunc_begin13
+	.long	.Lfunc_end13
+	.long	.Lfunc_begin14
+	.long	.Lfunc_end14
+	.long	.Lfunc_begin15
+	.long	.Lfunc_end15
+	.long	.Lfunc_begin16
+	.long	.Lfunc_end16
+	.long	.Lfunc_begin17
+	.long	.Lfunc_end17
+	.long	.Lfunc_begin18
+	.long	.Lfunc_end18
+	.long	.Lfunc_begin19
+	.long	.Lfunc_end19
+	.long	.Lfunc_begin20
+	.long	.Lfunc_end20
+	.long	.Lfunc_begin21
+	.long	.Lfunc_end21
+	.long	.Lfunc_begin22
+	.long	.Lfunc_end22
+	.long	.Lfunc_begin23
+	.long	.Lfunc_end23
+	.long	.Lfunc_begin24
+	.long	.Lfunc_end24
+	.long	.Lfunc_begin25
+	.long	.Lfunc_end25
+	.long	.Lfunc_begin26
+	.long	.Lfunc_end26
+	.long	0
+	.long	0
+	.ident	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]"
+	.section	".note.GNU-stack","",%progbits
+	.eabi_attribute	30, 6	@ Tag_ABI_optimization_goals
+	.ARM_attribute	16, 1	@ Tag_AV_eba
+	.section	.debug_line,"",%progbits
+.Lline_table_start0:

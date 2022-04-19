@@ -1,0 +1,4809 @@
+	.text
+	.syntax unified
+	.eabi_attribute	67, "2.09"	@ Tag_conformance
+	.cpu	cortex-m23
+	.eabi_attribute	6, 16	@ Tag_CPU_arch
+	.eabi_attribute	7, 77	@ Tag_CPU_arch_profile
+	.eabi_attribute	8, 0	@ Tag_ARM_ISA_use
+	.eabi_attribute	9, 3	@ Tag_THUMB_ISA_use
+	.eabi_attribute	34, 0	@ Tag_CPU_unaligned_access
+	.eabi_attribute	17, 1	@ Tag_ABI_PCS_GOT_use
+	.eabi_attribute	20, 2	@ Tag_ABI_FP_denormal
+	.eabi_attribute	21, 0	@ Tag_ABI_FP_exceptions
+	.eabi_attribute	23, 1	@ Tag_ABI_FP_number_model
+	.eabi_attribute	24, 1	@ Tag_ABI_align_needed
+	.eabi_attribute	25, 1	@ Tag_ABI_align_preserved
+	.eabi_attribute	38, 1	@ Tag_ABI_FP_16bit_format
+	.eabi_attribute	18, 2	@ Tag_ABI_PCS_wchar_t
+	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
+	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
+	.file	"modbus_asc.c"
+	.file	1 "D:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include" "stdint.h"
+	.file	2 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../APP/Src/modbus_asc.c"
+	.file	3 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../APP/Inc\\type.h"
+	.file	4 "E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" "../GD32E230_Firmware_Library/CMSIS/GD/GD32E230/Include\\gd32e230.h"
+	.file	5 "D:/Program Files\\Packs\\ARM\\CMSIS\\5.7.0\\CMSIS\\Core\\Include" "core_cm23.h"
+	.section	.text.MBASC_GetSlaveAddr,"ax",%progbits
+	.hidden	MBASC_GetSlaveAddr      @ -- Begin function MBASC_GetSlaveAddr
+	.globl	MBASC_GetSlaveAddr
+	.p2align	1
+	.type	MBASC_GetSlaveAddr,%function
+	.code	16                      @ @MBASC_GetSlaveAddr
+	.thumb_func
+MBASC_GetSlaveAddr:
+.Lfunc_begin0:
+	.loc	2 53 0                  @ ../APP/Src/modbus_asc.c:53:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 4
+	str	r0, [sp]
+.Ltmp0:
+	.loc	2 54 12 prologue_end    @ ../APP/Src/modbus_asc.c:54:12
+	ldr	r0, [sp]
+	ldrb	r0, [r0]
+	.loc	2 54 5 is_stmt 0        @ ../APP/Src/modbus_asc.c:54:5
+	add	sp, #4
+	bx	lr
+.Ltmp1:
+.Lfunc_end0:
+	.size	MBASC_GetSlaveAddr, .Lfunc_end0-MBASC_GetSlaveAddr
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_SendMsg,"ax",%progbits
+	.hidden	MBASC_SendMsg           @ -- Begin function MBASC_SendMsg
+	.globl	MBASC_SendMsg
+	.p2align	1
+	.type	MBASC_SendMsg,%function
+	.code	16                      @ @MBASC_SendMsg
+	.thumb_func
+MBASC_SendMsg:
+.Lfunc_begin1:
+	.loc	2 70 0 is_stmt 1        @ ../APP/Src/modbus_asc.c:70:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	mov	r2, r1
+	str	r0, [sp, #4]
+	mov	r0, sp
+	strb	r1, [r0]
+.Ltmp2:
+	.loc	2 71 32 prologue_end    @ ../APP/Src/modbus_asc.c:71:32
+	ldr	r0, [sp, #4]
+	ldrb	r0, [r0]
+.Ltmp3:
+	.loc	2 71 8 is_stmt 0        @ ../APP/Src/modbus_asc.c:71:8
+	cmp	r0, #0
+	beq	.LBB1_2
+	b	.LBB1_1
+.LBB1_1:
+	.loc	2 0 8                   @ ../APP/Src/modbus_asc.c:0:8
+	movs	r0, #50
+.Ltmp4:
+	.loc	2 73 7 is_stmt 1        @ ../APP/Src/modbus_asc.c:73:7
+	bl	Delay_Ms
+	.loc	2 74 31                 @ ../APP/Src/modbus_asc.c:74:31
+	ldr	r0, [sp, #4]
+	mov	r1, sp
+	.loc	2 74 43 is_stmt 0       @ ../APP/Src/modbus_asc.c:74:43
+	ldrb	r1, [r1]
+	.loc	2 74 9                  @ ../APP/Src/modbus_asc.c:74:9
+	bl	MODBUS_ASCII_SendData
+	.loc	2 75 5 is_stmt 1        @ ../APP/Src/modbus_asc.c:75:5
+	b	.LBB1_2
+.Ltmp5:
+.LBB1_2:
+	.loc	2 76 1                  @ ../APP/Src/modbus_asc.c:76:1
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp6:
+.Lfunc_end1:
+	.size	MBASC_SendMsg, .Lfunc_end1-MBASC_SendMsg
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_SendMsg_NoLimit,"ax",%progbits
+	.hidden	MBASC_SendMsg_NoLimit   @ -- Begin function MBASC_SendMsg_NoLimit
+	.globl	MBASC_SendMsg_NoLimit
+	.p2align	1
+	.type	MBASC_SendMsg_NoLimit,%function
+	.code	16                      @ @MBASC_SendMsg_NoLimit
+	.thumb_func
+MBASC_SendMsg_NoLimit:
+.Lfunc_begin2:
+	.loc	2 90 0                  @ ../APP/Src/modbus_asc.c:90:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 24
+	mov	r2, r1
+	str	r0, [sp, #12]
+	add	r0, sp, #8
+	strb	r1, [r0]
+	movs	r1, #50
+.Ltmp7:
+	.loc	2 91 4 prologue_end     @ ../APP/Src/modbus_asc.c:91:4
+	str	r0, [sp, #4]            @ 4-byte Spill
+	mov	r0, r1
+	str	r2, [sp]                @ 4-byte Spill
+	bl	Delay_Ms
+	.loc	2 92 27                 @ ../APP/Src/modbus_asc.c:92:27
+	ldr	r0, [sp, #12]
+	.loc	2 92 39 is_stmt 0       @ ../APP/Src/modbus_asc.c:92:39
+	ldr	r1, [sp, #4]            @ 4-byte Reload
+	ldrb	r1, [r1]
+	.loc	2 92 5                  @ ../APP/Src/modbus_asc.c:92:5
+	bl	MODBUS_ASCII_SendData
+	.loc	2 93 1 is_stmt 1        @ ../APP/Src/modbus_asc.c:93:1
+	add	sp, #16
+	pop	{r7, pc}
+.Ltmp8:
+.Lfunc_end2:
+	.size	MBASC_SendMsg_NoLimit, .Lfunc_end2-MBASC_SendMsg_NoLimit
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_SendErr,"ax",%progbits
+	.hidden	MBASC_SendErr           @ -- Begin function MBASC_SendErr
+	.globl	MBASC_SendErr
+	.p2align	2
+	.type	MBASC_SendErr,%function
+	.code	16                      @ @MBASC_SendErr
+	.thumb_func
+MBASC_SendErr:
+.Lfunc_begin3:
+	.loc	2 107 0                 @ ../APP/Src/modbus_asc.c:107:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 32
+	mov	r1, r0
+	add	r2, sp, #12
+	strb	r0, [r2]
+.Ltmp9:
+	.loc	2 108 13 prologue_end   @ ../APP/Src/modbus_asc.c:108:13
+	ldr	r0, __arm_cp.3_0
+	movs	r2, #1
+	strb	r2, [r0]
+	.loc	2 109 20                @ ../APP/Src/modbus_asc.c:109:20
+	ldrb	r2, [r0]
+	adds	r3, r2, #1
+	strb	r3, [r0]
+	.loc	2 109 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:109:5
+	ldr	r3, __arm_cp.3_1
+	.loc	2 109 24                @ ../APP/Src/modbus_asc.c:109:24
+	ldrb	r4, [r3, r2]
+	movs	r5, #128
+	orrs	r4, r5
+	strb	r4, [r3, r2]
+	.loc	2 110 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:110:26
+	ldr	r2, [sp, #12]
+	.loc	2 110 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:110:20
+	ldrb	r4, [r0]
+	adds	r5, r4, #1
+	strb	r5, [r0]
+	.loc	2 110 24                @ ../APP/Src/modbus_asc.c:110:24
+	strb	r2, [r3, r4]
+	.loc	2 111 28 is_stmt 1      @ ../APP/Src/modbus_asc.c:111:28
+	ldrb	r0, [r0]
+	.loc	2 111 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:111:5
+	str	r0, [sp, #8]            @ 4-byte Spill
+	mov	r0, r3
+	ldr	r2, [sp, #8]            @ 4-byte Reload
+	str	r1, [sp, #4]            @ 4-byte Spill
+	mov	r1, r2
+	bl	MBASC_SendMsg
+	.loc	2 112 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:112:1
+	add	sp, #16
+	pop	{r4, r5, r7, pc}
+.Ltmp10:
+	.p2align	2
+@ %bb.1:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.3_0:
+	.long	SendLen
+.Lcpi_end0:
+	.size	__arm_cp.3_0, .Lcpi_end0-__arm_cp.3_0
+__arm_cp.3_1:
+	.long	SendBuf
+.Lcpi_end1:
+	.size	__arm_cp.3_1, .Lcpi_end1-__arm_cp.3_1
+.Lfunc_end3:
+	.size	MBASC_SendErr, .Lfunc_end3-MBASC_SendErr
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun03,"ax",%progbits
+	.hidden	MBASC_Fun03             @ -- Begin function MBASC_Fun03
+	.globl	MBASC_Fun03
+	.p2align	2
+	.type	MBASC_Fun03,%function
+	.code	16                      @ @MBASC_Fun03
+	.thumb_func
+MBASC_Fun03:
+.Lfunc_begin4:
+	.loc	2 126 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:126:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 40
+	add	r0, sp, #20
+	movs	r1, #0
+.Ltmp11:
+	.loc	2 130 14 prologue_end   @ ../APP/Src/modbus_asc.c:130:14
+	strh	r1, [r0]
+	.loc	2 133 16                @ ../APP/Src/modbus_asc.c:133:16
+	ldr	r2, __arm_cp.4_0
+	ldrb	r3, [r2, #2]
+	add	r4, sp, #16
+	.loc	2 133 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:133:14
+	strb	r3, [r4]
+	.loc	2 134 16 is_stmt 1      @ ../APP/Src/modbus_asc.c:134:16
+	ldrb	r3, [r2, #3]
+	add	r4, sp, #12
+	.loc	2 134 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:134:14
+	strb	r3, [r4]
+	.loc	2 136 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:136:21
+	ldrb	r3, [r2, #4]
+	.loc	2 136 47 is_stmt 0      @ ../APP/Src/modbus_asc.c:136:47
+	lsls	r3, r3, #8
+	.loc	2 136 55                @ ../APP/Src/modbus_asc.c:136:55
+	ldrb	r4, [r2, #5]
+	.loc	2 136 53                @ ../APP/Src/modbus_asc.c:136:53
+	adds	r3, r3, r4
+	.loc	2 136 18                @ ../APP/Src/modbus_asc.c:136:18
+	strh	r3, [r0]
+	.loc	2 138 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:138:13
+	ldr	r0, __arm_cp.4_1
+	strb	r1, [r0]
+	.loc	2 139 26                @ ../APP/Src/modbus_asc.c:139:26
+	ldrb	r0, [r2]
+	cmp	r0, #0
+	beq	.LBB4_2
+	b	.LBB4_1
+.LBB4_1:
+	.loc	2 139 53 is_stmt 0      @ ../APP/Src/modbus_asc.c:139:53
+	ldr	r0, __arm_cp.4_2
+	ldrb	r0, [r0]
+	.loc	2 139 26                @ ../APP/Src/modbus_asc.c:139:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB4_3
+.LBB4_2:
+	.loc	2 0 26                  @ ../APP/Src/modbus_asc.c:0:26
+	movs	r0, #0
+	.loc	2 139 26                @ ../APP/Src/modbus_asc.c:139:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB4_3
+.LBB4_3:
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	.loc	2 139 20                @ ../APP/Src/modbus_asc.c:139:20
+	ldr	r1, __arm_cp.4_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 139 5                 @ ../APP/Src/modbus_asc.c:139:5
+	ldr	r3, __arm_cp.4_3
+	.loc	2 139 24                @ ../APP/Src/modbus_asc.c:139:24
+	strb	r0, [r3, r2]
+	.loc	2 140 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:140:20
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r2, #3
+	.loc	2 140 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:140:24
+	strb	r2, [r3, r0]
+	.loc	2 141 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:141:26
+	ldr	r0, [sp, #20]
+	.loc	2 141 39 is_stmt 0      @ ../APP/Src/modbus_asc.c:141:39
+	lsls	r0, r0, #1
+	.loc	2 141 20                @ ../APP/Src/modbus_asc.c:141:20
+	ldrb	r2, [r1]
+	adds	r4, r2, #1
+	strb	r4, [r1]
+	.loc	2 141 24                @ ../APP/Src/modbus_asc.c:141:24
+	strb	r0, [r3, r2]
+	add	r0, sp, #12
+.Ltmp12:
+	.loc	2 143 14 is_stmt 1      @ ../APP/Src/modbus_asc.c:143:14
+	ldrb	r0, [r0]
+	.loc	2 143 58 is_stmt 0      @ ../APP/Src/modbus_asc.c:143:58
+	cmp	r0, #48
+	blt	.LBB4_9
+	b	.LBB4_4
+.LBB4_4:
+	.loc	2 0 58                  @ ../APP/Src/modbus_asc.c:0:58
+	add	r0, sp, #12
+	.loc	2 143 62                @ ../APP/Src/modbus_asc.c:143:62
+	ldrb	r0, [r0]
+	.loc	2 144 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:144:9
+	cmp	r0, #79
+	bgt	.LBB4_9
+	b	.LBB4_5
+.LBB4_5:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #12
+	.loc	2 144 13                @ ../APP/Src/modbus_asc.c:144:13
+	ldrb	r0, [r0]
+	add	r1, sp, #20
+	.loc	2 144 24                @ ../APP/Src/modbus_asc.c:144:24
+	ldrh	r1, [r1]
+	.loc	2 144 22                @ ../APP/Src/modbus_asc.c:144:22
+	adds	r0, r0, r1
+	.loc	2 144 76                @ ../APP/Src/modbus_asc.c:144:76
+	cmp	r0, #80
+	bgt	.LBB4_9
+	b	.LBB4_6
+.LBB4_6:
+	.loc	2 0 76                  @ ../APP/Src/modbus_asc.c:0:76
+	add	r0, sp, #20
+	.loc	2 144 85                @ ../APP/Src/modbus_asc.c:144:85
+	ldrh	r0, [r0]
+	.loc	2 145 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:145:9
+	cmp	r0, #0
+	beq	.LBB4_9
+	b	.LBB4_7
+.LBB4_7:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #16
+	.loc	2 145 14                @ ../APP/Src/modbus_asc.c:145:14
+	ldrb	r0, [r0]
+	.loc	2 145 35                @ ../APP/Src/modbus_asc.c:145:35
+	ldr	r1, __arm_cp.4_2
+	ldrb	r1, [r1]
+	.loc	2 145 46                @ ../APP/Src/modbus_asc.c:145:46
+	cmp	r0, r1
+	beq	.LBB4_10
+	b	.LBB4_8
+.LBB4_8:
+	.loc	2 0 46                  @ ../APP/Src/modbus_asc.c:0:46
+	add	r0, sp, #16
+	.loc	2 145 50                @ ../APP/Src/modbus_asc.c:145:50
+	ldrb	r0, [r0]
+.Ltmp13:
+	.loc	2 143 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:143:9
+	cmp	r0, #0
+	beq	.LBB4_10
+	b	.LBB4_9
+.LBB4_9:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	movs	r0, #2
+.Ltmp14:
+	.loc	2 147 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:147:9
+	bl	MBASC_SendErr
+	.loc	2 148 9                 @ ../APP/Src/modbus_asc.c:148:9
+	b	.LBB4_55
+.Ltmp15:
+.LBB4_10:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #8
+	movs	r1, #0
+.Ltmp16:
+	.loc	2 151 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:151:18
+	strb	r1, [r0]
+	.loc	2 151 10 is_stmt 0      @ ../APP/Src/modbus_asc.c:151:10
+	b	.LBB4_11
+.LBB4_11:                               @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB4_49 Depth 2
+	.loc	2 0 10                  @ ../APP/Src/modbus_asc.c:0:10
+	add	r0, sp, #8
+.Ltmp17:
+	.loc	2 151 25                @ ../APP/Src/modbus_asc.c:151:25
+	ldrb	r0, [r0]
+	add	r1, sp, #20
+	.loc	2 151 29                @ ../APP/Src/modbus_asc.c:151:29
+	ldrh	r1, [r1]
+.Ltmp18:
+	.loc	2 151 5                 @ ../APP/Src/modbus_asc.c:151:5
+	cmp	r0, r1
+	blt	.LBB4_12
+	b	.LBB4_54
+.LBB4_12:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #12
+.Ltmp19:
+	.loc	2 153 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:153:17
+	ldrb	r0, [r0]
+	.loc	2 153 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:153:9
+	subs	r0, #48
+	cmp	r0, #31
+	str	r0, [sp]                @ 4-byte Spill
+	bls	.LBB4_13
+	b	.LBB4_47
+.LBB4_13:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	ldr	r0, [sp]                @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI4_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.14:
+	.p2align	2
+.LJTI4_0:
+	b.w	.LBB4_15
+	b.w	.LBB4_16
+	b.w	.LBB4_17
+	b.w	.LBB4_18
+	b.w	.LBB4_19
+	b.w	.LBB4_20
+	b.w	.LBB4_21
+	b.w	.LBB4_22
+	b.w	.LBB4_23
+	b.w	.LBB4_24
+	b.w	.LBB4_25
+	b.w	.LBB4_26
+	b.w	.LBB4_27
+	b.w	.LBB4_28
+	b.w	.LBB4_29
+	b.w	.LBB4_30
+	b.w	.LBB4_31
+	b.w	.LBB4_32
+	b.w	.LBB4_33
+	b.w	.LBB4_34
+	b.w	.LBB4_35
+	b.w	.LBB4_36
+	b.w	.LBB4_37
+	b.w	.LBB4_38
+	b.w	.LBB4_39
+	b.w	.LBB4_40
+	b.w	.LBB4_41
+	b.w	.LBB4_42
+	b.w	.LBB4_43
+	b.w	.LBB4_44
+	b.w	.LBB4_45
+	b.w	.LBB4_46
+.LBB4_15:                               @   in Loop: Header=BB4_11 Depth=1
+.Ltmp20:
+	.loc	2 156 33 is_stmt 1      @ ../APP/Src/modbus_asc.c:156:33
+	ldr	r0, __arm_cp.4_2
+	ldrb	r0, [r0]
+	add	r1, sp, #24
+	.loc	2 156 22 is_stmt 0      @ ../APP/Src/modbus_asc.c:156:22
+	strh	r0, [r1]
+	.loc	2 157 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:157:13
+	b	.LBB4_48
+.LBB4_16:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 160 33                @ ../APP/Src/modbus_asc.c:160:33
+	ldr	r0, __arm_cp.4_2
+	ldrb	r0, [r0, #1]
+	add	r1, sp, #24
+	.loc	2 160 22 is_stmt 0      @ ../APP/Src/modbus_asc.c:160:22
+	strh	r0, [r1]
+	.loc	2 161 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:161:13
+	b	.LBB4_48
+.LBB4_17:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #3
+	.loc	2 164 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:164:22
+	strh	r1, [r0]
+	.loc	2 165 13                @ ../APP/Src/modbus_asc.c:165:13
+	b	.LBB4_48
+.LBB4_18:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 168 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:168:22
+	strh	r1, [r0]
+	.loc	2 169 13                @ ../APP/Src/modbus_asc.c:169:13
+	b	.LBB4_48
+.LBB4_19:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 172 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:172:22
+	strh	r1, [r0]
+	.loc	2 173 13                @ ../APP/Src/modbus_asc.c:173:13
+	b	.LBB4_48
+.LBB4_20:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 176 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:176:22
+	strh	r1, [r0]
+	.loc	2 177 13                @ ../APP/Src/modbus_asc.c:177:13
+	b	.LBB4_48
+.LBB4_21:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 180 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:180:22
+	strh	r1, [r0]
+	.loc	2 181 13                @ ../APP/Src/modbus_asc.c:181:13
+	b	.LBB4_48
+.LBB4_22:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 184 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:184:22
+	strh	r1, [r0]
+	.loc	2 185 13                @ ../APP/Src/modbus_asc.c:185:13
+	b	.LBB4_48
+.LBB4_23:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 188 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:188:22
+	strh	r1, [r0]
+	.loc	2 189 13                @ ../APP/Src/modbus_asc.c:189:13
+	b	.LBB4_48
+.LBB4_24:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 192 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:192:22
+	strh	r1, [r0]
+	.loc	2 193 13                @ ../APP/Src/modbus_asc.c:193:13
+	b	.LBB4_48
+.LBB4_25:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 196 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:196:22
+	strh	r1, [r0]
+	.loc	2 197 13                @ ../APP/Src/modbus_asc.c:197:13
+	b	.LBB4_48
+.LBB4_26:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 200 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:200:22
+	strh	r1, [r0]
+	.loc	2 201 13                @ ../APP/Src/modbus_asc.c:201:13
+	b	.LBB4_48
+.LBB4_27:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 204 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:204:22
+	strh	r1, [r0]
+	.loc	2 205 13                @ ../APP/Src/modbus_asc.c:205:13
+	b	.LBB4_48
+.LBB4_28:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 209 13                @ ../APP/Src/modbus_asc.c:209:13
+	b	.LBB4_48
+.LBB4_29:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 212 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:212:22
+	strh	r1, [r0]
+	.loc	2 213 13                @ ../APP/Src/modbus_asc.c:213:13
+	b	.LBB4_48
+.LBB4_30:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 217 13                @ ../APP/Src/modbus_asc.c:217:13
+	b	.LBB4_48
+.LBB4_31:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 220 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:220:22
+	strh	r1, [r0]
+	.loc	2 221 13                @ ../APP/Src/modbus_asc.c:221:13
+	b	.LBB4_48
+.LBB4_32:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 224 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:224:22
+	strh	r1, [r0]
+	.loc	2 226 13                @ ../APP/Src/modbus_asc.c:226:13
+	b	.LBB4_48
+.LBB4_33:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 229 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:229:22
+	strh	r1, [r0]
+	.loc	2 230 13                @ ../APP/Src/modbus_asc.c:230:13
+	b	.LBB4_48
+.LBB4_34:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 233 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:233:22
+	strh	r1, [r0]
+	.loc	2 234 13                @ ../APP/Src/modbus_asc.c:234:13
+	b	.LBB4_48
+.LBB4_35:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 237 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:237:22
+	strh	r1, [r0]
+	.loc	2 238 13                @ ../APP/Src/modbus_asc.c:238:13
+	b	.LBB4_48
+.LBB4_36:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 241 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:241:22
+	strh	r1, [r0]
+	.loc	2 242 13                @ ../APP/Src/modbus_asc.c:242:13
+	b	.LBB4_48
+.LBB4_37:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 245 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:245:22
+	strh	r1, [r0]
+	.loc	2 246 13                @ ../APP/Src/modbus_asc.c:246:13
+	b	.LBB4_48
+.LBB4_38:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 249 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:249:22
+	strh	r1, [r0]
+	.loc	2 250 13                @ ../APP/Src/modbus_asc.c:250:13
+	b	.LBB4_48
+.LBB4_39:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 253 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:253:22
+	strh	r1, [r0]
+	.loc	2 254 13                @ ../APP/Src/modbus_asc.c:254:13
+	b	.LBB4_48
+.LBB4_40:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 257 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:257:22
+	strh	r1, [r0]
+	.loc	2 258 13                @ ../APP/Src/modbus_asc.c:258:13
+	b	.LBB4_48
+.LBB4_41:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 261 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:261:22
+	strh	r1, [r0]
+	.loc	2 262 13                @ ../APP/Src/modbus_asc.c:262:13
+	b	.LBB4_48
+.LBB4_42:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 265 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:265:22
+	strh	r1, [r0]
+	.loc	2 266 13                @ ../APP/Src/modbus_asc.c:266:13
+	b	.LBB4_48
+.LBB4_43:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 269 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:269:22
+	strh	r1, [r0]
+	.loc	2 270 13                @ ../APP/Src/modbus_asc.c:270:13
+	b	.LBB4_48
+.LBB4_44:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 273 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:273:22
+	strh	r1, [r0]
+	.loc	2 274 13                @ ../APP/Src/modbus_asc.c:274:13
+	b	.LBB4_48
+.LBB4_45:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 277 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:277:22
+	strh	r1, [r0]
+	.loc	2 278 13                @ ../APP/Src/modbus_asc.c:278:13
+	b	.LBB4_48
+.LBB4_46:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 281 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:281:22
+	strh	r1, [r0]
+	.loc	2 282 13                @ ../APP/Src/modbus_asc.c:282:13
+	b	.LBB4_48
+.LBB4_47:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 285 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:285:22
+	strh	r1, [r0]
+	.loc	2 286 13                @ ../APP/Src/modbus_asc.c:286:13
+	b	.LBB4_48
+.Ltmp21:
+.LBB4_48:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #28
+	movs	r1, #2
+.Ltmp22:
+	.loc	2 290 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:290:18
+	strb	r1, [r0]
+	.loc	2 290 16 is_stmt 0      @ ../APP/Src/modbus_asc.c:290:16
+	b	.LBB4_49
+.LBB4_49:                               @   Parent Loop BB4_11 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	2 0 16                  @ ../APP/Src/modbus_asc.c:0:16
+	add	r0, sp, #28
+.Ltmp23:
+	.loc	2 290 23                @ ../APP/Src/modbus_asc.c:290:23
+	ldrb	r0, [r0]
+.Ltmp24:
+	.loc	2 290 11                @ ../APP/Src/modbus_asc.c:290:11
+	cmp	r0, #1
+	blt	.LBB4_52
+	b	.LBB4_50
+.LBB4_50:                               @   in Loop: Header=BB4_49 Depth=2
+	.loc	2 0 11                  @ ../APP/Src/modbus_asc.c:0:11
+	add	r0, sp, #24
+.Ltmp25:
+	.loc	2 292 46 is_stmt 1      @ ../APP/Src/modbus_asc.c:292:46
+	ldrh	r0, [r0]
+	add	r1, sp, #28
+	.loc	2 292 60 is_stmt 0      @ ../APP/Src/modbus_asc.c:292:60
+	ldrb	r1, [r1]
+	.loc	2 292 62                @ ../APP/Src/modbus_asc.c:292:62
+	lsls	r1, r1, #3
+	.loc	2 292 67                @ ../APP/Src/modbus_asc.c:292:67
+	subs	r1, #8
+	.loc	2 292 55                @ ../APP/Src/modbus_asc.c:292:55
+	lsrs	r0, r1
+	.loc	2 292 30                @ ../APP/Src/modbus_asc.c:292:30
+	ldr	r1, __arm_cp.4_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 292 15                @ ../APP/Src/modbus_asc.c:292:15
+	ldr	r1, __arm_cp.4_3
+	.loc	2 292 34                @ ../APP/Src/modbus_asc.c:292:34
+	strb	r0, [r1, r2]
+	.loc	2 293 11 is_stmt 1      @ ../APP/Src/modbus_asc.c:293:11
+	b	.LBB4_51
+.Ltmp26:
+.LBB4_51:                               @   in Loop: Header=BB4_49 Depth=2
+	.loc	2 290 31                @ ../APP/Src/modbus_asc.c:290:31
+	ldr	r0, [sp, #28]
+	subs	r0, r0, #1
+	add	r1, sp, #28
+	strb	r0, [r1]
+	.loc	2 290 11 is_stmt 0      @ ../APP/Src/modbus_asc.c:290:11
+	b	.LBB4_49
+.Ltmp27:
+.LBB4_52:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 296 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:296:5
+	b	.LBB4_53
+.Ltmp28:
+.LBB4_53:                               @   in Loop: Header=BB4_11 Depth=1
+	.loc	2 151 51                @ ../APP/Src/modbus_asc.c:151:51
+	ldr	r0, [sp, #12]
+	adds	r0, r0, #1
+	add	r1, sp, #12
+	strb	r0, [r1]
+	.loc	2 151 56 is_stmt 0      @ ../APP/Src/modbus_asc.c:151:56
+	ldr	r0, [sp, #8]
+	adds	r0, r0, #1
+	add	r1, sp, #8
+	strb	r0, [r1]
+	.loc	2 151 5                 @ ../APP/Src/modbus_asc.c:151:5
+	b	.LBB4_11
+.Ltmp29:
+.LBB4_54:
+	.loc	2 297 36 is_stmt 1      @ ../APP/Src/modbus_asc.c:297:36
+	ldr	r0, __arm_cp.4_1
+	ldrb	r1, [r0]
+	.loc	2 297 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:297:5
+	ldr	r0, __arm_cp.4_3
+	bl	MBASC_SendMsg_NoLimit
+	.loc	2 298 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:298:1
+	b	.LBB4_55
+.LBB4_55:
+	add	sp, #32
+	pop	{r4, pc}
+.Ltmp30:
+	.p2align	2
+@ %bb.56:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.4_0:
+	.long	UARTx_RXBuff
+.Lcpi_end2:
+	.size	__arm_cp.4_0, .Lcpi_end2-__arm_cp.4_0
+__arm_cp.4_1:
+	.long	SendLen
+.Lcpi_end3:
+	.size	__arm_cp.4_1, .Lcpi_end3-__arm_cp.4_1
+__arm_cp.4_2:
+	.long	UserPara
+.Lcpi_end4:
+	.size	__arm_cp.4_2, .Lcpi_end4-__arm_cp.4_2
+__arm_cp.4_3:
+	.long	SendBuf
+.Lcpi_end5:
+	.size	__arm_cp.4_3, .Lcpi_end5-__arm_cp.4_3
+.Lfunc_end4:
+	.size	MBASC_Fun03, .Lfunc_end4-MBASC_Fun03
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun04,"ax",%progbits
+	.hidden	MBASC_Fun04             @ -- Begin function MBASC_Fun04
+	.globl	MBASC_Fun04
+	.p2align	2
+	.type	MBASC_Fun04,%function
+	.code	16                      @ @MBASC_Fun04
+	.thumb_func
+MBASC_Fun04:
+.Lfunc_begin5:
+	.loc	2 314 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:314:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 40
+.Ltmp31:
+	.loc	2 321 16 prologue_end   @ ../APP/Src/modbus_asc.c:321:16
+	ldr	r0, __arm_cp.5_0
+	ldrb	r1, [r0, #2]
+	add	r2, sp, #16
+	.loc	2 321 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:321:14
+	strb	r1, [r2]
+	.loc	2 322 16 is_stmt 1      @ ../APP/Src/modbus_asc.c:322:16
+	ldrb	r1, [r0, #3]
+	add	r2, sp, #12
+	.loc	2 322 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:322:14
+	strb	r1, [r2]
+	.loc	2 324 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:324:21
+	ldrb	r1, [r0, #4]
+	.loc	2 324 47 is_stmt 0      @ ../APP/Src/modbus_asc.c:324:47
+	lsls	r1, r1, #8
+	.loc	2 324 54                @ ../APP/Src/modbus_asc.c:324:54
+	ldrb	r2, [r0, #5]
+	.loc	2 324 52                @ ../APP/Src/modbus_asc.c:324:52
+	adds	r1, r1, r2
+	add	r2, sp, #20
+	.loc	2 324 18                @ ../APP/Src/modbus_asc.c:324:18
+	strh	r1, [r2]
+	.loc	2 326 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:326:13
+	ldr	r1, __arm_cp.5_1
+	movs	r2, #0
+	strb	r2, [r1]
+	.loc	2 327 26                @ ../APP/Src/modbus_asc.c:327:26
+	ldrb	r0, [r0]
+	cmp	r0, #0
+	beq	.LBB5_2
+	b	.LBB5_1
+.LBB5_1:
+	.loc	2 327 53 is_stmt 0      @ ../APP/Src/modbus_asc.c:327:53
+	ldr	r0, __arm_cp.5_2
+	ldrb	r0, [r0]
+	.loc	2 327 26                @ ../APP/Src/modbus_asc.c:327:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB5_3
+.LBB5_2:
+	.loc	2 0 26                  @ ../APP/Src/modbus_asc.c:0:26
+	movs	r0, #0
+	.loc	2 327 26                @ ../APP/Src/modbus_asc.c:327:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB5_3
+.LBB5_3:
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	.loc	2 327 20                @ ../APP/Src/modbus_asc.c:327:20
+	ldr	r1, __arm_cp.5_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 327 5                 @ ../APP/Src/modbus_asc.c:327:5
+	ldr	r3, __arm_cp.5_3
+	.loc	2 327 24                @ ../APP/Src/modbus_asc.c:327:24
+	strb	r0, [r3, r2]
+	.loc	2 328 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:328:20
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r2, #4
+	.loc	2 328 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:328:24
+	strb	r2, [r3, r0]
+	.loc	2 329 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:329:26
+	ldr	r0, [sp, #20]
+	.loc	2 329 39 is_stmt 0      @ ../APP/Src/modbus_asc.c:329:39
+	lsls	r0, r0, #1
+	.loc	2 329 20                @ ../APP/Src/modbus_asc.c:329:20
+	ldrb	r2, [r1]
+	adds	r4, r2, #1
+	strb	r4, [r1]
+	.loc	2 329 24                @ ../APP/Src/modbus_asc.c:329:24
+	strb	r0, [r3, r2]
+	add	r0, sp, #12
+.Ltmp32:
+	.loc	2 331 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:331:20
+	ldrb	r0, [r0]
+	.loc	2 331 60 is_stmt 0      @ ../APP/Src/modbus_asc.c:331:60
+	cmp	r0, #14
+	bgt	.LBB5_9
+	b	.LBB5_4
+.LBB5_4:
+	.loc	2 0 60                  @ ../APP/Src/modbus_asc.c:0:60
+	add	r0, sp, #12
+	.loc	2 331 65                @ ../APP/Src/modbus_asc.c:331:65
+	ldrb	r0, [r0]
+	add	r1, sp, #20
+	.loc	2 331 76                @ ../APP/Src/modbus_asc.c:331:76
+	ldrh	r1, [r1]
+	.loc	2 331 74                @ ../APP/Src/modbus_asc.c:331:74
+	adds	r0, r0, r1
+	.loc	2 331 130               @ ../APP/Src/modbus_asc.c:331:130
+	cmp	r0, #16
+	bgt	.LBB5_9
+	b	.LBB5_5
+.LBB5_5:
+	.loc	2 0 130                 @ ../APP/Src/modbus_asc.c:0:130
+	add	r0, sp, #20
+	.loc	2 331 140               @ ../APP/Src/modbus_asc.c:331:140
+	ldrh	r0, [r0]
+	.loc	2 331 154               @ ../APP/Src/modbus_asc.c:331:154
+	cmp	r0, #0
+	beq	.LBB5_9
+	b	.LBB5_6
+.LBB5_6:
+	.loc	2 0 154                 @ ../APP/Src/modbus_asc.c:0:154
+	add	r0, sp, #20
+	.loc	2 331 164               @ ../APP/Src/modbus_asc.c:331:164
+	ldrh	r0, [r0]
+	.loc	2 331 186               @ ../APP/Src/modbus_asc.c:331:186
+	lsls	r0, r0, #31
+	cmp	r0, #0
+	bne	.LBB5_9
+	b	.LBB5_7
+.LBB5_7:
+	.loc	2 0 186                 @ ../APP/Src/modbus_asc.c:0:186
+	add	r0, sp, #12
+	.loc	2 331 196               @ ../APP/Src/modbus_asc.c:331:196
+	ldrb	r0, [r0]
+	.loc	2 331 219               @ ../APP/Src/modbus_asc.c:331:219
+	lsls	r0, r0, #31
+	cmp	r0, #0
+	bne	.LBB5_9
+	b	.LBB5_8
+.LBB5_8:
+	.loc	2 0 219                 @ ../APP/Src/modbus_asc.c:0:219
+	add	r0, sp, #16
+	.loc	2 331 225               @ ../APP/Src/modbus_asc.c:331:225
+	ldrb	r0, [r0]
+	.loc	2 331 246               @ ../APP/Src/modbus_asc.c:331:246
+	ldr	r1, __arm_cp.5_2
+	ldrb	r1, [r1]
+.Ltmp33:
+	.loc	2 331 10                @ ../APP/Src/modbus_asc.c:331:10
+	cmp	r0, r1
+	beq	.LBB5_10
+	b	.LBB5_9
+.LBB5_9:
+	.loc	2 0 10                  @ ../APP/Src/modbus_asc.c:0:10
+	movs	r0, #2
+.Ltmp34:
+	.loc	2 334 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:334:9
+	bl	MBASC_SendErr
+	.loc	2 335 9                 @ ../APP/Src/modbus_asc.c:335:9
+	b	.LBB5_31
+.Ltmp35:
+.LBB5_10:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #8
+	movs	r1, #0
+.Ltmp36:
+	.loc	2 338 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:338:17
+	strb	r1, [r0]
+	.loc	2 338 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:338:9
+	b	.LBB5_11
+.LBB5_11:                               @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB5_25 Depth 2
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #8
+.Ltmp37:
+	.loc	2 338 24                @ ../APP/Src/modbus_asc.c:338:24
+	ldrb	r0, [r0]
+	add	r1, sp, #20
+	.loc	2 338 28                @ ../APP/Src/modbus_asc.c:338:28
+	ldrh	r1, [r1]
+.Ltmp38:
+	.loc	2 338 5                 @ ../APP/Src/modbus_asc.c:338:5
+	cmp	r0, r1
+	bge	.LBB5_30
+	b	.LBB5_12
+.LBB5_12:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #12
+.Ltmp39:
+	.loc	2 340 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:340:17
+	ldrb	r0, [r0]
+	.loc	2 340 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:340:9
+	cmp	r0, #14
+	str	r0, [sp]                @ 4-byte Spill
+	bhi	.LBB5_23
+@ %bb.13:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	ldr	r0, [sp]                @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI5_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.14:
+	.p2align	2
+.LJTI5_0:
+	b.w	.LBB5_15
+	b.w	.LBB5_23
+	b.w	.LBB5_16
+	b.w	.LBB5_23
+	b.w	.LBB5_17
+	b.w	.LBB5_23
+	b.w	.LBB5_18
+	b.w	.LBB5_23
+	b.w	.LBB5_19
+	b.w	.LBB5_23
+	b.w	.LBB5_20
+	b.w	.LBB5_23
+	b.w	.LBB5_21
+	b.w	.LBB5_23
+	b.w	.LBB5_22
+.LBB5_15:                               @   in Loop: Header=BB5_11 Depth=1
+.Ltmp40:
+	.loc	2 344 35 is_stmt 1      @ ../APP/Src/modbus_asc.c:344:35
+	ldr	r0, __arm_cp.5_2
+	ldrb	r0, [r0, #4]
+	.loc	2 344 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:344:24
+	str	r0, [sp, #24]
+	.loc	2 346 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:346:15
+	b	.LBB5_24
+.LBB5_16:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 348 35                @ ../APP/Src/modbus_asc.c:348:35
+	ldr	r0, __arm_cp.5_2
+	ldrb	r0, [r0, #5]
+	.loc	2 348 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:348:24
+	str	r0, [sp, #24]
+	.loc	2 349 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:349:13
+	b	.LBB5_24
+.LBB5_17:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 352 35                @ ../APP/Src/modbus_asc.c:352:35
+	ldr	r0, __arm_cp.5_2
+	ldr	r0, [r0, #8]
+	.loc	2 352 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:352:24
+	str	r0, [sp, #24]
+	.loc	2 353 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:353:13
+	b	.LBB5_24
+.LBB5_18:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 356 35                @ ../APP/Src/modbus_asc.c:356:35
+	ldr	r0, __arm_cp.5_2
+	ldr	r0, [r0, #20]
+	.loc	2 356 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:356:24
+	str	r0, [sp, #24]
+	.loc	2 357 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:357:13
+	b	.LBB5_24
+.LBB5_19:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 360 35                @ ../APP/Src/modbus_asc.c:360:35
+	ldr	r0, __arm_cp.5_2
+	ldr	r0, [r0, #24]
+	.loc	2 360 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:360:24
+	str	r0, [sp, #24]
+	.loc	2 361 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:361:13
+	b	.LBB5_24
+.LBB5_20:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 365 35                @ ../APP/Src/modbus_asc.c:365:35
+	ldr	r0, __arm_cp.5_2
+	ldr	r0, [r0, #28]
+	.loc	2 365 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:365:24
+	str	r0, [sp, #24]
+	.loc	2 367 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:367:13
+	b	.LBB5_24
+.LBB5_21:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	movs	r0, #0
+	.loc	2 370 24 is_stmt 1      @ ../APP/Src/modbus_asc.c:370:24
+	str	r0, [sp, #24]
+	.loc	2 371 13                @ ../APP/Src/modbus_asc.c:371:13
+	b	.LBB5_24
+.LBB5_22:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	movs	r0, #0
+	.loc	2 374 24 is_stmt 1      @ ../APP/Src/modbus_asc.c:374:24
+	str	r0, [sp, #24]
+	.loc	2 375 13                @ ../APP/Src/modbus_asc.c:375:13
+	b	.LBB5_24
+.LBB5_23:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	movs	r0, #0
+	.loc	2 378 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:378:22
+	str	r0, [sp, #24]
+	.loc	2 379 13                @ ../APP/Src/modbus_asc.c:379:13
+	b	.LBB5_24
+.Ltmp41:
+.LBB5_24:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #28
+	movs	r1, #4
+.Ltmp42:
+	.loc	2 381 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:381:15
+	strb	r1, [r0]
+	.loc	2 381 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:381:13
+	b	.LBB5_25
+.LBB5_25:                               @   Parent Loop BB5_11 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	2 0 13                  @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #28
+.Ltmp43:
+	.loc	2 381 20                @ ../APP/Src/modbus_asc.c:381:20
+	ldrb	r0, [r0]
+.Ltmp44:
+	.loc	2 381 9                 @ ../APP/Src/modbus_asc.c:381:9
+	cmp	r0, #1
+	blt	.LBB5_28
+	b	.LBB5_26
+.LBB5_26:                               @   in Loop: Header=BB5_25 Depth=2
+.Ltmp45:
+	.loc	2 383 44 is_stmt 1      @ ../APP/Src/modbus_asc.c:383:44
+	ldr	r0, [sp, #24]
+	add	r1, sp, #28
+	.loc	2 383 58 is_stmt 0      @ ../APP/Src/modbus_asc.c:383:58
+	ldrb	r1, [r1]
+	.loc	2 383 60                @ ../APP/Src/modbus_asc.c:383:60
+	lsls	r1, r1, #3
+	.loc	2 383 65                @ ../APP/Src/modbus_asc.c:383:65
+	subs	r1, #8
+	.loc	2 383 53                @ ../APP/Src/modbus_asc.c:383:53
+	lsrs	r0, r1
+	.loc	2 383 28                @ ../APP/Src/modbus_asc.c:383:28
+	ldr	r1, __arm_cp.5_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 383 13                @ ../APP/Src/modbus_asc.c:383:13
+	ldr	r1, __arm_cp.5_3
+	.loc	2 383 32                @ ../APP/Src/modbus_asc.c:383:32
+	strb	r0, [r1, r2]
+	.loc	2 384 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:384:9
+	b	.LBB5_27
+.Ltmp46:
+.LBB5_27:                               @   in Loop: Header=BB5_25 Depth=2
+	.loc	2 381 28                @ ../APP/Src/modbus_asc.c:381:28
+	ldr	r0, [sp, #28]
+	subs	r0, r0, #1
+	add	r1, sp, #28
+	strb	r0, [r1]
+	.loc	2 381 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:381:9
+	b	.LBB5_25
+.Ltmp47:
+.LBB5_28:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 385 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:385:5
+	b	.LBB5_29
+.Ltmp48:
+.LBB5_29:                               @   in Loop: Header=BB5_11 Depth=1
+	.loc	2 338 51                @ ../APP/Src/modbus_asc.c:338:51
+	ldr	r0, [sp, #12]
+	adds	r0, r0, #2
+	add	r1, sp, #12
+	strb	r0, [r1]
+	.loc	2 338 59 is_stmt 0      @ ../APP/Src/modbus_asc.c:338:59
+	ldr	r0, [sp, #8]
+	adds	r0, r0, #2
+	add	r1, sp, #8
+	strb	r0, [r1]
+	.loc	2 338 5                 @ ../APP/Src/modbus_asc.c:338:5
+	b	.LBB5_11
+.Ltmp49:
+.LBB5_30:
+	.loc	2 386 28 is_stmt 1      @ ../APP/Src/modbus_asc.c:386:28
+	ldr	r0, __arm_cp.5_1
+	ldrb	r1, [r0]
+	.loc	2 386 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:386:5
+	ldr	r0, __arm_cp.5_3
+	bl	MBASC_SendMsg
+	.loc	2 387 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:387:1
+	b	.LBB5_31
+.LBB5_31:
+	add	sp, #32
+	pop	{r4, pc}
+.Ltmp50:
+	.p2align	2
+@ %bb.32:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.5_0:
+	.long	UARTx_RXBuff
+.Lcpi_end6:
+	.size	__arm_cp.5_0, .Lcpi_end6-__arm_cp.5_0
+__arm_cp.5_1:
+	.long	SendLen
+.Lcpi_end7:
+	.size	__arm_cp.5_1, .Lcpi_end7-__arm_cp.5_1
+__arm_cp.5_2:
+	.long	UserPara
+.Lcpi_end8:
+	.size	__arm_cp.5_2, .Lcpi_end8-__arm_cp.5_2
+__arm_cp.5_3:
+	.long	SendBuf
+.Lcpi_end9:
+	.size	__arm_cp.5_3, .Lcpi_end9-__arm_cp.5_3
+.Lfunc_end5:
+	.size	MBASC_Fun04, .Lfunc_end5-MBASC_Fun04
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun05,"ax",%progbits
+	.hidden	MBASC_Fun05             @ -- Begin function MBASC_Fun05
+	.globl	MBASC_Fun05
+	.p2align	2
+	.type	MBASC_Fun05,%function
+	.code	16                      @ @MBASC_Fun05
+	.thumb_func
+MBASC_Fun05:
+.Lfunc_begin6:
+	.loc	2 402 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:402:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 40
+	add	r0, sp, #20
+	movs	r1, #0
+.Ltmp51:
+	.loc	2 411 15 prologue_end   @ ../APP/Src/modbus_asc.c:411:15
+	strb	r1, [r0]
+	.loc	2 413 16                @ ../APP/Src/modbus_asc.c:413:16
+	ldr	r0, __arm_cp.6_0
+	ldrb	r2, [r0, #2]
+	add	r3, sp, #28
+	.loc	2 413 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:413:14
+	strb	r2, [r3]
+	.loc	2 414 16 is_stmt 1      @ ../APP/Src/modbus_asc.c:414:16
+	ldrb	r2, [r0, #3]
+	add	r3, sp, #24
+	.loc	2 414 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:414:14
+	strb	r2, [r3]
+	.loc	2 418 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:418:13
+	ldr	r2, __arm_cp.6_1
+	strb	r1, [r2]
+	.loc	2 419 26                @ ../APP/Src/modbus_asc.c:419:26
+	ldrb	r0, [r0]
+	cmp	r0, #0
+	beq	.LBB6_2
+	b	.LBB6_1
+.LBB6_1:
+	.loc	2 419 53 is_stmt 0      @ ../APP/Src/modbus_asc.c:419:53
+	ldr	r0, __arm_cp.6_2
+	ldrb	r0, [r0]
+	.loc	2 419 26                @ ../APP/Src/modbus_asc.c:419:26
+	str	r0, [sp, #16]           @ 4-byte Spill
+	b	.LBB6_3
+.LBB6_2:
+	.loc	2 0 26                  @ ../APP/Src/modbus_asc.c:0:26
+	movs	r0, #0
+	.loc	2 419 26                @ ../APP/Src/modbus_asc.c:419:26
+	str	r0, [sp, #16]           @ 4-byte Spill
+	b	.LBB6_3
+.LBB6_3:
+	ldr	r0, [sp, #16]           @ 4-byte Reload
+	.loc	2 419 20                @ ../APP/Src/modbus_asc.c:419:20
+	ldr	r1, __arm_cp.6_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 419 5                 @ ../APP/Src/modbus_asc.c:419:5
+	ldr	r3, __arm_cp.6_3
+	.loc	2 419 24                @ ../APP/Src/modbus_asc.c:419:24
+	strb	r0, [r3, r2]
+	.loc	2 420 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:420:20
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r1, #5
+	.loc	2 420 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:420:24
+	strb	r1, [r3, r0]
+	add	r0, sp, #24
+.Ltmp52:
+	.loc	2 423 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:423:15
+	ldrb	r0, [r0]
+	.loc	2 423 57 is_stmt 0      @ ../APP/Src/modbus_asc.c:423:57
+	cmp	r0, #80
+	blt	.LBB6_6
+	b	.LBB6_4
+.LBB6_4:
+	.loc	2 0 57                  @ ../APP/Src/modbus_asc.c:0:57
+	add	r0, sp, #24
+	.loc	2 423 61                @ ../APP/Src/modbus_asc.c:423:61
+	ldrb	r0, [r0]
+	.loc	2 423 104               @ ../APP/Src/modbus_asc.c:423:104
+	cmp	r0, #84
+	bgt	.LBB6_6
+	b	.LBB6_5
+.LBB6_5:
+	.loc	2 0 104                 @ ../APP/Src/modbus_asc.c:0:104
+	add	r0, sp, #28
+	.loc	2 423 108               @ ../APP/Src/modbus_asc.c:423:108
+	ldrb	r0, [r0]
+	.loc	2 423 129               @ ../APP/Src/modbus_asc.c:423:129
+	ldr	r1, __arm_cp.6_2
+	ldrb	r1, [r1]
+.Ltmp53:
+	.loc	2 423 9                 @ ../APP/Src/modbus_asc.c:423:9
+	cmp	r0, r1
+	beq	.LBB6_7
+	b	.LBB6_6
+.LBB6_6:
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	movs	r0, #2
+.Ltmp54:
+	.loc	2 425 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:425:9
+	bl	MBASC_SendErr
+	.loc	2 426 9                 @ ../APP/Src/modbus_asc.c:426:9
+	b	.LBB6_33
+.Ltmp55:
+.LBB6_7:
+	.loc	2 429 12                @ ../APP/Src/modbus_asc.c:429:12
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #4]
+	.loc	2 429 37 is_stmt 0      @ ../APP/Src/modbus_asc.c:429:37
+	cmp	r0, #255
+	bne	.LBB6_9
+	b	.LBB6_8
+.LBB6_8:
+	.loc	2 429 41                @ ../APP/Src/modbus_asc.c:429:41
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #5]
+	.loc	2 430 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:430:15
+	cmp	r0, #0
+	beq	.LBB6_12
+	b	.LBB6_9
+.LBB6_9:
+	.loc	2 430 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:430:20
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #4]
+	.loc	2 430 45                @ ../APP/Src/modbus_asc.c:430:45
+	cmp	r0, #0
+	bne	.LBB6_11
+	b	.LBB6_10
+.LBB6_10:
+	.loc	2 430 49                @ ../APP/Src/modbus_asc.c:430:49
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #5]
+.Ltmp56:
+	.loc	2 429 8 is_stmt 1       @ ../APP/Src/modbus_asc.c:429:8
+	cmp	r0, #0
+	beq	.LBB6_12
+	b	.LBB6_11
+.LBB6_11:
+	.loc	2 0 8 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:8
+	movs	r0, #3
+.Ltmp57:
+	.loc	2 432 7 is_stmt 1       @ ../APP/Src/modbus_asc.c:432:7
+	bl	MBASC_SendErr
+	.loc	2 433 7                 @ ../APP/Src/modbus_asc.c:433:7
+	b	.LBB6_33
+.Ltmp58:
+.LBB6_12:
+	.loc	2 0 7 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:7
+	add	r0, sp, #24
+	.loc	2 436 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:436:17
+	ldrb	r0, [r0]
+	.loc	2 436 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:436:9
+	subs	r0, #80
+	cmp	r0, #3
+	str	r0, [sp, #12]           @ 4-byte Spill
+	bhi	.LBB6_29
+@ %bb.13:
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	ldr	r0, [sp, #12]           @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI6_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.14:
+	.p2align	2
+.LJTI6_0:
+	b.w	.LBB6_15
+	b.w	.LBB6_23
+	b.w	.LBB6_27
+	b.w	.LBB6_28
+.LBB6_15:
+.Ltmp59:
+	.loc	2 439 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:439:18
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #4]
+	.loc	2 439 43 is_stmt 0      @ ../APP/Src/modbus_asc.c:439:43
+	cmp	r0, #0
+	bne	.LBB6_18
+	b	.LBB6_16
+.LBB6_16:
+	.loc	2 439 47                @ ../APP/Src/modbus_asc.c:439:47
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #5]
+.Ltmp60:
+	.loc	2 439 17                @ ../APP/Src/modbus_asc.c:439:17
+	cmp	r0, #0
+	bne	.LBB6_18
+	b	.LBB6_17
+.LBB6_17:
+.Ltmp61:
+	.loc	2 444 14 is_stmt 1      @ ../APP/Src/modbus_asc.c:444:14
+	b	.LBB6_22
+.Ltmp62:
+.LBB6_18:
+	.loc	2 445 23                @ ../APP/Src/modbus_asc.c:445:23
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #4]
+	.loc	2 445 48 is_stmt 0      @ ../APP/Src/modbus_asc.c:445:48
+	cmp	r0, #255
+	bne	.LBB6_21
+	b	.LBB6_19
+.LBB6_19:
+	.loc	2 445 52                @ ../APP/Src/modbus_asc.c:445:52
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #5]
+.Ltmp63:
+	.loc	2 445 22                @ ../APP/Src/modbus_asc.c:445:22
+	cmp	r0, #0
+	bne	.LBB6_21
+	b	.LBB6_20
+.LBB6_20:
+.Ltmp64:
+	.loc	2 450 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:450:15
+	b	.LBB6_21
+.Ltmp65:
+.LBB6_21:
+	.loc	2 0 15 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:15
+	b	.LBB6_22
+.LBB6_22:
+	.loc	2 451 16 is_stmt 1      @ ../APP/Src/modbus_asc.c:451:16
+	b	.LBB6_30
+.LBB6_23:
+.Ltmp66:
+	.loc	2 454 21                @ ../APP/Src/modbus_asc.c:454:21
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #4]
+	.loc	2 454 46 is_stmt 0      @ ../APP/Src/modbus_asc.c:454:46
+	cmp	r0, #0
+	bne	.LBB6_26
+	b	.LBB6_24
+.LBB6_24:
+	.loc	2 454 50                @ ../APP/Src/modbus_asc.c:454:50
+	ldr	r0, __arm_cp.6_0
+	ldrb	r0, [r0, #5]
+.Ltmp67:
+	.loc	2 454 20                @ ../APP/Src/modbus_asc.c:454:20
+	cmp	r0, #0
+	bne	.LBB6_26
+	b	.LBB6_25
+.LBB6_25:
+.Ltmp68:
+	.loc	2 456 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:456:21
+	ldr	r1, __arm_cp.6_4
+	movs	r0, #0
+	movs	r2, #1
+	str	r0, [sp, #8]            @ 4-byte Spill
+	str	r2, [sp, #4]            @ 4-byte Spill
+	bl	Flash_Write_MultiBytes
+	.loc	2 457 21                @ ../APP/Src/modbus_asc.c:457:21
+	str	r0, [sp]                @ 4-byte Spill
+	bl	ReadPara
+	.loc	2 458 21                @ ../APP/Src/modbus_asc.c:458:21
+	ldr	r1, __arm_cp.6_5
+	ldr	r0, [sp, #8]            @ 4-byte Reload
+	ldr	r2, [sp, #4]            @ 4-byte Reload
+	bl	Flash_Write_MultiBytes
+	.loc	2 459 19                @ ../APP/Src/modbus_asc.c:459:19
+	b	.LBB6_26
+.Ltmp69:
+.LBB6_26:
+	.loc	2 460 16                @ ../APP/Src/modbus_asc.c:460:16
+	b	.LBB6_30
+.LBB6_27:
+	.loc	2 464 17                @ ../APP/Src/modbus_asc.c:464:17
+	b	.LBB6_30
+.LBB6_28:
+	.loc	2 467 17                @ ../APP/Src/modbus_asc.c:467:17
+	b	.LBB6_30
+.LBB6_29:
+	.loc	2 470 17                @ ../APP/Src/modbus_asc.c:470:17
+	b	.LBB6_30
+.Ltmp70:
+.LBB6_30:
+	.loc	2 0 17 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:17
+	add	r0, sp, #20
+.Ltmp71:
+	.loc	2 474 8 is_stmt 1       @ ../APP/Src/modbus_asc.c:474:8
+	ldrb	r0, [r0]
+.Ltmp72:
+	.loc	2 474 8 is_stmt 0       @ ../APP/Src/modbus_asc.c:474:8
+	cmp	r0, #1
+	bne	.LBB6_32
+	b	.LBB6_31
+.LBB6_31:
+	.loc	2 0 8                   @ ../APP/Src/modbus_asc.c:0:8
+	add	r0, sp, #20
+	movs	r1, #0
+.Ltmp73:
+	.loc	2 476 24 is_stmt 1      @ ../APP/Src/modbus_asc.c:476:24
+	strb	r1, [r0]
+	.loc	2 483 5                 @ ../APP/Src/modbus_asc.c:483:5
+	b	.LBB6_32
+.Ltmp74:
+.LBB6_32:
+	.loc	2 484 5                 @ ../APP/Src/modbus_asc.c:484:5
+	ldr	r0, __arm_cp.6_0
+	movs	r1, #6
+	bl	MBASC_SendMsg
+	.loc	2 485 1                 @ ../APP/Src/modbus_asc.c:485:1
+	b	.LBB6_33
+.LBB6_33:
+	add	sp, #32
+	pop	{r7, pc}
+.Ltmp75:
+	.p2align	2
+@ %bb.34:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.6_0:
+	.long	UARTx_RXBuff
+.Lcpi_end10:
+	.size	__arm_cp.6_0, .Lcpi_end10-__arm_cp.6_0
+__arm_cp.6_1:
+	.long	SendLen
+.Lcpi_end11:
+	.size	__arm_cp.6_1, .Lcpi_end11-__arm_cp.6_1
+__arm_cp.6_2:
+	.long	UserPara
+.Lcpi_end12:
+	.size	__arm_cp.6_2, .Lcpi_end12-__arm_cp.6_2
+__arm_cp.6_3:
+	.long	SendBuf
+.Lcpi_end13:
+	.size	__arm_cp.6_3, .Lcpi_end13-__arm_cp.6_3
+__arm_cp.6_4:
+	.long	.L.str
+.Lcpi_end14:
+	.size	__arm_cp.6_4, .Lcpi_end14-__arm_cp.6_4
+__arm_cp.6_5:
+	.long	.L.str.1
+.Lcpi_end15:
+	.size	__arm_cp.6_5, .Lcpi_end15-__arm_cp.6_5
+.Lfunc_end6:
+	.size	MBASC_Fun05, .Lfunc_end6-MBASC_Fun05
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun10,"ax",%progbits
+	.hidden	MBASC_Fun10             @ -- Begin function MBASC_Fun10
+	.globl	MBASC_Fun10
+	.p2align	2
+	.type	MBASC_Fun10,%function
+	.code	16                      @ @MBASC_Fun10
+	.thumb_func
+MBASC_Fun10:
+.Lfunc_begin7:
+	.loc	2 499 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:499:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#56
+	sub	sp, #56
+	.cfi_def_cfa_offset 64
+	movs	r0, #0
+.Ltmp76:
+	.loc	2 500 14 prologue_end   @ ../APP/Src/modbus_asc.c:500:14
+	str	r0, [sp, #52]
+	add	r1, sp, #48
+	.loc	2 502 14                @ ../APP/Src/modbus_asc.c:502:14
+	strh	r0, [r1]
+	add	r2, sp, #28
+	.loc	2 508 15                @ ../APP/Src/modbus_asc.c:508:15
+	strb	r0, [r2]
+	.loc	2 510 16                @ ../APP/Src/modbus_asc.c:510:16
+	ldr	r2, __arm_cp.7_0
+	ldrb	r3, [r2, #2]
+	add	r4, sp, #40
+	.loc	2 510 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:510:14
+	strb	r3, [r4]
+	.loc	2 511 16 is_stmt 1      @ ../APP/Src/modbus_asc.c:511:16
+	ldrb	r3, [r2, #3]
+	add	r4, sp, #36
+	.loc	2 511 14 is_stmt 0      @ ../APP/Src/modbus_asc.c:511:14
+	strb	r3, [r4]
+	.loc	2 513 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:513:21
+	ldrb	r3, [r2, #4]
+	.loc	2 513 47 is_stmt 0      @ ../APP/Src/modbus_asc.c:513:47
+	lsls	r3, r3, #8
+	.loc	2 513 55                @ ../APP/Src/modbus_asc.c:513:55
+	ldrb	r4, [r2, #5]
+	.loc	2 513 53                @ ../APP/Src/modbus_asc.c:513:53
+	adds	r3, r3, r4
+	.loc	2 513 18                @ ../APP/Src/modbus_asc.c:513:18
+	strh	r3, [r1]
+	.loc	2 515 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:515:13
+	ldr	r1, __arm_cp.7_1
+	strb	r0, [r1]
+	.loc	2 516 26                @ ../APP/Src/modbus_asc.c:516:26
+	ldrb	r0, [r2]
+	cmp	r0, #0
+	beq	.LBB7_2
+	b	.LBB7_1
+.LBB7_1:
+	.loc	2 516 53 is_stmt 0      @ ../APP/Src/modbus_asc.c:516:53
+	ldr	r0, __arm_cp.7_2
+	ldrb	r0, [r0]
+	.loc	2 516 26                @ ../APP/Src/modbus_asc.c:516:26
+	str	r0, [sp, #20]           @ 4-byte Spill
+	b	.LBB7_3
+.LBB7_2:
+	.loc	2 0 26                  @ ../APP/Src/modbus_asc.c:0:26
+	movs	r0, #0
+	.loc	2 516 26                @ ../APP/Src/modbus_asc.c:516:26
+	str	r0, [sp, #20]           @ 4-byte Spill
+	b	.LBB7_3
+.LBB7_3:
+	ldr	r0, [sp, #20]           @ 4-byte Reload
+	.loc	2 516 20                @ ../APP/Src/modbus_asc.c:516:20
+	ldr	r1, __arm_cp.7_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 516 5                 @ ../APP/Src/modbus_asc.c:516:5
+	ldr	r3, __arm_cp.7_3
+	.loc	2 516 24                @ ../APP/Src/modbus_asc.c:516:24
+	strb	r0, [r3, r2]
+	.loc	2 517 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:517:20
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r2, #16
+	.loc	2 517 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:517:24
+	strb	r2, [r3, r0]
+	.loc	2 518 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:518:26
+	ldr	r0, [sp, #48]
+	.loc	2 518 39 is_stmt 0      @ ../APP/Src/modbus_asc.c:518:39
+	lsls	r0, r0, #1
+	.loc	2 518 20                @ ../APP/Src/modbus_asc.c:518:20
+	ldrb	r2, [r1]
+	adds	r4, r2, #1
+	strb	r4, [r1]
+	.loc	2 518 24                @ ../APP/Src/modbus_asc.c:518:24
+	strb	r0, [r3, r2]
+	add	r0, sp, #36
+.Ltmp77:
+	.loc	2 520 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:520:15
+	ldrb	r0, [r0]
+	.loc	2 520 55 is_stmt 0      @ ../APP/Src/modbus_asc.c:520:55
+	cmp	r0, #48
+	blt	.LBB7_9
+	b	.LBB7_4
+.LBB7_4:
+	.loc	2 0 55                  @ ../APP/Src/modbus_asc.c:0:55
+	add	r0, sp, #36
+	.loc	2 520 59                @ ../APP/Src/modbus_asc.c:520:59
+	ldrb	r0, [r0]
+	.loc	2 521 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:521:13
+	cmp	r0, #79
+	bgt	.LBB7_9
+	b	.LBB7_5
+.LBB7_5:
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #36
+	.loc	2 521 17                @ ../APP/Src/modbus_asc.c:521:17
+	ldrb	r0, [r0]
+	add	r1, sp, #48
+	.loc	2 521 28                @ ../APP/Src/modbus_asc.c:521:28
+	ldrh	r1, [r1]
+	.loc	2 521 26                @ ../APP/Src/modbus_asc.c:521:26
+	adds	r0, r0, r1
+	.loc	2 522 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:522:13
+	cmp	r0, #80
+	bgt	.LBB7_9
+	b	.LBB7_6
+.LBB7_6:
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #48
+	.loc	2 522 23                @ ../APP/Src/modbus_asc.c:522:23
+	ldrh	r0, [r0]
+	.loc	2 522 38                @ ../APP/Src/modbus_asc.c:522:38
+	cmp	r0, #0
+	beq	.LBB7_9
+	b	.LBB7_7
+.LBB7_7:
+	.loc	2 0 38                  @ ../APP/Src/modbus_asc.c:0:38
+	add	r0, sp, #48
+	.loc	2 522 43                @ ../APP/Src/modbus_asc.c:522:43
+	ldrh	r0, [r0]
+	.loc	2 522 56                @ ../APP/Src/modbus_asc.c:522:56
+	lsls	r0, r0, #1
+	.loc	2 522 64                @ ../APP/Src/modbus_asc.c:522:64
+	ldr	r1, __arm_cp.7_0
+	ldrb	r1, [r1, #6]
+	.loc	2 523 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:523:13
+	cmp	r1, r0
+	bne	.LBB7_9
+	b	.LBB7_8
+.LBB7_8:
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #40
+	.loc	2 523 17                @ ../APP/Src/modbus_asc.c:523:17
+	ldrb	r0, [r0]
+	.loc	2 523 38                @ ../APP/Src/modbus_asc.c:523:38
+	ldr	r1, __arm_cp.7_2
+	ldrb	r1, [r1]
+.Ltmp78:
+	.loc	2 520 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:520:9
+	cmp	r0, r1
+	beq	.LBB7_10
+	b	.LBB7_9
+.LBB7_9:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	movs	r0, #2
+.Ltmp79:
+	.loc	2 525 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:525:9
+	bl	MBASC_SendErr
+	.loc	2 526 9                 @ ../APP/Src/modbus_asc.c:526:9
+	b	.LBB7_44
+.Ltmp80:
+.LBB7_10:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #24
+	movs	r1, #0
+.Ltmp81:
+	.loc	2 529 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:529:18
+	strb	r1, [r0]
+	.loc	2 529 10 is_stmt 0      @ ../APP/Src/modbus_asc.c:529:10
+	b	.LBB7_11
+.LBB7_11:                               @ =>This Inner Loop Header: Depth=1
+	.loc	2 0 10                  @ ../APP/Src/modbus_asc.c:0:10
+	add	r0, sp, #24
+.Ltmp82:
+	.loc	2 529 25                @ ../APP/Src/modbus_asc.c:529:25
+	ldrb	r0, [r0]
+	add	r1, sp, #48
+	.loc	2 529 29                @ ../APP/Src/modbus_asc.c:529:29
+	ldrh	r1, [r1]
+.Ltmp83:
+	.loc	2 529 5                 @ ../APP/Src/modbus_asc.c:529:5
+	cmp	r0, r1
+	blt	.LBB7_12
+	b	.LBB7_41
+.LBB7_12:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #36
+.Ltmp84:
+	.loc	2 531 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:531:17
+	ldrb	r0, [r0]
+	.loc	2 531 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:531:9
+	subs	r0, #48
+	cmp	r0, #66
+	str	r0, [sp, #16]           @ 4-byte Spill
+	bls	.LBB7_13
+	b	.LBB7_38
+.LBB7_13:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	ldr	r0, [sp, #16]           @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI7_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.14:
+	.p2align	2
+.LJTI7_0:
+	b.w	.LBB7_15
+	b.w	.LBB7_16
+	b.w	.LBB7_17
+	b.w	.LBB7_18
+	b.w	.LBB7_19
+	b.w	.LBB7_20
+	b.w	.LBB7_21
+	b.w	.LBB7_22
+	b.w	.LBB7_23
+	b.w	.LBB7_24
+	b.w	.LBB7_27
+	b.w	.LBB7_30
+	b.w	.LBB7_31
+	b.w	.LBB7_32
+	b.w	.LBB7_33
+	b.w	.LBB7_38
+	b.w	.LBB7_34
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_38
+	b.w	.LBB7_35
+	b.w	.LBB7_36
+	b.w	.LBB7_37
+.LBB7_15:                               @   in Loop: Header=BB7_11 Depth=1
+.Ltmp85:
+	.loc	2 534 53 is_stmt 1      @ ../APP/Src/modbus_asc.c:534:53
+	ldr	r0, [sp, #52]
+	.loc	2 534 38 is_stmt 0      @ ../APP/Src/modbus_asc.c:534:38
+	ldr	r1, __arm_cp.7_0
+	.loc	2 534 82                @ ../APP/Src/modbus_asc.c:534:82
+	adds	r0, r0, r1
+	.loc	2 534 68                @ ../APP/Src/modbus_asc.c:534:68
+	ldrb	r0, [r0, #8]
+	.loc	2 534 36                @ ../APP/Src/modbus_asc.c:534:36
+	ldr	r1, __arm_cp.7_2
+	strb	r0, [r1]
+	movs	r0, #2
+	movs	r2, #1
+	.loc	2 536 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:536:21
+	bl	Flash_Write_MultiBytes
+	.loc	2 537 17                @ ../APP/Src/modbus_asc.c:537:17
+	b	.LBB7_39
+.LBB7_16:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 539 52                @ ../APP/Src/modbus_asc.c:539:52
+	ldr	r0, [sp, #52]
+	.loc	2 539 37 is_stmt 0      @ ../APP/Src/modbus_asc.c:539:37
+	ldr	r1, __arm_cp.7_0
+	.loc	2 539 81                @ ../APP/Src/modbus_asc.c:539:81
+	adds	r0, r0, r1
+	.loc	2 539 67                @ ../APP/Src/modbus_asc.c:539:67
+	ldrb	r0, [r0, #8]
+	.loc	2 539 35                @ ../APP/Src/modbus_asc.c:539:35
+	ldr	r1, __arm_cp.7_2
+	strb	r0, [r1, #1]
+	adds	r1, r1, #1
+	movs	r0, #3
+	movs	r2, #1
+	.loc	2 540 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:540:17
+	bl	Flash_Write_MultiBytes
+	.loc	2 542 17                @ ../APP/Src/modbus_asc.c:542:17
+	b	.LBB7_39
+.LBB7_17:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 545 50                @ ../APP/Src/modbus_asc.c:545:50
+	ldr	r0, [sp, #52]
+	.loc	2 545 35 is_stmt 0      @ ../APP/Src/modbus_asc.c:545:35
+	ldr	r1, __arm_cp.7_0
+	.loc	2 545 79                @ ../APP/Src/modbus_asc.c:545:79
+	adds	r0, r0, r1
+	.loc	2 545 65                @ ../APP/Src/modbus_asc.c:545:65
+	ldrb	r0, [r0, #8]
+	.loc	2 545 33                @ ../APP/Src/modbus_asc.c:545:33
+	ldr	r1, __arm_cp.7_2
+	strb	r0, [r1, #2]
+	.loc	2 548 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:548:17
+	b	.LBB7_39
+.LBB7_18:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 551 17                @ ../APP/Src/modbus_asc.c:551:17
+	b	.LBB7_39
+.LBB7_19:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 554 17                @ ../APP/Src/modbus_asc.c:554:17
+	b	.LBB7_39
+.LBB7_20:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 564 17                @ ../APP/Src/modbus_asc.c:564:17
+	b	.LBB7_39
+.LBB7_21:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 567 17                @ ../APP/Src/modbus_asc.c:567:17
+	b	.LBB7_39
+.LBB7_22:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 570 17                @ ../APP/Src/modbus_asc.c:570:17
+	b	.LBB7_39
+.LBB7_23:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 573 17                @ ../APP/Src/modbus_asc.c:573:17
+	b	.LBB7_39
+.LBB7_24:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 576 51                @ ../APP/Src/modbus_asc.c:576:51
+	ldr	r0, [sp, #52]
+	.loc	2 576 34 is_stmt 0      @ ../APP/Src/modbus_asc.c:576:34
+	ldr	r1, __arm_cp.7_0
+	.loc	2 576 49                @ ../APP/Src/modbus_asc.c:576:49
+	adds	r0, r0, r1
+	.loc	2 576 34                @ ../APP/Src/modbus_asc.c:576:34
+	ldrb	r1, [r0, #7]
+	.loc	2 576 58                @ ../APP/Src/modbus_asc.c:576:58
+	lsls	r1, r1, #8
+	.loc	2 576 66                @ ../APP/Src/modbus_asc.c:576:66
+	ldrb	r0, [r0, #8]
+	.loc	2 576 64                @ ../APP/Src/modbus_asc.c:576:64
+	adds	r0, r1, r0
+	add	r1, sp, #44
+	.loc	2 576 31                @ ../APP/Src/modbus_asc.c:576:31
+	strh	r0, [r1]
+.Ltmp86:
+	.loc	2 577 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:577:20
+	ldrh	r0, [r1]
+	ldr	r1, __arm_cp.7_4
+.Ltmp87:
+	.loc	2 577 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:577:20
+	cmp	r0, r1
+	beq	.LBB7_26
+	b	.LBB7_25
+.LBB7_25:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 0 20                  @ ../APP/Src/modbus_asc.c:0:20
+	add	r0, sp, #44
+.Ltmp88:
+	.loc	2 579 41 is_stmt 1      @ ../APP/Src/modbus_asc.c:579:41
+	ldrh	r0, [r0]
+	.loc	2 579 39 is_stmt 0      @ ../APP/Src/modbus_asc.c:579:39
+	ldr	r1, __arm_cp.7_2
+	str	r0, [r1, #20]
+	.loc	2 580 42 is_stmt 1      @ ../APP/Src/modbus_asc.c:580:42
+	ldr	r0, [r1, #20]
+	add	r1, sp, #32
+	.loc	2 580 21 is_stmt 0      @ ../APP/Src/modbus_asc.c:580:21
+	str	r1, [sp, #12]           @ 4-byte Spill
+	bl	long32Array
+	movs	r0, #4
+	.loc	2 581 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:581:21
+	str	r0, [sp, #8]            @ 4-byte Spill
+	ldr	r1, [sp, #12]           @ 4-byte Reload
+	ldr	r2, [sp, #8]            @ 4-byte Reload
+	bl	Flash_Write_MultiBytes
+	.loc	2 582 17                @ ../APP/Src/modbus_asc.c:582:17
+	b	.LBB7_26
+.Ltmp89:
+.LBB7_26:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 583 17                @ ../APP/Src/modbus_asc.c:583:17
+	b	.LBB7_39
+.LBB7_27:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 586 51                @ ../APP/Src/modbus_asc.c:586:51
+	ldr	r0, [sp, #52]
+	.loc	2 586 34 is_stmt 0      @ ../APP/Src/modbus_asc.c:586:34
+	ldr	r1, __arm_cp.7_0
+	.loc	2 586 49                @ ../APP/Src/modbus_asc.c:586:49
+	adds	r0, r0, r1
+	.loc	2 586 34                @ ../APP/Src/modbus_asc.c:586:34
+	ldrb	r1, [r0, #7]
+	.loc	2 586 58                @ ../APP/Src/modbus_asc.c:586:58
+	lsls	r1, r1, #8
+	.loc	2 586 66                @ ../APP/Src/modbus_asc.c:586:66
+	ldrb	r0, [r0, #8]
+	.loc	2 586 64                @ ../APP/Src/modbus_asc.c:586:64
+	adds	r0, r1, r0
+	add	r1, sp, #44
+	.loc	2 586 31                @ ../APP/Src/modbus_asc.c:586:31
+	strh	r0, [r1]
+.Ltmp90:
+	.loc	2 587 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:587:20
+	ldrh	r0, [r1]
+	ldr	r1, __arm_cp.7_4
+.Ltmp91:
+	.loc	2 587 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:587:20
+	cmp	r0, r1
+	beq	.LBB7_29
+	b	.LBB7_28
+.LBB7_28:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 0 20                  @ ../APP/Src/modbus_asc.c:0:20
+	add	r0, sp, #44
+.Ltmp92:
+	.loc	2 589 43 is_stmt 1      @ ../APP/Src/modbus_asc.c:589:43
+	ldrh	r0, [r0]
+	.loc	2 589 41 is_stmt 0      @ ../APP/Src/modbus_asc.c:589:41
+	ldr	r1, __arm_cp.7_2
+	str	r0, [r1, #24]
+	.loc	2 590 42 is_stmt 1      @ ../APP/Src/modbus_asc.c:590:42
+	ldr	r0, [r1, #24]
+	add	r1, sp, #32
+	.loc	2 590 21 is_stmt 0      @ ../APP/Src/modbus_asc.c:590:21
+	str	r1, [sp, #4]            @ 4-byte Spill
+	bl	long32Array
+	movs	r0, #20
+	movs	r2, #4
+	.loc	2 591 21 is_stmt 1      @ ../APP/Src/modbus_asc.c:591:21
+	ldr	r1, [sp, #4]            @ 4-byte Reload
+	bl	Flash_Write_MultiBytes
+	.loc	2 592 17                @ ../APP/Src/modbus_asc.c:592:17
+	b	.LBB7_29
+.Ltmp93:
+.LBB7_29:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 593 17                @ ../APP/Src/modbus_asc.c:593:17
+	b	.LBB7_39
+.LBB7_30:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 596 17                @ ../APP/Src/modbus_asc.c:596:17
+	b	.LBB7_39
+.LBB7_31:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 599 17                @ ../APP/Src/modbus_asc.c:599:17
+	b	.LBB7_39
+.LBB7_32:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 603 17                @ ../APP/Src/modbus_asc.c:603:17
+	b	.LBB7_39
+.LBB7_33:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 606 17                @ ../APP/Src/modbus_asc.c:606:17
+	b	.LBB7_39
+.LBB7_34:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 610 17                @ ../APP/Src/modbus_asc.c:610:17
+	b	.LBB7_39
+.LBB7_35:
+	.loc	2 614 17                @ ../APP/Src/modbus_asc.c:614:17
+	b	.LBB7_44
+.LBB7_36:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 617 17                @ ../APP/Src/modbus_asc.c:617:17
+	b	.LBB7_39
+.LBB7_37:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 620 17                @ ../APP/Src/modbus_asc.c:620:17
+	b	.LBB7_39
+.LBB7_38:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 623 17                @ ../APP/Src/modbus_asc.c:623:17
+	b	.LBB7_39
+.Ltmp94:
+.LBB7_39:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 625 15                @ ../APP/Src/modbus_asc.c:625:15
+	ldr	r0, [sp, #52]
+	adds	r0, r0, #2
+	str	r0, [sp, #52]
+	.loc	2 626 5                 @ ../APP/Src/modbus_asc.c:626:5
+	b	.LBB7_40
+.Ltmp95:
+.LBB7_40:                               @   in Loop: Header=BB7_11 Depth=1
+	.loc	2 529 51                @ ../APP/Src/modbus_asc.c:529:51
+	ldr	r0, [sp, #36]
+	adds	r0, r0, #1
+	add	r1, sp, #36
+	strb	r0, [r1]
+	.loc	2 529 56 is_stmt 0      @ ../APP/Src/modbus_asc.c:529:56
+	ldr	r0, [sp, #24]
+	adds	r0, r0, #1
+	add	r1, sp, #24
+	strb	r0, [r1]
+	.loc	2 529 5                 @ ../APP/Src/modbus_asc.c:529:5
+	b	.LBB7_11
+.Ltmp96:
+.LBB7_41:
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #28
+.Ltmp97:
+	.loc	2 627 8 is_stmt 1       @ ../APP/Src/modbus_asc.c:627:8
+	ldrb	r0, [r0]
+.Ltmp98:
+	.loc	2 627 8 is_stmt 0       @ ../APP/Src/modbus_asc.c:627:8
+	cmp	r0, #1
+	bne	.LBB7_43
+	b	.LBB7_42
+.LBB7_42:
+	.loc	2 0 8                   @ ../APP/Src/modbus_asc.c:0:8
+	add	r0, sp, #28
+	movs	r1, #0
+.Ltmp99:
+	.loc	2 629 24 is_stmt 1      @ ../APP/Src/modbus_asc.c:629:24
+	strb	r1, [r0]
+	.loc	2 636 5                 @ ../APP/Src/modbus_asc.c:636:5
+	b	.LBB7_43
+.Ltmp100:
+.LBB7_43:
+	.loc	2 637 5                 @ ../APP/Src/modbus_asc.c:637:5
+	ldr	r0, __arm_cp.7_0
+	movs	r1, #6
+	bl	MBASC_SendMsg
+	.loc	2 638 1                 @ ../APP/Src/modbus_asc.c:638:1
+	b	.LBB7_44
+.LBB7_44:
+	add	sp, #56
+	pop	{r4, pc}
+.Ltmp101:
+	.p2align	2
+@ %bb.45:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.7_0:
+	.long	UARTx_RXBuff
+.Lcpi_end16:
+	.size	__arm_cp.7_0, .Lcpi_end16-__arm_cp.7_0
+__arm_cp.7_1:
+	.long	SendLen
+.Lcpi_end17:
+	.size	__arm_cp.7_1, .Lcpi_end17-__arm_cp.7_1
+__arm_cp.7_2:
+	.long	UserPara
+.Lcpi_end18:
+	.size	__arm_cp.7_2, .Lcpi_end18-__arm_cp.7_2
+__arm_cp.7_3:
+	.long	SendBuf
+.Lcpi_end19:
+	.size	__arm_cp.7_3, .Lcpi_end19-__arm_cp.7_3
+__arm_cp.7_4:
+	.long	65535                   @ 0xffff
+.Lcpi_end20:
+	.size	__arm_cp.7_4, .Lcpi_end20-__arm_cp.7_4
+.Lfunc_end7:
+	.size	MBASC_Fun10, .Lfunc_end7-MBASC_Fun10
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun2B,"ax",%progbits
+	.hidden	MBASC_Fun2B             @ -- Begin function MBASC_Fun2B
+	.globl	MBASC_Fun2B
+	.p2align	2
+	.type	MBASC_Fun2B,%function
+	.code	16                      @ @MBASC_Fun2B
+	.thumb_func
+MBASC_Fun2B:
+.Lfunc_begin8:
+	.loc	2 653 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:653:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 48
+	add	r0, sp, #28
+	movs	r1, #0
+.Ltmp102:
+	.loc	2 654 14 prologue_end   @ ../APP/Src/modbus_asc.c:654:14
+	strh	r1, [r0]
+	add	r0, sp, #24
+	.loc	2 654 30 is_stmt 0      @ ../APP/Src/modbus_asc.c:654:30
+	strh	r1, [r0]
+	add	r0, sp, #20
+	.loc	2 655 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:655:13
+	strb	r1, [r0]
+	add	r0, sp, #16
+	.loc	2 656 13                @ ../APP/Src/modbus_asc.c:656:13
+	strb	r1, [r0]
+.Ltmp103:
+	.loc	2 658 17                @ ../APP/Src/modbus_asc.c:658:17
+	ldr	r0, __arm_cp.8_0
+	ldrb	r0, [r0]
+	.loc	2 658 30 is_stmt 0      @ ../APP/Src/modbus_asc.c:658:30
+	ldr	r1, __arm_cp.8_1
+	ldrb	r1, [r1, #2]
+.Ltmp104:
+	.loc	2 658 8                 @ ../APP/Src/modbus_asc.c:658:8
+	cmp	r0, r1
+	beq	.LBB8_2
+	b	.LBB8_1
+.LBB8_1:
+.Ltmp105:
+	.loc	2 660 19 is_stmt 1      @ ../APP/Src/modbus_asc.c:660:19
+	ldr	r0, __arm_cp.8_1
+	ldrb	r1, [r0, #2]
+	.loc	2 660 35 is_stmt 0      @ ../APP/Src/modbus_asc.c:660:35
+	lsls	r1, r1, #8
+	.loc	2 660 43                @ ../APP/Src/modbus_asc.c:660:43
+	ldrb	r0, [r0, #3]
+	.loc	2 660 41                @ ../APP/Src/modbus_asc.c:660:41
+	adds	r0, r1, r0
+	add	r1, sp, #24
+	.loc	2 660 17                @ ../APP/Src/modbus_asc.c:660:17
+	strh	r0, [r1]
+	.loc	2 661 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:661:5
+	b	.LBB8_3
+.Ltmp106:
+.LBB8_2:
+	.loc	2 664 32                @ ../APP/Src/modbus_asc.c:664:32
+	ldr	r0, __arm_cp.8_1
+	ldrb	r0, [r0, #3]
+	movw	r1, #20736
+	.loc	2 664 30 is_stmt 0      @ ../APP/Src/modbus_asc.c:664:30
+	adds	r0, r0, r1
+	add	r1, sp, #24
+	.loc	2 664 17                @ ../APP/Src/modbus_asc.c:664:17
+	strh	r0, [r1]
+	b	.LBB8_3
+.Ltmp107:
+.LBB8_3:
+	.loc	2 666 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:666:18
+	ldr	r0, __arm_cp.8_1
+	ldrb	r1, [r0, #4]
+	.loc	2 666 34 is_stmt 0      @ ../APP/Src/modbus_asc.c:666:34
+	lsls	r1, r1, #8
+	.loc	2 666 42                @ ../APP/Src/modbus_asc.c:666:42
+	ldrb	r2, [r0, #5]
+	.loc	2 666 40                @ ../APP/Src/modbus_asc.c:666:40
+	adds	r1, r1, r2
+	add	r2, sp, #28
+	.loc	2 666 16                @ ../APP/Src/modbus_asc.c:666:16
+	strh	r1, [r2]
+	.loc	2 668 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:668:13
+	ldr	r1, __arm_cp.8_2
+	movs	r2, #0
+	strb	r2, [r1]
+	.loc	2 669 27                @ ../APP/Src/modbus_asc.c:669:27
+	bl	MBASC_GetSlaveAddr
+	.loc	2 669 26 is_stmt 0      @ ../APP/Src/modbus_asc.c:669:26
+	cmp	r0, #0
+	beq	.LBB8_5
+	b	.LBB8_4
+.LBB8_4:
+	.loc	2 669 72                @ ../APP/Src/modbus_asc.c:669:72
+	ldr	r0, __arm_cp.8_0
+	ldrb	r0, [r0]
+	.loc	2 669 26                @ ../APP/Src/modbus_asc.c:669:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB8_6
+.LBB8_5:
+	.loc	2 0 26                  @ ../APP/Src/modbus_asc.c:0:26
+	movs	r0, #0
+	.loc	2 669 26                @ ../APP/Src/modbus_asc.c:669:26
+	str	r0, [sp, #4]            @ 4-byte Spill
+	b	.LBB8_6
+.LBB8_6:
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	.loc	2 669 20                @ ../APP/Src/modbus_asc.c:669:20
+	ldr	r1, __arm_cp.8_2
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 669 5                 @ ../APP/Src/modbus_asc.c:669:5
+	ldr	r3, __arm_cp.8_3
+	.loc	2 669 24                @ ../APP/Src/modbus_asc.c:669:24
+	strb	r0, [r3, r2]
+	.loc	2 670 20 is_stmt 1      @ ../APP/Src/modbus_asc.c:670:20
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r2, #43
+	.loc	2 670 24 is_stmt 0      @ ../APP/Src/modbus_asc.c:670:24
+	strb	r2, [r3, r0]
+	.loc	2 671 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:671:26
+	ldr	r0, __arm_cp.8_1
+	ldrb	r2, [r0, #4]
+	.loc	2 671 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:671:20
+	ldrb	r4, [r1]
+	adds	r5, r4, #1
+	strb	r5, [r1]
+	.loc	2 671 24                @ ../APP/Src/modbus_asc.c:671:24
+	strb	r2, [r3, r4]
+	.loc	2 672 26 is_stmt 1      @ ../APP/Src/modbus_asc.c:672:26
+	ldrb	r0, [r0, #5]
+	.loc	2 672 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:672:20
+	ldrb	r2, [r1]
+	adds	r4, r2, #1
+	strb	r4, [r1]
+	.loc	2 672 24                @ ../APP/Src/modbus_asc.c:672:24
+	strb	r0, [r3, r2]
+	add	r0, sp, #24
+.Ltmp108:
+	.loc	2 674 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:674:13
+	ldrh	r0, [r0]
+	ldr	r1, __arm_cp.8_4
+	.loc	2 674 32 is_stmt 0      @ ../APP/Src/modbus_asc.c:674:32
+	cmp	r0, r1
+	blt	.LBB8_10
+	b	.LBB8_7
+.LBB8_7:
+	.loc	2 0 32                  @ ../APP/Src/modbus_asc.c:0:32
+	add	r0, sp, #24
+	.loc	2 674 36                @ ../APP/Src/modbus_asc.c:674:36
+	ldrh	r0, [r0]
+	ldr	r1, __arm_cp.8_5
+	.loc	2 674 55                @ ../APP/Src/modbus_asc.c:674:55
+	cmp	r0, r1
+	bgt	.LBB8_10
+	b	.LBB8_8
+.LBB8_8:
+	.loc	2 0 55                  @ ../APP/Src/modbus_asc.c:0:55
+	add	r0, sp, #24
+	.loc	2 674 59                @ ../APP/Src/modbus_asc.c:674:59
+	ldrh	r0, [r0]
+	add	r1, sp, #28
+	.loc	2 674 69                @ ../APP/Src/modbus_asc.c:674:69
+	ldrh	r1, [r1]
+	.loc	2 674 67                @ ../APP/Src/modbus_asc.c:674:67
+	adds	r0, r0, r1
+	ldr	r1, __arm_cp.8_6
+	.loc	2 675 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:675:9
+	cmp	r0, r1
+	bgt	.LBB8_10
+	b	.LBB8_9
+.LBB8_9:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #28
+	.loc	2 675 18                @ ../APP/Src/modbus_asc.c:675:18
+	ldrh	r0, [r0]
+.Ltmp109:
+	.loc	2 674 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:674:9
+	cmp	r0, #0
+	bne	.LBB8_11
+	b	.LBB8_10
+.LBB8_10:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	movs	r0, #2
+.Ltmp110:
+	.loc	2 677 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:677:9
+	bl	MBASC_SendErr
+	.loc	2 678 9                 @ ../APP/Src/modbus_asc.c:678:9
+	b	.LBB8_38
+.Ltmp111:
+.LBB8_11:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #12
+	movs	r1, #0
+.Ltmp112:
+	.loc	2 681 18 is_stmt 1      @ ../APP/Src/modbus_asc.c:681:18
+	strb	r1, [r0]
+	.loc	2 681 10 is_stmt 0      @ ../APP/Src/modbus_asc.c:681:10
+	b	.LBB8_12
+.LBB8_12:                               @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB8_27 Depth 2
+	.loc	2 0 10                  @ ../APP/Src/modbus_asc.c:0:10
+	add	r0, sp, #12
+.Ltmp113:
+	.loc	2 681 25                @ ../APP/Src/modbus_asc.c:681:25
+	ldrb	r0, [r0]
+	add	r1, sp, #28
+	.loc	2 681 29                @ ../APP/Src/modbus_asc.c:681:29
+	ldrh	r1, [r1]
+.Ltmp114:
+	.loc	2 681 5                 @ ../APP/Src/modbus_asc.c:681:5
+	cmp	r0, r1
+	blt	.LBB8_13
+	b	.LBB8_37
+.LBB8_13:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #24
+.Ltmp115:
+	.loc	2 683 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:683:17
+	ldrh	r0, [r0]
+	.loc	2 683 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:683:9
+	movw	r1, #20960
+	subs	r0, r0, r1
+	cmp	r0, #5
+	str	r0, [sp]                @ 4-byte Spill
+	bls	.LBB8_14
+	b	.LBB8_34
+.LBB8_14:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	ldr	r0, [sp]                @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI8_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.15:
+	.p2align	2
+.LJTI8_0:
+	b.w	.LBB8_16
+	b.w	.LBB8_21
+	b.w	.LBB8_22
+	b.w	.LBB8_23
+	b.w	.LBB8_32
+	b.w	.LBB8_33
+.LBB8_16:                               @   in Loop: Header=BB8_12 Depth=1
+.Ltmp116:
+	.loc	2 686 28 is_stmt 1      @ ../APP/Src/modbus_asc.c:686:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 686 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:686:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #224
+	.loc	2 686 32                @ ../APP/Src/modbus_asc.c:686:32
+	strb	r2, [r0, r1]
+	add	r0, sp, #20
+.Ltmp117:
+	.loc	2 688 22 is_stmt 1      @ ../APP/Src/modbus_asc.c:688:22
+	ldrb	r0, [r0]
+	.loc	2 688 38 is_stmt 0      @ ../APP/Src/modbus_asc.c:688:38
+	cmp	r0, #0
+	beq	.LBB8_18
+	b	.LBB8_17
+.LBB8_17:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 0 38                  @ ../APP/Src/modbus_asc.c:0:38
+	add	r0, sp, #20
+	.loc	2 688 49                @ ../APP/Src/modbus_asc.c:688:49
+	ldrb	r0, [r0]
+.Ltmp118:
+	.loc	2 688 16                @ ../APP/Src/modbus_asc.c:688:16
+	cmp	r0, #51
+	blt	.LBB8_19
+	b	.LBB8_18
+.LBB8_18:                               @   in Loop: Header=BB8_12 Depth=1
+.Ltmp119:
+	.loc	2 690 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:690:32
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 690 17 is_stmt 0      @ ../APP/Src/modbus_asc.c:690:17
+	ldr	r2, __arm_cp.8_3
+	movs	r3, #1
+	.loc	2 690 36                @ ../APP/Src/modbus_asc.c:690:36
+	strb	r3, [r2, r1]
+	.loc	2 691 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:691:32
+	ldrb	r1, [r0]
+	adds	r3, r1, #1
+	strb	r3, [r0]
+	movs	r0, #0
+	.loc	2 691 36 is_stmt 0      @ ../APP/Src/modbus_asc.c:691:36
+	strb	r0, [r2, r1]
+	.loc	2 692 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:692:13
+	b	.LBB8_20
+.Ltmp120:
+.LBB8_19:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 695 38                @ ../APP/Src/modbus_asc.c:695:38
+	ldr	r0, [sp, #20]
+	.loc	2 695 32 is_stmt 0      @ ../APP/Src/modbus_asc.c:695:32
+	ldr	r1, __arm_cp.8_2
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 695 17                @ ../APP/Src/modbus_asc.c:695:17
+	ldr	r1, __arm_cp.8_3
+	.loc	2 695 36                @ ../APP/Src/modbus_asc.c:695:36
+	strb	r0, [r1, r2]
+	b	.LBB8_20
+.Ltmp121:
+.LBB8_20:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 701 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:701:13
+	b	.LBB8_35
+.LBB8_21:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 704 28                @ ../APP/Src/modbus_asc.c:704:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 704 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:704:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #225
+	.loc	2 704 32                @ ../APP/Src/modbus_asc.c:704:32
+	strb	r2, [r0, r1]
+	.loc	2 719 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:719:13
+	b	.LBB8_35
+.LBB8_22:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 722 28                @ ../APP/Src/modbus_asc.c:722:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 722 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:722:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #226
+	.loc	2 722 32                @ ../APP/Src/modbus_asc.c:722:32
+	strb	r2, [r0, r1]
+	.loc	2 737 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:737:13
+	b	.LBB8_35
+.LBB8_23:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 740 28                @ ../APP/Src/modbus_asc.c:740:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 740 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:740:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #227
+	.loc	2 740 32                @ ../APP/Src/modbus_asc.c:740:32
+	strb	r2, [r0, r1]
+	add	r0, sp, #16
+	movs	r1, #8
+	.loc	2 741 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:741:32
+	strb	r1, [r0]
+.Ltmp122:
+	.loc	2 742 22                @ ../APP/Src/modbus_asc.c:742:22
+	ldrb	r0, [r0]
+	.loc	2 742 42 is_stmt 0      @ ../APP/Src/modbus_asc.c:742:42
+	cmp	r0, #0
+	beq	.LBB8_25
+	b	.LBB8_24
+.LBB8_24:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 0 42                  @ ../APP/Src/modbus_asc.c:0:42
+	add	r0, sp, #16
+	.loc	2 742 53                @ ../APP/Src/modbus_asc.c:742:53
+	ldrb	r0, [r0]
+.Ltmp123:
+	.loc	2 742 16                @ ../APP/Src/modbus_asc.c:742:16
+	cmp	r0, #51
+	blt	.LBB8_26
+	b	.LBB8_25
+.LBB8_25:                               @   in Loop: Header=BB8_12 Depth=1
+.Ltmp124:
+	.loc	2 744 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:744:32
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 744 17 is_stmt 0      @ ../APP/Src/modbus_asc.c:744:17
+	ldr	r2, __arm_cp.8_3
+	movs	r3, #1
+	.loc	2 744 36                @ ../APP/Src/modbus_asc.c:744:36
+	strb	r3, [r2, r1]
+	.loc	2 745 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:745:32
+	ldrb	r1, [r0]
+	adds	r3, r1, #1
+	strb	r3, [r0]
+	movs	r0, #0
+	.loc	2 745 36 is_stmt 0      @ ../APP/Src/modbus_asc.c:745:36
+	strb	r0, [r2, r1]
+	.loc	2 746 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:746:13
+	b	.LBB8_31
+.Ltmp125:
+.LBB8_26:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 749 38                @ ../APP/Src/modbus_asc.c:749:38
+	ldr	r0, [sp, #16]
+	.loc	2 749 32 is_stmt 0      @ ../APP/Src/modbus_asc.c:749:32
+	ldr	r1, __arm_cp.8_2
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 749 17                @ ../APP/Src/modbus_asc.c:749:17
+	ldr	r1, __arm_cp.8_3
+	.loc	2 749 36                @ ../APP/Src/modbus_asc.c:749:36
+	strb	r0, [r1, r2]
+	add	r0, sp, #8
+	movs	r1, #0
+.Ltmp126:
+	.loc	2 750 30 is_stmt 1      @ ../APP/Src/modbus_asc.c:750:30
+	strb	r1, [r0]
+	.loc	2 750 22 is_stmt 0      @ ../APP/Src/modbus_asc.c:750:22
+	b	.LBB8_27
+.LBB8_27:                               @   Parent Loop BB8_12 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	2 0 22                  @ ../APP/Src/modbus_asc.c:0:22
+	add	r0, sp, #8
+.Ltmp127:
+	.loc	2 750 37                @ ../APP/Src/modbus_asc.c:750:37
+	ldrb	r0, [r0]
+	add	r1, sp, #16
+	.loc	2 750 41                @ ../APP/Src/modbus_asc.c:750:41
+	ldrb	r1, [r1]
+.Ltmp128:
+	.loc	2 750 17                @ ../APP/Src/modbus_asc.c:750:17
+	cmp	r0, r1
+	bge	.LBB8_30
+	b	.LBB8_28
+.LBB8_28:                               @   in Loop: Header=BB8_27 Depth=2
+	.loc	2 0 17                  @ ../APP/Src/modbus_asc.c:0:17
+	add	r0, sp, #8
+.Ltmp129:
+	.loc	2 752 60 is_stmt 1      @ ../APP/Src/modbus_asc.c:752:60
+	ldrb	r0, [r0]
+	.loc	2 752 42 is_stmt 0      @ ../APP/Src/modbus_asc.c:752:42
+	ldr	r1, __arm_cp.8_7
+	.loc	2 752 61                @ ../APP/Src/modbus_asc.c:752:61
+	adds	r0, r0, r1
+	.loc	2 752 42                @ ../APP/Src/modbus_asc.c:752:42
+	ldrb	r0, [r0, #1]
+	.loc	2 752 36                @ ../APP/Src/modbus_asc.c:752:36
+	ldr	r1, __arm_cp.8_2
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 752 21                @ ../APP/Src/modbus_asc.c:752:21
+	ldr	r1, __arm_cp.8_3
+	.loc	2 752 40                @ ../APP/Src/modbus_asc.c:752:40
+	strb	r0, [r1, r2]
+	.loc	2 753 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:753:17
+	b	.LBB8_29
+.Ltmp130:
+.LBB8_29:                               @   in Loop: Header=BB8_27 Depth=2
+	.loc	2 750 62                @ ../APP/Src/modbus_asc.c:750:62
+	ldr	r0, [sp, #8]
+	adds	r0, r0, #1
+	add	r1, sp, #8
+	strb	r0, [r1]
+	.loc	2 750 17 is_stmt 0      @ ../APP/Src/modbus_asc.c:750:17
+	b	.LBB8_27
+.Ltmp131:
+.LBB8_30:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 0 17                  @ ../APP/Src/modbus_asc.c:0:17
+	b	.LBB8_31
+.LBB8_31:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 755 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:755:13
+	b	.LBB8_35
+.LBB8_32:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 758 28                @ ../APP/Src/modbus_asc.c:758:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 758 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:758:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #228
+	.loc	2 758 32                @ ../APP/Src/modbus_asc.c:758:32
+	strb	r2, [r0, r1]
+	.loc	2 773 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:773:13
+	b	.LBB8_35
+.LBB8_33:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 776 28                @ ../APP/Src/modbus_asc.c:776:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	.loc	2 776 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:776:13
+	ldr	r0, __arm_cp.8_3
+	movs	r2, #229
+	.loc	2 776 32                @ ../APP/Src/modbus_asc.c:776:32
+	strb	r2, [r0, r1]
+	.loc	2 791 12 is_stmt 1      @ ../APP/Src/modbus_asc.c:791:12
+	b	.LBB8_35
+.LBB8_34:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 794 13                @ ../APP/Src/modbus_asc.c:794:13
+	b	.LBB8_35
+.Ltmp132:
+.LBB8_35:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 796 5                 @ ../APP/Src/modbus_asc.c:796:5
+	b	.LBB8_36
+.Ltmp133:
+.LBB8_36:                               @   in Loop: Header=BB8_12 Depth=1
+	.loc	2 681 48                @ ../APP/Src/modbus_asc.c:681:48
+	ldr	r0, [sp, #24]
+	adds	r0, r0, #1
+	add	r1, sp, #24
+	strh	r0, [r1]
+	.loc	2 681 53 is_stmt 0      @ ../APP/Src/modbus_asc.c:681:53
+	ldr	r0, [sp, #12]
+	adds	r0, r0, #1
+	add	r1, sp, #12
+	strb	r0, [r1]
+	.loc	2 681 5                 @ ../APP/Src/modbus_asc.c:681:5
+	b	.LBB8_12
+.Ltmp134:
+.LBB8_37:
+	.loc	2 797 28 is_stmt 1      @ ../APP/Src/modbus_asc.c:797:28
+	ldr	r0, __arm_cp.8_2
+	ldrb	r1, [r0]
+	.loc	2 797 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:797:5
+	ldr	r0, __arm_cp.8_3
+	bl	MBASC_SendMsg
+	.loc	2 798 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:798:1
+	b	.LBB8_38
+.LBB8_38:
+	add	sp, #32
+	pop	{r4, r5, r7, pc}
+.Ltmp135:
+	.p2align	2
+@ %bb.39:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.8_0:
+	.long	UserPara
+.Lcpi_end21:
+	.size	__arm_cp.8_0, .Lcpi_end21-__arm_cp.8_0
+__arm_cp.8_1:
+	.long	UARTx_RXBuff
+.Lcpi_end22:
+	.size	__arm_cp.8_1, .Lcpi_end22-__arm_cp.8_1
+__arm_cp.8_2:
+	.long	SendLen
+.Lcpi_end23:
+	.size	__arm_cp.8_2, .Lcpi_end23-__arm_cp.8_2
+__arm_cp.8_3:
+	.long	SendBuf
+.Lcpi_end24:
+	.size	__arm_cp.8_3, .Lcpi_end24-__arm_cp.8_3
+__arm_cp.8_4:
+	.long	20960                   @ 0x51e0
+.Lcpi_end25:
+	.size	__arm_cp.8_4, .Lcpi_end25-__arm_cp.8_4
+__arm_cp.8_5:
+	.long	20965                   @ 0x51e5
+.Lcpi_end26:
+	.size	__arm_cp.8_5, .Lcpi_end26-__arm_cp.8_5
+__arm_cp.8_6:
+	.long	29158                   @ 0x71e6
+.Lcpi_end27:
+	.size	__arm_cp.8_6, .Lcpi_end27-__arm_cp.8_6
+__arm_cp.8_7:
+	.long	SensorSoftVersion
+.Lcpi_end28:
+	.size	__arm_cp.8_7, .Lcpi_end28-__arm_cp.8_7
+.Lfunc_end8:
+	.size	MBASC_Fun2B, .Lfunc_end8-MBASC_Fun2B
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.Delay_1Ms,"ax",%progbits
+	.hidden	Delay_1Ms               @ -- Begin function Delay_1Ms
+	.globl	Delay_1Ms
+	.p2align	1
+	.type	Delay_1Ms,%function
+	.code	16                      @ @Delay_1Ms
+	.thumb_func
+Delay_1Ms:
+.Lfunc_begin9:
+	.loc	2 813 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:813:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#4
+	sub	sp, #4
+	.cfi_def_cfa_offset 4
+	str	r0, [sp]
+.Ltmp136:
+	.loc	2 814 11 prologue_end   @ ../APP/Src/modbus_asc.c:814:11
+	ldr	r0, [sp]
+	movw	r1, #940
+	.loc	2 814 15 is_stmt 0      @ ../APP/Src/modbus_asc.c:814:15
+	muls	r1, r0, r1
+	.loc	2 814 9                 @ ../APP/Src/modbus_asc.c:814:9
+	str	r1, [sp]
+	.loc	2 816 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:816:5
+	b	.LBB9_1
+.LBB9_1:                                @ =>This Inner Loop Header: Depth=1
+	.loc	2 816 15 is_stmt 0      @ ../APP/Src/modbus_asc.c:816:15
+	ldr	r0, [sp]
+	subs	r1, r0, #1
+	str	r1, [sp]
+	.loc	2 816 5                 @ ../APP/Src/modbus_asc.c:816:5
+	cmp	r0, #0
+	beq	.LBB9_3
+	b	.LBB9_2
+.LBB9_2:                                @   in Loop: Header=BB9_1 Depth=1
+	b	.LBB9_1
+.LBB9_3:
+	.loc	2 819 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:819:1
+	add	sp, #4
+	bx	lr
+.Ltmp137:
+.Lfunc_end9:
+	.size	Delay_1Ms, .Lfunc_end9-Delay_1Ms
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Fun41,"ax",%progbits
+	.hidden	MBASC_Fun41             @ -- Begin function MBASC_Fun41
+	.globl	MBASC_Fun41
+	.p2align	2
+	.type	MBASC_Fun41,%function
+	.code	16                      @ @MBASC_Fun41
+	.thumb_func
+MBASC_Fun41:
+.Lfunc_begin10:
+	.loc	2 822 0                 @ ../APP/Src/modbus_asc.c:822:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 48
+	add	r0, sp, #28
+	movs	r1, #255
+.Ltmp138:
+	.loc	2 823 10 prologue_end   @ ../APP/Src/modbus_asc.c:823:10
+	strb	r1, [r0]
+	add	r0, sp, #24
+	movs	r1, #0
+	.loc	2 824 14                @ ../APP/Src/modbus_asc.c:824:14
+	strh	r1, [r0]
+	add	r2, sp, #20
+	.loc	2 825 14                @ ../APP/Src/modbus_asc.c:825:14
+	strh	r1, [r2]
+	.loc	2 828 27                @ ../APP/Src/modbus_asc.c:828:27
+	ldr	r3, __arm_cp.10_0
+	ldrb	r4, [r3, #2]
+	.loc	2 828 42 is_stmt 0      @ ../APP/Src/modbus_asc.c:828:42
+	lsls	r4, r4, #8
+	.loc	2 828 51                @ ../APP/Src/modbus_asc.c:828:51
+	ldrb	r5, [r3, #3]
+	.loc	2 828 49                @ ../APP/Src/modbus_asc.c:828:49
+	adds	r4, r4, r5
+	.loc	2 828 13                @ ../APP/Src/modbus_asc.c:828:13
+	strh	r4, [r0]
+	.loc	2 829 30 is_stmt 1      @ ../APP/Src/modbus_asc.c:829:30
+	ldrb	r0, [r3, #4]
+	.loc	2 829 45 is_stmt 0      @ ../APP/Src/modbus_asc.c:829:45
+	lsls	r0, r0, #8
+	.loc	2 829 54                @ ../APP/Src/modbus_asc.c:829:54
+	ldrb	r4, [r3, #5]
+	.loc	2 829 52                @ ../APP/Src/modbus_asc.c:829:52
+	adds	r0, r0, r4
+	.loc	2 829 16                @ ../APP/Src/modbus_asc.c:829:16
+	strh	r0, [r2]
+	.loc	2 831 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:831:13
+	ldr	r0, __arm_cp.10_1
+	strb	r1, [r0]
+	.loc	2 833 26                @ ../APP/Src/modbus_asc.c:833:26
+	str	r0, [sp, #12]           @ 4-byte Spill
+	mov	r0, r3
+	bl	MBASC_GetSlaveAddr
+	.loc	2 833 20 is_stmt 0      @ ../APP/Src/modbus_asc.c:833:20
+	ldr	r1, [sp, #12]           @ 4-byte Reload
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 833 5                 @ ../APP/Src/modbus_asc.c:833:5
+	ldr	r3, __arm_cp.10_2
+	.loc	2 833 24                @ ../APP/Src/modbus_asc.c:833:24
+	strb	r0, [r3, r2]
+	.loc	2 834 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:834:17
+	ldrb	r0, [r1]
+	adds	r2, r0, #1
+	strb	r2, [r1]
+	movs	r2, #65
+	.loc	2 834 21 is_stmt 0      @ ../APP/Src/modbus_asc.c:834:21
+	strb	r2, [r3, r0]
+	add	r0, sp, #16
+	movs	r2, #2
+.Ltmp139:
+	.loc	2 835 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:835:17
+	strb	r2, [r0]
+	.loc	2 835 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:835:9
+	b	.LBB10_1
+.LBB10_1:                               @ =>This Inner Loop Header: Depth=1
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #16
+.Ltmp140:
+	.loc	2 835 24                @ ../APP/Src/modbus_asc.c:835:24
+	ldrb	r0, [r0]
+.Ltmp141:
+	.loc	2 835 5                 @ ../APP/Src/modbus_asc.c:835:5
+	cmp	r0, #5
+	bgt	.LBB10_4
+	b	.LBB10_2
+.LBB10_2:                               @   in Loop: Header=BB10_1 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #16
+.Ltmp142:
+	.loc	2 837 43 is_stmt 1      @ ../APP/Src/modbus_asc.c:837:43
+	ldrb	r0, [r0]
+	.loc	2 837 30 is_stmt 0      @ ../APP/Src/modbus_asc.c:837:30
+	ldr	r1, __arm_cp.10_0
+	ldrb	r0, [r1, r0]
+	.loc	2 837 24                @ ../APP/Src/modbus_asc.c:837:24
+	ldr	r1, __arm_cp.10_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 837 9                 @ ../APP/Src/modbus_asc.c:837:9
+	ldr	r1, __arm_cp.10_2
+	.loc	2 837 28                @ ../APP/Src/modbus_asc.c:837:28
+	strb	r0, [r1, r2]
+	.loc	2 838 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:838:5
+	b	.LBB10_3
+.Ltmp143:
+.LBB10_3:                               @   in Loop: Header=BB10_1 Depth=1
+	.loc	2 835 32                @ ../APP/Src/modbus_asc.c:835:32
+	ldr	r0, [sp, #16]
+	adds	r0, r0, #1
+	add	r1, sp, #16
+	strb	r0, [r1]
+	.loc	2 835 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:835:5
+	b	.LBB10_1
+.Ltmp144:
+.LBB10_4:
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #24
+.Ltmp145:
+	.loc	2 840 19 is_stmt 1      @ ../APP/Src/modbus_asc.c:840:19
+	ldrh	r0, [r0]
+	.loc	2 840 28 is_stmt 0      @ ../APP/Src/modbus_asc.c:840:28
+	cmp	r0, #1
+	bne	.LBB10_7
+	b	.LBB10_5
+.LBB10_5:
+	.loc	2 0 28                  @ ../APP/Src/modbus_asc.c:0:28
+	add	r0, sp, #20
+	.loc	2 840 37                @ ../APP/Src/modbus_asc.c:840:37
+	ldrh	r0, [r0]
+	.loc	2 840 49                @ ../APP/Src/modbus_asc.c:840:49
+	cmp	r0, #0
+	bne	.LBB10_7
+	b	.LBB10_6
+.LBB10_6:
+	.loc	2 840 53                @ ../APP/Src/modbus_asc.c:840:53
+	ldr	r0, __arm_cp.10_0
+	ldrb	r0, [r0]
+.Ltmp146:
+	.loc	2 840 8                 @ ../APP/Src/modbus_asc.c:840:8
+	cmp	r0, #0
+	bne	.LBB10_8
+	b	.LBB10_7
+.LBB10_7:
+.Ltmp147:
+	.loc	2 842 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:842:9
+	add	sp, #32
+	pop	{r4, r5, r7, pc}
+.Ltmp148:
+.LBB10_8:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+	movs	r0, #0
+	add	r1, sp, #28
+	movs	r2, #1
+.Ltmp149:
+	.loc	2 847 3 is_stmt 1       @ ../APP/Src/modbus_asc.c:847:3
+	str	r0, [sp, #8]            @ 4-byte Spill
+	bl	Flash_Write_MultiBytes
+	.loc	2 848 24                @ ../APP/Src/modbus_asc.c:848:24
+	ldr	r1, __arm_cp.10_1
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 848 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:848:9
+	ldr	r3, __arm_cp.10_2
+	.loc	2 848 28                @ ../APP/Src/modbus_asc.c:848:28
+	ldr	r4, [sp, #8]            @ 4-byte Reload
+	strb	r4, [r3, r2]
+	.loc	2 849 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:849:32
+	ldrb	r1, [r1]
+	.loc	2 849 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:849:9
+	str	r0, [sp, #4]            @ 4-byte Spill
+	mov	r0, r3
+	bl	MBASC_SendMsg
+	movs	r0, #20
+	.loc	2 850 3 is_stmt 1       @ ../APP/Src/modbus_asc.c:850:3
+	bl	Delay_1Ms
+	.loc	2 851 9                 @ ../APP/Src/modbus_asc.c:851:9
+	bl	__NVIC_SystemReset
+.Ltmp150:
+	.p2align	2
+@ %bb.9:
+	.loc	2 0 9 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:9
+__arm_cp.10_0:
+	.long	UARTx_RXBuff
+.Lcpi_end29:
+	.size	__arm_cp.10_0, .Lcpi_end29-__arm_cp.10_0
+__arm_cp.10_1:
+	.long	SendLen
+.Lcpi_end30:
+	.size	__arm_cp.10_1, .Lcpi_end30-__arm_cp.10_1
+__arm_cp.10_2:
+	.long	SendBuf
+.Lcpi_end31:
+	.size	__arm_cp.10_2, .Lcpi_end31-__arm_cp.10_2
+.Lfunc_end10:
+	.size	MBASC_Fun41, .Lfunc_end10-MBASC_Fun41
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.__NVIC_SystemReset,"ax",%progbits
+	.p2align	2               @ -- Begin function __NVIC_SystemReset
+	.type	__NVIC_SystemReset,%function
+	.code	16                      @ @__NVIC_SystemReset
+	.thumb_func
+__NVIC_SystemReset:
+.Lfunc_begin11:
+	.loc	5 1857 0 is_stmt 1      @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1857:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	5 1858 3 prologue_end   @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1858:3
+	dsb	sy
+	ldr	r0, __arm_cp.11_0
+	ldr	r1, __arm_cp.11_1
+	.loc	5 1860 15               @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1860:15
+	str	r1, [r0]
+	.loc	5 1862 3                @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1862:3
+	dsb	sy
+	.loc	5 1864 3                @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1864:3
+	b	.LBB11_1
+.LBB11_1:                               @ =>This Inner Loop Header: Depth=1
+.Ltmp151:
+	.loc	5 1866 5                @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1866:5
+	nop
+.Ltmp152:
+	.loc	5 1864 3                @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:1864:3
+	b	.LBB11_1
+.Ltmp153:
+	.p2align	2
+@ %bb.2:
+	.loc	5 0 3 is_stmt 0         @ D:/Program Files\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm23.h:0:3
+__arm_cp.11_0:
+	.long	3758157068              @ 0xe000ed0c
+.Lcpi_end32:
+	.size	__arm_cp.11_0, .Lcpi_end32-__arm_cp.11_0
+__arm_cp.11_1:
+	.long	100270084               @ 0x5fa0004
+.Lcpi_end33:
+	.size	__arm_cp.11_1, .Lcpi_end33-__arm_cp.11_1
+.Lfunc_end11:
+	.size	__NVIC_SystemReset, .Lfunc_end11-__NVIC_SystemReset
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_Function,"ax",%progbits
+	.hidden	MBASC_Function          @ -- Begin function MBASC_Function
+	.globl	MBASC_Function
+	.p2align	2
+	.type	MBASC_Function,%function
+	.code	16                      @ @MBASC_Function
+	.thumb_func
+MBASC_Function:
+.Lfunc_begin12:
+	.loc	2 870 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:870:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	add	r0, sp, #4
+	movs	r1, #0
+.Ltmp154:
+	.loc	2 871 14 prologue_end   @ ../APP/Src/modbus_asc.c:871:14
+	strh	r1, [r0]
+.Ltmp155:
+	.loc	2 872 8                 @ ../APP/Src/modbus_asc.c:872:8
+	ldr	r0, __arm_cp.12_0
+	ldrb	r0, [r0]
+.Ltmp156:
+	.loc	2 872 8 is_stmt 0       @ ../APP/Src/modbus_asc.c:872:8
+	cmp	r0, #1
+	bne	.LBB12_22
+	b	.LBB12_1
+.LBB12_1:
+.Ltmp157:
+	.loc	2 874 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:874:17
+	ldr	r0, __arm_cp.12_1
+	add	r1, sp, #4
+	bl	MODBUS_ASCII_RecvData
+.Ltmp158:
+	.loc	2 874 12 is_stmt 0      @ ../APP/Src/modbus_asc.c:874:12
+	cmp	r0, #2
+	bne	.LBB12_3
+	b	.LBB12_2
+.LBB12_2:
+.Ltmp159:
+	.loc	2 876 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:876:13
+	b	.LBB12_22
+.Ltmp160:
+.LBB12_3:
+	.loc	2 0 13 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #4
+.Ltmp161:
+	.loc	2 879 12 is_stmt 1      @ ../APP/Src/modbus_asc.c:879:12
+	ldrh	r0, [r0]
+.Ltmp162:
+	.loc	2 879 12 is_stmt 0      @ ../APP/Src/modbus_asc.c:879:12
+	cmp	r0, #0
+	bgt	.LBB12_5
+	b	.LBB12_4
+.LBB12_4:
+.Ltmp163:
+	.loc	2 881 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:881:13
+	b	.LBB12_22
+.Ltmp164:
+.LBB12_5:
+	.loc	2 884 27                @ ../APP/Src/modbus_asc.c:884:27
+	ldr	r0, __arm_cp.12_2
+	ldrb	r0, [r0]
+	.loc	2 884 40 is_stmt 0      @ ../APP/Src/modbus_asc.c:884:40
+	ldr	r1, __arm_cp.12_1
+	ldrb	r1, [r1]
+	.loc	2 884 56                @ ../APP/Src/modbus_asc.c:884:56
+	cmp	r0, r1
+	beq	.LBB12_8
+	b	.LBB12_6
+.LBB12_6:
+	.loc	2 884 84                @ ../APP/Src/modbus_asc.c:884:84
+	ldr	r0, __arm_cp.12_1
+	ldrb	r0, [r0]
+.Ltmp165:
+	.loc	2 884 17                @ ../APP/Src/modbus_asc.c:884:17
+	cmp	r0, #0
+	beq	.LBB12_8
+	b	.LBB12_7
+.LBB12_7:
+.Ltmp166:
+	.loc	2 886 13 is_stmt 1      @ ../APP/Src/modbus_asc.c:886:13
+	b	.LBB12_22
+.Ltmp167:
+.LBB12_8:
+	.loc	2 891 21                @ ../APP/Src/modbus_asc.c:891:21
+	ldr	r0, __arm_cp.12_1
+	ldrb	r0, [r0, #1]
+	.loc	2 891 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:891:13
+	cmp	r0, #3
+	str	r0, [sp]                @ 4-byte Spill
+	beq	.LBB12_13
+	b	.LBB12_9
+.LBB12_9:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #4
+	beq	.LBB12_14
+	b	.LBB12_10
+.LBB12_10:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #16
+	beq	.LBB12_15
+	b	.LBB12_11
+.LBB12_11:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #43
+	beq	.LBB12_16
+	b	.LBB12_12
+.LBB12_12:
+	ldr	r0, [sp]                @ 4-byte Reload
+	cmp	r0, #65
+	beq	.LBB12_17
+	b	.LBB12_18
+.LBB12_13:
+.Ltmp168:
+	.loc	2 894 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:894:17
+	bl	MBASC_Fun03
+	.loc	2 895 17                @ ../APP/Src/modbus_asc.c:895:17
+	b	.LBB12_19
+.LBB12_14:
+	.loc	2 898 17                @ ../APP/Src/modbus_asc.c:898:17
+	bl	MBASC_Fun04
+	.loc	2 899 17                @ ../APP/Src/modbus_asc.c:899:17
+	b	.LBB12_19
+.LBB12_15:
+	.loc	2 902 17                @ ../APP/Src/modbus_asc.c:902:17
+	bl	MBASC_Fun10
+	.loc	2 903 17                @ ../APP/Src/modbus_asc.c:903:17
+	b	.LBB12_19
+.LBB12_16:
+	.loc	2 906 17                @ ../APP/Src/modbus_asc.c:906:17
+	bl	MBASC_Fun2B
+	.loc	2 907 17                @ ../APP/Src/modbus_asc.c:907:17
+	b	.LBB12_19
+.LBB12_17:
+	.loc	2 910 17                @ ../APP/Src/modbus_asc.c:910:17
+	bl	MBASC_Fun41
+	.loc	2 911 17                @ ../APP/Src/modbus_asc.c:911:17
+	b	.LBB12_19
+.LBB12_18:
+	.loc	2 914 25                @ ../APP/Src/modbus_asc.c:914:25
+	ldr	r0, __arm_cp.12_3
+	movs	r1, #0
+	strb	r1, [r0]
+	.loc	2 915 38                @ ../APP/Src/modbus_asc.c:915:38
+	ldr	r1, __arm_cp.12_1
+	ldrb	r2, [r1]
+	.loc	2 915 32 is_stmt 0      @ ../APP/Src/modbus_asc.c:915:32
+	ldrb	r3, [r0]
+	adds	r4, r3, #1
+	strb	r4, [r0]
+	.loc	2 915 17                @ ../APP/Src/modbus_asc.c:915:17
+	ldr	r4, __arm_cp.12_4
+	.loc	2 915 36                @ ../APP/Src/modbus_asc.c:915:36
+	strb	r2, [r4, r3]
+	.loc	2 916 45 is_stmt 1      @ ../APP/Src/modbus_asc.c:916:45
+	ldrb	r1, [r1, #1]
+	movs	r2, #128
+	.loc	2 916 43 is_stmt 0      @ ../APP/Src/modbus_asc.c:916:43
+	orrs	r1, r2
+	.loc	2 916 32                @ ../APP/Src/modbus_asc.c:916:32
+	ldrb	r2, [r0]
+	adds	r3, r2, #1
+	strb	r3, [r0]
+	.loc	2 916 36                @ ../APP/Src/modbus_asc.c:916:36
+	strb	r1, [r4, r2]
+	.loc	2 917 32 is_stmt 1      @ ../APP/Src/modbus_asc.c:917:32
+	ldrb	r1, [r0]
+	adds	r2, r1, #1
+	strb	r2, [r0]
+	movs	r2, #1
+	.loc	2 917 36 is_stmt 0      @ ../APP/Src/modbus_asc.c:917:36
+	strb	r2, [r4, r1]
+	.loc	2 918 40 is_stmt 1      @ ../APP/Src/modbus_asc.c:918:40
+	ldrb	r1, [r0]
+	.loc	2 918 17 is_stmt 0      @ ../APP/Src/modbus_asc.c:918:17
+	mov	r0, r4
+	bl	MBASC_SendMsg
+	.loc	2 919 17 is_stmt 1      @ ../APP/Src/modbus_asc.c:919:17
+	b	.LBB12_19
+.Ltmp169:
+.LBB12_19:
+	.loc	2 0 17 is_stmt 0        @ ../APP/Src/modbus_asc.c:0:17
+	b	.LBB12_20
+.LBB12_20:
+	b	.LBB12_21
+.LBB12_21:
+	.loc	2 922 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:922:5
+	b	.LBB12_22
+.Ltmp170:
+.LBB12_22:
+	.loc	2 932 1                 @ ../APP/Src/modbus_asc.c:932:1
+	add	sp, #8
+	pop	{r4, pc}
+.Ltmp171:
+	.p2align	2
+@ %bb.23:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.12_0:
+	.long	UartRecvFrameOK
+.Lcpi_end34:
+	.size	__arm_cp.12_0, .Lcpi_end34-__arm_cp.12_0
+__arm_cp.12_1:
+	.long	UARTx_RXBuff
+.Lcpi_end35:
+	.size	__arm_cp.12_1, .Lcpi_end35-__arm_cp.12_1
+__arm_cp.12_2:
+	.long	UserPara
+.Lcpi_end36:
+	.size	__arm_cp.12_2, .Lcpi_end36-__arm_cp.12_2
+__arm_cp.12_3:
+	.long	SendLen
+.Lcpi_end37:
+	.size	__arm_cp.12_3, .Lcpi_end37-__arm_cp.12_3
+__arm_cp.12_4:
+	.long	SendBuf
+.Lcpi_end38:
+	.size	__arm_cp.12_4, .Lcpi_end38-__arm_cp.12_4
+.Lfunc_end12:
+	.size	MBASC_Function, .Lfunc_end12-MBASC_Function
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.section	.text.MBASC_AutoUpLoadFrame,"ax",%progbits
+	.hidden	MBASC_AutoUpLoadFrame   @ -- Begin function MBASC_AutoUpLoadFrame
+	.globl	MBASC_AutoUpLoadFrame
+	.p2align	2
+	.type	MBASC_AutoUpLoadFrame,%function
+	.code	16                      @ @MBASC_AutoUpLoadFrame
+	.thumb_func
+MBASC_AutoUpLoadFrame:
+.Lfunc_begin13:
+	.loc	2 936 0 is_stmt 1       @ ../APP/Src/modbus_asc.c:936:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#24
+	sub	sp, #24
+	.cfi_def_cfa_offset 32
+.Ltmp172:
+	.loc	2 941 13 prologue_end   @ ../APP/Src/modbus_asc.c:941:13
+	ldr	r0, __arm_cp.13_0
+	movs	r1, #0
+	strb	r1, [r0]
+	add	r0, sp, #16
+.Ltmp173:
+	.loc	2 951 11                @ ../APP/Src/modbus_asc.c:951:11
+	strb	r1, [r0]
+	.loc	2 951 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:951:9
+	b	.LBB13_1
+.LBB13_1:                               @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB13_3 Depth 2
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #16
+.Ltmp174:
+	.loc	2 951 16                @ ../APP/Src/modbus_asc.c:951:16
+	ldrb	r0, [r0]
+.Ltmp175:
+	.loc	2 951 5                 @ ../APP/Src/modbus_asc.c:951:5
+	cmp	r0, #2
+	bhi	.LBB13_8
+	b	.LBB13_2
+.LBB13_2:                               @   in Loop: Header=BB13_1 Depth=1
+	.loc	2 0 5                   @ ../APP/Src/modbus_asc.c:0:5
+	add	r0, sp, #20
+	movs	r1, #4
+.Ltmp176:
+	.loc	2 953 15 is_stmt 1      @ ../APP/Src/modbus_asc.c:953:15
+	strb	r1, [r0]
+	.loc	2 953 13 is_stmt 0      @ ../APP/Src/modbus_asc.c:953:13
+	b	.LBB13_3
+.LBB13_3:                               @   Parent Loop BB13_1 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	2 0 13                  @ ../APP/Src/modbus_asc.c:0:13
+	add	r0, sp, #20
+.Ltmp177:
+	.loc	2 953 20                @ ../APP/Src/modbus_asc.c:953:20
+	ldrb	r0, [r0]
+.Ltmp178:
+	.loc	2 953 9                 @ ../APP/Src/modbus_asc.c:953:9
+	cmp	r0, #1
+	blt	.LBB13_6
+	b	.LBB13_4
+.LBB13_4:                               @   in Loop: Header=BB13_3 Depth=2
+	.loc	2 0 9                   @ ../APP/Src/modbus_asc.c:0:9
+	add	r0, sp, #16
+.Ltmp179:
+	.loc	2 955 53 is_stmt 1      @ ../APP/Src/modbus_asc.c:955:53
+	ldrb	r0, [r0]
+	.loc	2 955 44 is_stmt 0      @ ../APP/Src/modbus_asc.c:955:44
+	lsls	r0, r0, #2
+	add	r1, sp, #4
+	ldr	r0, [r1, r0]
+	add	r1, sp, #20
+	.loc	2 955 61                @ ../APP/Src/modbus_asc.c:955:61
+	ldrb	r1, [r1]
+	.loc	2 955 63                @ ../APP/Src/modbus_asc.c:955:63
+	lsls	r1, r1, #3
+	.loc	2 955 68                @ ../APP/Src/modbus_asc.c:955:68
+	subs	r1, #8
+	.loc	2 955 56                @ ../APP/Src/modbus_asc.c:955:56
+	lsrs	r0, r1
+	.loc	2 955 28                @ ../APP/Src/modbus_asc.c:955:28
+	ldr	r1, __arm_cp.13_0
+	ldrb	r2, [r1]
+	adds	r3, r2, #1
+	strb	r3, [r1]
+	.loc	2 955 13                @ ../APP/Src/modbus_asc.c:955:13
+	ldr	r1, __arm_cp.13_1
+	.loc	2 955 32                @ ../APP/Src/modbus_asc.c:955:32
+	strb	r0, [r1, r2]
+	.loc	2 956 9 is_stmt 1       @ ../APP/Src/modbus_asc.c:956:9
+	b	.LBB13_5
+.Ltmp180:
+.LBB13_5:                               @   in Loop: Header=BB13_3 Depth=2
+	.loc	2 953 28                @ ../APP/Src/modbus_asc.c:953:28
+	ldr	r0, [sp, #20]
+	subs	r0, r0, #1
+	add	r1, sp, #20
+	strb	r0, [r1]
+	.loc	2 953 9 is_stmt 0       @ ../APP/Src/modbus_asc.c:953:9
+	b	.LBB13_3
+.Ltmp181:
+.LBB13_6:                               @   in Loop: Header=BB13_1 Depth=1
+	.loc	2 957 5 is_stmt 1       @ ../APP/Src/modbus_asc.c:957:5
+	b	.LBB13_7
+.Ltmp182:
+.LBB13_7:                               @   in Loop: Header=BB13_1 Depth=1
+	.loc	2 951 61                @ ../APP/Src/modbus_asc.c:951:61
+	ldr	r0, [sp, #16]
+	adds	r0, r0, #1
+	add	r1, sp, #16
+	strb	r0, [r1]
+	.loc	2 951 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:951:5
+	b	.LBB13_1
+.Ltmp183:
+.LBB13_8:
+	.loc	2 958 36 is_stmt 1      @ ../APP/Src/modbus_asc.c:958:36
+	ldr	r0, __arm_cp.13_0
+	ldrb	r1, [r0]
+	.loc	2 958 5 is_stmt 0       @ ../APP/Src/modbus_asc.c:958:5
+	ldr	r0, __arm_cp.13_1
+	bl	MBASC_SendMsg_NoLimit
+	.loc	2 959 1 is_stmt 1       @ ../APP/Src/modbus_asc.c:959:1
+	add	sp, #24
+	pop	{r7, pc}
+.Ltmp184:
+	.p2align	2
+@ %bb.9:
+	.loc	2 0 1 is_stmt 0         @ ../APP/Src/modbus_asc.c:0:1
+__arm_cp.13_0:
+	.long	SendLen
+.Lcpi_end39:
+	.size	__arm_cp.13_0, .Lcpi_end39-__arm_cp.13_0
+__arm_cp.13_1:
+	.long	SendBuf
+.Lcpi_end40:
+	.size	__arm_cp.13_1, .Lcpi_end40-__arm_cp.13_1
+.Lfunc_end13:
+	.size	MBASC_AutoUpLoadFrame, .Lfunc_end13-MBASC_AutoUpLoadFrame
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	StartFlag               @ @StartFlag
+	.type	StartFlag,%object
+	.section	.bss.StartFlag,"aw",%nobits
+	.globl	StartFlag
+StartFlag:
+.LStartFlag$local:
+	.byte	0                       @ 0x0
+	.size	StartFlag, 1
+
+	.hidden	StartCountFlag          @ @StartCountFlag
+	.type	StartCountFlag,%object
+	.section	.bss.StartCountFlag,"aw",%nobits
+	.globl	StartCountFlag
+StartCountFlag:
+.LStartCountFlag$local:
+	.byte	0                       @ 0x0
+	.size	StartCountFlag, 1
+
+	.hidden	SensorSoftVersion       @ @SensorSoftVersion
+	.type	SensorSoftVersion,%object
+	.section	.rodata.SensorSoftVersion,"a",%progbits
+	.globl	SensorSoftVersion
+SensorSoftVersion:
+.LSensorSoftVersion$local:
+	.asciz	"\007GD1.0.0\000"
+	.size	SensorSoftVersion, 10
+
+	.hidden	SendLen                 @ @SendLen
+	.type	SendLen,%object
+	.section	.bss.SendLen,"aw",%nobits
+	.globl	SendLen
+SendLen:
+.LSendLen$local:
+	.byte	0                       @ 0x0
+	.size	SendLen, 1
+
+	.hidden	SendBuf                 @ @SendBuf
+	.type	SendBuf,%object
+	.section	.bss.SendBuf,"aw",%nobits
+	.globl	SendBuf
+SendBuf:
+.LSendBuf$local:
+	.zero	100
+	.size	SendBuf, 100
+
+	.type	.L.str,%object          @ @.str
+	.section	.rodata.str1.1,"aMS",%progbits,1
+.L.str:
+	.asciz	"\002"
+	.size	.L.str, 2
+
+	.type	.L.str.1,%object        @ @.str.1
+.L.str.1:
+	.asciz	"\001"
+	.size	.L.str.1, 2
+
+	.type	.L__const.MBASC_Fun41.buf,%object @ @__const.MBASC_Fun41.buf
+	.section	.rodata..L__const.MBASC_Fun41.buf,"a",%progbits
+.L__const.MBASC_Fun41.buf:
+	.byte	255
+	.size	.L__const.MBASC_Fun41.buf, 1
+
+	.section	.debug_str,"MS",%progbits,1
+.Linfo_string0:
+	.asciz	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]" @ string offset=0
+.Linfo_string1:
+	.asciz	"../APP/Src\\modbus_asc.c" @ string offset=55
+.Linfo_string2:
+	.asciz	"E:\\project\\product\\GD32\\E230 -  ZFZ-F8\\MDK-ARM" @ string offset=79
+.Linfo_string3:
+	.asciz	"StartFlag"             @ string offset=126
+.Linfo_string4:
+	.asciz	"unsigned char"         @ string offset=136
+.Linfo_string5:
+	.asciz	"uint8_t"               @ string offset=150
+.Linfo_string6:
+	.asciz	"StartCountFlag"        @ string offset=158
+.Linfo_string7:
+	.asciz	"SensorSoftVersion"     @ string offset=173
+.Linfo_string8:
+	.asciz	"__ARRAY_SIZE_TYPE__"   @ string offset=191
+.Linfo_string9:
+	.asciz	"SendLen"               @ string offset=211
+.Linfo_string10:
+	.asciz	"SendBuf"               @ string offset=219
+.Linfo_string11:
+	.asciz	"Bit_RESET"             @ string offset=227
+.Linfo_string12:
+	.asciz	"Bit_SET"               @ string offset=237
+.Linfo_string13:
+	.asciz	"RESET"                 @ string offset=245
+.Linfo_string14:
+	.asciz	"SET"                   @ string offset=251
+.Linfo_string15:
+	.asciz	"unsigned short"        @ string offset=255
+.Linfo_string16:
+	.asciz	"uint16_t"              @ string offset=270
+.Linfo_string17:
+	.asciz	"CPUID"                 @ string offset=279
+.Linfo_string18:
+	.asciz	"unsigned int"          @ string offset=285
+.Linfo_string19:
+	.asciz	"uint32_t"              @ string offset=298
+.Linfo_string20:
+	.asciz	"ICSR"                  @ string offset=307
+.Linfo_string21:
+	.asciz	"VTOR"                  @ string offset=312
+.Linfo_string22:
+	.asciz	"AIRCR"                 @ string offset=317
+.Linfo_string23:
+	.asciz	"SCR"                   @ string offset=323
+.Linfo_string24:
+	.asciz	"CCR"                   @ string offset=327
+.Linfo_string25:
+	.asciz	"RESERVED1"             @ string offset=331
+.Linfo_string26:
+	.asciz	"SHPR"                  @ string offset=341
+.Linfo_string27:
+	.asciz	"SHCSR"                 @ string offset=346
+.Linfo_string28:
+	.asciz	"SCB_Type"              @ string offset=352
+.Linfo_string29:
+	.asciz	"MBASC_GetSlaveAddr"    @ string offset=361
+.Linfo_string30:
+	.asciz	"MBASC_SendMsg"         @ string offset=380
+.Linfo_string31:
+	.asciz	"MBASC_SendMsg_NoLimit" @ string offset=394
+.Linfo_string32:
+	.asciz	"MBASC_SendErr"         @ string offset=416
+.Linfo_string33:
+	.asciz	"MBASC_Fun03"           @ string offset=430
+.Linfo_string34:
+	.asciz	"MBASC_Fun04"           @ string offset=442
+.Linfo_string35:
+	.asciz	"MBASC_Fun05"           @ string offset=454
+.Linfo_string36:
+	.asciz	"MBASC_Fun10"           @ string offset=466
+.Linfo_string37:
+	.asciz	"MBASC_Fun2B"           @ string offset=478
+.Linfo_string38:
+	.asciz	"Delay_1Ms"             @ string offset=490
+.Linfo_string39:
+	.asciz	"MBASC_Fun41"           @ string offset=500
+.Linfo_string40:
+	.asciz	"__NVIC_SystemReset"    @ string offset=512
+.Linfo_string41:
+	.asciz	"MBASC_Function"        @ string offset=531
+.Linfo_string42:
+	.asciz	"MBASC_AutoUpLoadFrame" @ string offset=546
+.Linfo_string43:
+	.asciz	"uint8_tMsg"            @ string offset=568
+.Linfo_string44:
+	.asciz	"uint8_tMsgLen"         @ string offset=579
+.Linfo_string45:
+	.asciz	"ErrCode"               @ string offset=593
+.Linfo_string46:
+	.asciz	"i"                     @ string offset=601
+.Linfo_string47:
+	.asciz	"Data_Buf"              @ string offset=603
+.Linfo_string48:
+	.asciz	"Register_Num"          @ string offset=612
+.Linfo_string49:
+	.asciz	"ReadAdrH"              @ string offset=625
+.Linfo_string50:
+	.asciz	"ReadAdrL"              @ string offset=634
+.Linfo_string51:
+	.asciz	"k"                     @ string offset=643
+.Linfo_string52:
+	.asciz	"bWriteParaFlag"        @ string offset=645
+.Linfo_string53:
+	.asciz	"BitAction"             @ string offset=660
+.Linfo_string54:
+	.asciz	"index"                 @ string offset=670
+.Linfo_string55:
+	.asciz	"uint16_tTemp"          @ string offset=676
+.Linfo_string56:
+	.asciz	"uTemp"                 @ string offset=689
+.Linfo_string57:
+	.asciz	"Object_Num"            @ string offset=695
+.Linfo_string58:
+	.asciz	"ReadAdr"               @ string offset=706
+.Linfo_string59:
+	.asciz	"CompanyNameLen"        @ string offset=714
+.Linfo_string60:
+	.asciz	"SoftwareVersionLen"    @ string offset=729
+.Linfo_string61:
+	.asciz	"cnt"                   @ string offset=748
+.Linfo_string62:
+	.asciz	"buf"                   @ string offset=752
+.Linfo_string63:
+	.asciz	"DataLength"            @ string offset=756
+.Linfo_string64:
+	.asciz	"ReadData"              @ string offset=767
+.Linfo_string65:
+	.asciz	"RecvLen"               @ string offset=776
+.Linfo_string66:
+	.asciz	"j"                     @ string offset=784
+	.section	.debug_abbrev,"",%progbits
+	.byte	1                       @ Abbreviation Code
+	.byte	17                      @ DW_TAG_compile_unit
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	37                      @ DW_AT_producer
+	.byte	14                      @ DW_FORM_strp
+	.byte	19                      @ DW_AT_language
+	.byte	5                       @ DW_FORM_data2
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	16                      @ DW_AT_stmt_list
+	.byte	6                       @ DW_FORM_data4
+	.byte	27                      @ DW_AT_comp_dir
+	.byte	14                      @ DW_FORM_strp
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	85                      @ DW_AT_ranges
+	.byte	6                       @ DW_FORM_data4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	2                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	3                       @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	4                       @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	5                       @ Abbreviation Code
+	.byte	1                       @ DW_TAG_array_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	33                      @ DW_TAG_subrange_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	55                      @ DW_AT_count
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
+	.byte	38                      @ DW_TAG_const_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	8                       @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	9                       @ Abbreviation Code
+	.byte	4                       @ DW_TAG_enumeration_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	10                      @ Abbreviation Code
+	.byte	40                      @ DW_TAG_enumerator
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	28                      @ DW_AT_const_value
+	.byte	15                      @ DW_FORM_udata
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	11                      @ Abbreviation Code
+	.byte	15                      @ DW_TAG_pointer_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	12                      @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	13                      @ Abbreviation Code
+	.byte	19                      @ DW_TAG_structure_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	14                      @ Abbreviation Code
+	.byte	13                      @ DW_TAG_member
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	56                      @ DW_AT_data_member_location
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	15                      @ Abbreviation Code
+	.byte	53                      @ DW_TAG_volatile_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	16                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	17                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	18                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	19                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	20                      @ Abbreviation Code
+	.byte	11                      @ DW_TAG_lexical_block
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	21                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	22                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	23                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	24                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	25                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.ascii	"\207\001"              @ DW_AT_noreturn
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	0                       @ EOM(3)
+	.section	.debug_info,"",%progbits
+.Lcu_begin0:
+	.long	.Ldebug_info_end0-.Ldebug_info_start0 @ Length of Unit
+.Ldebug_info_start0:
+	.short	3                       @ DWARF version number
+	.long	.debug_abbrev           @ Offset Into Abbrev. Section
+	.byte	4                       @ Address Size (in bytes)
+	.byte	1                       @ Abbrev [1] 0xb:0x5c5 DW_TAG_compile_unit
+	.long	.Linfo_string0          @ DW_AT_producer
+	.short	12                      @ DW_AT_language
+	.long	.Linfo_string1          @ DW_AT_name
+	.long	.Lline_table_start0     @ DW_AT_stmt_list
+	.long	.Linfo_string2          @ DW_AT_comp_dir
+	.long	0                       @ DW_AT_low_pc
+	.long	.Ldebug_ranges0         @ DW_AT_ranges
+	.byte	2                       @ Abbrev [2] 0x26:0x12 DW_TAG_variable
+	.long	.Linfo_string3          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	2                       @ DW_AT_decl_file
+	.byte	17                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	StartFlag
+	.byte	3                       @ Abbrev [3] 0x38:0xb DW_TAG_typedef
+	.long	67                      @ DW_AT_type
+	.long	.Linfo_string5          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	62                      @ DW_AT_decl_line
+	.byte	4                       @ Abbrev [4] 0x43:0x7 DW_TAG_base_type
+	.long	.Linfo_string4          @ DW_AT_name
+	.byte	8                       @ DW_AT_encoding
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ Abbrev [2] 0x4a:0x12 DW_TAG_variable
+	.long	.Linfo_string6          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	2                       @ DW_AT_decl_file
+	.byte	18                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	StartCountFlag
+	.byte	2                       @ Abbrev [2] 0x5c:0x12 DW_TAG_variable
+	.long	.Linfo_string7          @ DW_AT_name
+	.long	110                     @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	2                       @ DW_AT_decl_file
+	.byte	34                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	SensorSoftVersion
+	.byte	5                       @ Abbrev [5] 0x6e:0xc DW_TAG_array_type
+	.long	122                     @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0x73:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	10                      @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	7                       @ Abbrev [7] 0x7a:0x5 DW_TAG_const_type
+	.long	56                      @ DW_AT_type
+	.byte	8                       @ Abbrev [8] 0x7f:0x7 DW_TAG_base_type
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	8                       @ DW_AT_byte_size
+	.byte	7                       @ DW_AT_encoding
+	.byte	2                       @ Abbrev [2] 0x86:0x12 DW_TAG_variable
+	.long	.Linfo_string9          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	2                       @ DW_AT_decl_file
+	.byte	19                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	SendLen
+	.byte	2                       @ Abbrev [2] 0x98:0x12 DW_TAG_variable
+	.long	.Linfo_string10         @ DW_AT_name
+	.long	170                     @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	2                       @ DW_AT_decl_file
+	.byte	20                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	SendBuf
+	.byte	5                       @ Abbrev [5] 0xaa:0xc DW_TAG_array_type
+	.long	56                      @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0xaf:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	100                     @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	9                       @ Abbrev [9] 0xb6:0x15 DW_TAG_enumeration_type
+	.long	67                      @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	3                       @ DW_AT_decl_file
+	.byte	18                      @ DW_AT_decl_line
+	.byte	10                      @ Abbrev [10] 0xbe:0x6 DW_TAG_enumerator
+	.long	.Linfo_string11         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	10                      @ Abbrev [10] 0xc4:0x6 DW_TAG_enumerator
+	.long	.Linfo_string12         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	9                       @ Abbrev [9] 0xcb:0x15 DW_TAG_enumeration_type
+	.long	67                      @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	4                       @ DW_AT_decl_file
+	.byte	158                     @ DW_AT_decl_line
+	.byte	10                      @ Abbrev [10] 0xd3:0x6 DW_TAG_enumerator
+	.long	.Linfo_string13         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	10                      @ Abbrev [10] 0xd9:0x6 DW_TAG_enumerator
+	.long	.Linfo_string14         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	3                       @ Abbrev [3] 0xe0:0xb DW_TAG_typedef
+	.long	235                     @ DW_AT_type
+	.long	.Linfo_string16         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	63                      @ DW_AT_decl_line
+	.byte	4                       @ Abbrev [4] 0xeb:0x7 DW_TAG_base_type
+	.long	.Linfo_string15         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	2                       @ DW_AT_byte_size
+	.byte	11                      @ Abbrev [11] 0xf2:0x5 DW_TAG_pointer_type
+	.long	247                     @ DW_AT_type
+	.byte	12                      @ Abbrev [12] 0xf7:0xc DW_TAG_typedef
+	.long	259                     @ DW_AT_type
+	.long	.Linfo_string28         @ DW_AT_name
+	.byte	5                       @ DW_AT_decl_file
+	.short	398                     @ DW_AT_decl_line
+	.byte	13                      @ Abbrev [13] 0x103:0x7b DW_TAG_structure_type
+	.byte	40                      @ DW_AT_byte_size
+	.byte	5                       @ DW_AT_decl_file
+	.short	383                     @ DW_AT_decl_line
+	.byte	14                      @ Abbrev [14] 0x108:0xd DW_TAG_member
+	.long	.Linfo_string17         @ DW_AT_name
+	.long	382                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	385                     @ DW_AT_decl_line
+	.byte	0                       @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x115:0xd DW_TAG_member
+	.long	.Linfo_string20         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	386                     @ DW_AT_decl_line
+	.byte	4                       @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x122:0xd DW_TAG_member
+	.long	.Linfo_string21         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	388                     @ DW_AT_decl_line
+	.byte	8                       @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x12f:0xd DW_TAG_member
+	.long	.Linfo_string22         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	392                     @ DW_AT_decl_line
+	.byte	12                      @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x13c:0xd DW_TAG_member
+	.long	.Linfo_string23         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	393                     @ DW_AT_decl_line
+	.byte	16                      @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x149:0xd DW_TAG_member
+	.long	.Linfo_string24         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	394                     @ DW_AT_decl_line
+	.byte	20                      @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x156:0xd DW_TAG_member
+	.long	.Linfo_string25         @ DW_AT_name
+	.long	392                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	395                     @ DW_AT_decl_line
+	.byte	24                      @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x163:0xd DW_TAG_member
+	.long	.Linfo_string26         @ DW_AT_name
+	.long	410                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	396                     @ DW_AT_decl_line
+	.byte	28                      @ DW_AT_data_member_location
+	.byte	14                      @ Abbrev [14] 0x170:0xd DW_TAG_member
+	.long	.Linfo_string27         @ DW_AT_name
+	.long	387                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	397                     @ DW_AT_decl_line
+	.byte	36                      @ DW_AT_data_member_location
+	.byte	0                       @ End Of Children Mark
+	.byte	7                       @ Abbrev [7] 0x17e:0x5 DW_TAG_const_type
+	.long	387                     @ DW_AT_type
+	.byte	15                      @ Abbrev [15] 0x183:0x5 DW_TAG_volatile_type
+	.long	392                     @ DW_AT_type
+	.byte	3                       @ Abbrev [3] 0x188:0xb DW_TAG_typedef
+	.long	403                     @ DW_AT_type
+	.long	.Linfo_string19         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	64                      @ DW_AT_decl_line
+	.byte	4                       @ Abbrev [4] 0x193:0x7 DW_TAG_base_type
+	.long	.Linfo_string18         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	5                       @ Abbrev [5] 0x19a:0xc DW_TAG_array_type
+	.long	387                     @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0x19f:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	2                       @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	16                      @ Abbrev [16] 0x1a6:0x26 DW_TAG_subprogram
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end0             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string29         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	52                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.long	392                     @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	17                      @ Abbrev [17] 0x1bd:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	52                      @ DW_AT_decl_line
+	.long	1435                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	18                      @ Abbrev [18] 0x1cc:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string30         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	69                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	17                      @ Abbrev [17] 0x1df:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	69                      @ DW_AT_decl_line
+	.long	1435                    @ DW_AT_type
+	.byte	17                      @ Abbrev [17] 0x1ed:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	69                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	18                      @ Abbrev [18] 0x1fc:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string31         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	89                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	17                      @ Abbrev [17] 0x20f:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	89                      @ DW_AT_decl_line
+	.long	1435                    @ DW_AT_type
+	.byte	17                      @ Abbrev [17] 0x21d:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	89                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	18                      @ Abbrev [18] 0x22c:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin3           @ DW_AT_low_pc
+	.long	.Lfunc_end3             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string32         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	106                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	17                      @ Abbrev [17] 0x23f:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string45         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	106                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	18                      @ Abbrev [18] 0x24e:0x72 DW_TAG_subprogram
+	.long	.Lfunc_begin4           @ DW_AT_low_pc
+	.long	.Lfunc_end4             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string33         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	125                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	19                      @ Abbrev [19] 0x261:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	127                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	19                      @ Abbrev [19] 0x26f:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	128                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	19                      @ Abbrev [19] 0x27d:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	130                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	19                      @ Abbrev [19] 0x28b:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	131                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	19                      @ Abbrev [19] 0x299:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	131                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x2a7:0x18 DW_TAG_lexical_block
+	.long	.Ltmp16                 @ DW_AT_low_pc
+	.long	.Ltmp29                 @ DW_AT_high_pc
+	.byte	19                      @ Abbrev [19] 0x2b0:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string51         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	151                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	21                      @ Abbrev [21] 0x2c0:0x79 DW_TAG_subprogram
+	.long	.Lfunc_begin5           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string34         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	313                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x2d4:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	315                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x2e3:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	316                     @ DW_AT_decl_line
+	.long	392                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x2f2:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	317                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x301:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	318                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x310:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	319                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x31f:0x19 DW_TAG_lexical_block
+	.long	.Ltmp36                 @ DW_AT_low_pc
+	.long	.Ltmp49                 @ DW_AT_high_pc
+	.byte	22                      @ Abbrev [22] 0x328:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string51         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	338                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	23                      @ Abbrev [23] 0x339:0x41 DW_TAG_subprogram
+	.long	.Lfunc_begin6           @ DW_AT_low_pc
+	.long	.Lfunc_end6             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string35         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	401                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x34c:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	407                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x35b:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	407                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x36a:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string52         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	411                     @ DW_AT_decl_line
+	.long	1440                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	23                      @ Abbrev [23] 0x37a:0x96 DW_TAG_subprogram
+	.long	.Lfunc_begin7           @ DW_AT_low_pc
+	.long	.Lfunc_end7             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string36         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	498                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x38d:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	52
+	.long	.Linfo_string54         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	500                     @ DW_AT_decl_line
+	.long	392                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x39c:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	48
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	502                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x3ab:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	44
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	503                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x3ba:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	40
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	504                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x3c9:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	36
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	504                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x3d8:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	32
+	.long	.Linfo_string56         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	505                     @ DW_AT_decl_line
+	.long	1451                    @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x3e7:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string52         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	508                     @ DW_AT_decl_line
+	.long	1440                    @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x3f6:0x19 DW_TAG_lexical_block
+	.long	.Ltmp81                 @ DW_AT_low_pc
+	.long	.Ltmp96                 @ DW_AT_high_pc
+	.byte	22                      @ Abbrev [22] 0x3ff:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string51         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	529                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	21                      @ Abbrev [21] 0x410:0x83 DW_TAG_subprogram
+	.long	.Lfunc_begin8           @ DW_AT_low_pc
+	.long	.Lfunc_end8             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string37         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	652                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x424:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string57         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	654                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x433:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string58         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	654                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x442:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	655                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x451:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string60         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	656                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x460:0x32 DW_TAG_lexical_block
+	.long	.Ltmp112                @ DW_AT_low_pc
+	.long	.Ltmp134                @ DW_AT_high_pc
+	.byte	22                      @ Abbrev [22] 0x469:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string51         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	681                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x478:0x19 DW_TAG_lexical_block
+	.long	.Ltmp126                @ DW_AT_low_pc
+	.long	.Ltmp131                @ DW_AT_high_pc
+	.byte	22                      @ Abbrev [22] 0x481:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	750                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	21                      @ Abbrev [21] 0x493:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin9           @ DW_AT_low_pc
+	.long	.Lfunc_end9             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string38         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	812                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	24                      @ Abbrev [24] 0x4a7:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string61         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	812                     @ DW_AT_decl_line
+	.long	392                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	21                      @ Abbrev [21] 0x4b7:0x6a DW_TAG_subprogram
+	.long	.Lfunc_begin10          @ DW_AT_low_pc
+	.long	.Lfunc_end10            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string39         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	821                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x4cb:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string62         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	823                     @ DW_AT_decl_line
+	.long	1463                    @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x4da:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string58         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	824                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x4e9:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string63         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	825                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x4f8:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	19
+	.long	.Linfo_string64         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	826                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x507:0x19 DW_TAG_lexical_block
+	.long	.Ltmp139                @ DW_AT_low_pc
+	.long	.Ltmp144                @ DW_AT_high_pc
+	.byte	22                      @ Abbrev [22] 0x510:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	835                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+	.byte	25                      @ Abbrev [25] 0x521:0x14 DW_TAG_subprogram
+	.long	.Lfunc_begin11          @ DW_AT_low_pc
+	.long	.Lfunc_end11            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string40         @ DW_AT_name
+	.byte	5                       @ DW_AT_decl_file
+	.short	1856                    @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_noreturn
+	.byte	21                      @ Abbrev [21] 0x535:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin12          @ DW_AT_low_pc
+	.long	.Lfunc_end12            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string41         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	869                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x549:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string65         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	871                     @ DW_AT_decl_line
+	.long	224                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	21                      @ Abbrev [21] 0x559:0x42 DW_TAG_subprogram
+	.long	.Lfunc_begin13          @ DW_AT_low_pc
+	.long	.Lfunc_end13            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	935                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	22                      @ Abbrev [22] 0x56d:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	937                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x57c:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string66         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	938                     @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	22                      @ Abbrev [22] 0x58b:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.short	939                     @ DW_AT_decl_line
+	.long	1475                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	11                      @ Abbrev [11] 0x59b:0x5 DW_TAG_pointer_type
+	.long	56                      @ DW_AT_type
+	.byte	3                       @ Abbrev [3] 0x5a0:0xb DW_TAG_typedef
+	.long	182                     @ DW_AT_type
+	.long	.Linfo_string53         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	22                      @ DW_AT_decl_line
+	.byte	5                       @ Abbrev [5] 0x5ab:0xc DW_TAG_array_type
+	.long	56                      @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0x5b0:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	4                       @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x5b7:0xc DW_TAG_array_type
+	.long	56                      @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0x5bc:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	1                       @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x5c3:0xc DW_TAG_array_type
+	.long	392                     @ DW_AT_type
+	.byte	6                       @ Abbrev [6] 0x5c8:0x6 DW_TAG_subrange_type
+	.long	127                     @ DW_AT_type
+	.byte	3                       @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	0                       @ End Of Children Mark
+.Ldebug_info_end0:
+	.section	.debug_ranges,"",%progbits
+.Ldebug_ranges0:
+	.long	.Lfunc_begin0
+	.long	.Lfunc_end0
+	.long	.Lfunc_begin1
+	.long	.Lfunc_end1
+	.long	.Lfunc_begin2
+	.long	.Lfunc_end2
+	.long	.Lfunc_begin3
+	.long	.Lfunc_end3
+	.long	.Lfunc_begin4
+	.long	.Lfunc_end4
+	.long	.Lfunc_begin5
+	.long	.Lfunc_end5
+	.long	.Lfunc_begin6
+	.long	.Lfunc_end6
+	.long	.Lfunc_begin7
+	.long	.Lfunc_end7
+	.long	.Lfunc_begin8
+	.long	.Lfunc_end8
+	.long	.Lfunc_begin9
+	.long	.Lfunc_end9
+	.long	.Lfunc_begin10
+	.long	.Lfunc_end10
+	.long	.Lfunc_begin11
+	.long	.Lfunc_end11
+	.long	.Lfunc_begin12
+	.long	.Lfunc_end12
+	.long	.Lfunc_begin13
+	.long	.Lfunc_end13
+	.long	0
+	.long	0
+	.ident	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]"
+	.section	".note.GNU-stack","",%progbits
+	.eabi_attribute	30, 6	@ Tag_ABI_optimization_goals
+	.ARM_attribute	16, 1	@ Tag_AV_eba
+	.section	.debug_line,"",%progbits
+.Lline_table_start0:
